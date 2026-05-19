@@ -1,6 +1,7 @@
 ﻿using Dental_H.Controller;
 using Dental_H.Model;
 using Dental_H.Util;
+using Dental_H.View;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -56,7 +57,9 @@ namespace Dental_H
             // VALIDAR RESULTADO
             if (usuarioEncontrado != null)
             {
-                MessageBox.Show("Bienvenido " +usuarioEncontrado.NombreUsuario);
+                DashboardForm dashboard = new DashboardForm();
+                dashboard.Show();
+                this.Hide();
             }
             else
             {
