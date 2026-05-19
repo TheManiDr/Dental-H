@@ -95,6 +95,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Util\Conexion.cs" />
     <Compile Include="View\LoginForm.cs">
@@ -133,8 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Controller\" />
-    <Folder Include="DAO\" />
     <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
