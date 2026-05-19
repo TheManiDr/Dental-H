@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Dental_H.Util;
 namespace Dental_H.View
 {
     public partial class DashboardForm : Form
@@ -15,6 +15,13 @@ namespace Dental_H.View
         public DashboardForm()
         {
             InitializeComponent();
+            MessageBox.Show("Bienvenido " + Sesion.UsuarioActual.NombreUsuario);
+            MessageBox.Show("Rol: " + Sesion.UsuarioActual.IdRol);
+        }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -57,9 +57,11 @@ namespace Dental_H
             // VALIDAR RESULTADO
             if (usuarioEncontrado != null)
             {
+                Sesion.UsuarioActual = usuarioEncontrado;
                 DashboardForm dashboard = new DashboardForm();
                 dashboard.Show();
                 this.Hide();
+
             }
             else
             {
