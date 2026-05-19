@@ -1,4 +1,5 @@
-﻿
+﻿using Dental_H.Controller;
+using Dental_H.Model;
 using Dental_H.Util;
 using MySql.Data.MySqlClient;
 using System;
@@ -38,6 +39,29 @@ namespace Dental_H
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            // CAPTURAR DATOS
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
+
+            // CREAR CONTROLLER
+            LoginController controller = new LoginController();
+
+            // INTENTAR LOGIN
+            Usuario usuarioEncontrado = controller.IniciarSesion(usuario,contraseña);
+
+            // VALIDAR RESULTADO
+            if (usuarioEncontrado != null)
+            {
+                MessageBox.Show("Bienvenido " +usuarioEncontrado.NombreUsuario);
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
         }
     }
 }

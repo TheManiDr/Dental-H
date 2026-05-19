@@ -18,8 +18,8 @@ namespace Dental_H.DAO
 
                 string consulta =
                     "SELECT * FROM Usuario " +
-                    "WHERE usuario = @usuario " +
-                    "AND contraseña = @contrasena";
+                    "WHERE nombre_usuario = @usuario " +
+                    "AND contrasena = @contrasena";
 
                 MySqlCommand comando =
                     new MySqlCommand(consulta, conexion);
@@ -45,13 +45,13 @@ namespace Dental_H.DAO
                         reader.GetInt32("id_usuario");
 
                     usuarioEncontrado.NombreUsuario =
-                        reader.GetString("usuario");
+                        reader.GetString("nombre_usuario");
 
                     usuarioEncontrado.Contrasena =
-                        reader.GetString("contraseña");
+                        reader.GetString("contrasena");
 
                     usuarioEncontrado.IdPersonal =
-                        reader.GetInt32("id_personal");
+                        reader.GetInt32("id_persona");
 
                     usuarioEncontrado.IdRol =
                         reader.GetInt32("id_rol");
