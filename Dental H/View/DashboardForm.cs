@@ -17,6 +17,10 @@ namespace Dental_H.View
             InitializeComponent();
             MessageBox.Show("Bienvenido " + Sesion.UsuarioActual.NombreUsuario);
             MessageBox.Show("Rol: " + Sesion.UsuarioActual.IdRol);
+            if (Sesion.UsuarioActual.IdRol != 2)
+            {
+                btnUsuarios.Enabled = false;
+            }
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
