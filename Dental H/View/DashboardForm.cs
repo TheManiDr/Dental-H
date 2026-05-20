@@ -17,7 +17,7 @@ namespace Dental_H.View
             InitializeComponent();
             MessageBox.Show("Bienvenido " + Sesion.UsuarioActual.NombreUsuario);
             MessageBox.Show("Rol: " + Sesion.UsuarioActual.IdRol);
-            if (Sesion.UsuarioActual.IdRol != 2)
+            if (Sesion.UsuarioActual.IdRol != 1)
             {
                 btnUsuarios.Enabled = false;
             }
