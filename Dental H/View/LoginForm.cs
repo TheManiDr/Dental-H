@@ -21,21 +21,6 @@ namespace Dental_H
         {
             InitializeComponent();
 
-            try
-            {
-                MySqlConnection conexion = Conexion.obtenerConexion();
-
-                conexion.Open();
-
-                MessageBox.Show("Conexión exitosa con MySQL");
-
-                conexion.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
