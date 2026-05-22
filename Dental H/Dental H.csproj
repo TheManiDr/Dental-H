@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="Enums\Rol.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Util\Conexion.cs" />
     <Compile Include="Util\Sesion.cs" />

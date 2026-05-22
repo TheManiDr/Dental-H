@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dental_H.Util;
+using Dental_H.Enums;
+
 namespace Dental_H.View
 {
     public partial class DashboardForm : Form
@@ -17,7 +19,7 @@ namespace Dental_H.View
             InitializeComponent();
             MessageBox.Show("Bienvenido " + Sesion.UsuarioActual.NombreUsuario);
             MessageBox.Show("Rol: " + Sesion.UsuarioActual.IdRol);
-            if (Sesion.UsuarioActual.IdRol != 1)
+            if (Sesion.UsuarioActual.IdRol != (int)Rol.ADMINISTRADOR)
             {
                 btnUsuarios.Enabled = false;
             }
