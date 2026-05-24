@@ -52,28 +52,28 @@
             // 
             // txtAlergias
             // 
-            this.txtAlergias.Location = new System.Drawing.Point(372, 188);
+            this.txtAlergias.Location = new System.Drawing.Point(333, 77);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(100, 20);
             this.txtAlergias.TabIndex = 1;
             // 
             // txtContactoEmergencia
             // 
-            this.txtContactoEmergencia.Location = new System.Drawing.Point(372, 232);
+            this.txtContactoEmergencia.Location = new System.Drawing.Point(333, 121);
             this.txtContactoEmergencia.Name = "txtContactoEmergencia";
             this.txtContactoEmergencia.Size = new System.Drawing.Size(100, 20);
             this.txtContactoEmergencia.TabIndex = 2;
             // 
             // txtNumeroEmergencia
             // 
-            this.txtNumeroEmergencia.Location = new System.Drawing.Point(372, 279);
+            this.txtNumeroEmergencia.Location = new System.Drawing.Point(333, 168);
             this.txtNumeroEmergencia.Name = "txtNumeroEmergencia";
             this.txtNumeroEmergencia.Size = new System.Drawing.Size(100, 20);
             this.txtNumeroEmergencia.TabIndex = 3;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(618, 276);
+            this.btnGuardar.Location = new System.Drawing.Point(579, 165);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 4;
@@ -84,7 +84,7 @@
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(72, 127);
+            this.lbNombre.Location = new System.Drawing.Point(33, 16);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(44, 13);
             this.lbNombre.TabIndex = 5;
@@ -92,28 +92,28 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(75, 144);
+            this.txtNombre.Location = new System.Drawing.Point(36, 33);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 6;
             // 
             // txtApellidoPaterno
             // 
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(75, 188);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(36, 77);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(100, 20);
             this.txtApellidoPaterno.TabIndex = 7;
             // 
             // txtApellidoMaterno
             // 
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(75, 232);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(36, 121);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(100, 20);
             this.txtApellidoMaterno.TabIndex = 8;
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(75, 279);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(36, 168);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaNacimiento.TabIndex = 9;
@@ -121,7 +121,7 @@
             // cbGenero
             // 
             this.cbGenero.FormattingEnabled = true;
-            this.cbGenero.Location = new System.Drawing.Point(75, 322);
+            this.cbGenero.Location = new System.Drawing.Point(36, 211);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(121, 21);
             this.cbGenero.TabIndex = 10;
@@ -129,14 +129,14 @@
             // cbTipoSangre
             // 
             this.cbTipoSangre.FormattingEnabled = true;
-            this.cbTipoSangre.Location = new System.Drawing.Point(372, 144);
+            this.cbTipoSangre.Location = new System.Drawing.Point(333, 33);
             this.cbTipoSangre.Name = "cbTipoSangre";
             this.cbTipoSangre.Size = new System.Drawing.Size(121, 21);
             this.cbTipoSangre.TabIndex = 11;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(618, 232);
+            this.btnLimpiar.Location = new System.Drawing.Point(579, 121);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 12;
@@ -147,7 +147,7 @@
             // lbApellidoPaterno
             // 
             this.lbApellidoPaterno.AutoSize = true;
-            this.lbApellidoPaterno.Location = new System.Drawing.Point(75, 171);
+            this.lbApellidoPaterno.Location = new System.Drawing.Point(36, 60);
             this.lbApellidoPaterno.Name = "lbApellidoPaterno";
             this.lbApellidoPaterno.Size = new System.Drawing.Size(84, 13);
             this.lbApellidoPaterno.TabIndex = 13;
@@ -156,7 +156,7 @@
             // lbApellidoMaterno
             // 
             this.lbApellidoMaterno.AutoSize = true;
-            this.lbApellidoMaterno.Location = new System.Drawing.Point(75, 215);
+            this.lbApellidoMaterno.Location = new System.Drawing.Point(36, 104);
             this.lbApellidoMaterno.Name = "lbApellidoMaterno";
             this.lbApellidoMaterno.Size = new System.Drawing.Size(86, 13);
             this.lbApellidoMaterno.TabIndex = 14;
@@ -165,7 +165,7 @@
             // lbFechaNacimiento
             // 
             this.lbFechaNacimiento.AutoSize = true;
-            this.lbFechaNacimiento.Location = new System.Drawing.Point(75, 259);
+            this.lbFechaNacimiento.Location = new System.Drawing.Point(36, 148);
             this.lbFechaNacimiento.Name = "lbFechaNacimiento";
             this.lbFechaNacimiento.Size = new System.Drawing.Size(93, 13);
             this.lbFechaNacimiento.TabIndex = 15;
@@ -174,7 +174,7 @@
             // lbGenero
             // 
             this.lbGenero.AutoSize = true;
-            this.lbGenero.Location = new System.Drawing.Point(75, 306);
+            this.lbGenero.Location = new System.Drawing.Point(36, 195);
             this.lbGenero.Name = "lbGenero";
             this.lbGenero.Size = new System.Drawing.Size(42, 13);
             this.lbGenero.TabIndex = 16;
@@ -183,7 +183,7 @@
             // lbTipoSangre
             // 
             this.lbTipoSangre.AutoSize = true;
-            this.lbTipoSangre.Location = new System.Drawing.Point(372, 126);
+            this.lbTipoSangre.Location = new System.Drawing.Point(333, 15);
             this.lbTipoSangre.Name = "lbTipoSangre";
             this.lbTipoSangre.Size = new System.Drawing.Size(65, 13);
             this.lbTipoSangre.TabIndex = 17;
@@ -192,7 +192,7 @@
             // lbAlergias
             // 
             this.lbAlergias.AutoSize = true;
-            this.lbAlergias.Location = new System.Drawing.Point(372, 171);
+            this.lbAlergias.Location = new System.Drawing.Point(333, 60);
             this.lbAlergias.Name = "lbAlergias";
             this.lbAlergias.Size = new System.Drawing.Size(44, 13);
             this.lbAlergias.TabIndex = 18;
@@ -201,7 +201,7 @@
             // lbContactoEmergencia
             // 
             this.lbContactoEmergencia.AutoSize = true;
-            this.lbContactoEmergencia.Location = new System.Drawing.Point(372, 215);
+            this.lbContactoEmergencia.Location = new System.Drawing.Point(333, 104);
             this.lbContactoEmergencia.Name = "lbContactoEmergencia";
             this.lbContactoEmergencia.Size = new System.Drawing.Size(109, 13);
             this.lbContactoEmergencia.TabIndex = 19;
@@ -210,7 +210,7 @@
             // NumeroEmergencia
             // 
             this.NumeroEmergencia.AutoSize = true;
-            this.NumeroEmergencia.Location = new System.Drawing.Point(372, 259);
+            this.NumeroEmergencia.Location = new System.Drawing.Point(333, 148);
             this.NumeroEmergencia.Name = "NumeroEmergencia";
             this.NumeroEmergencia.Size = new System.Drawing.Size(103, 13);
             this.NumeroEmergencia.TabIndex = 20;
