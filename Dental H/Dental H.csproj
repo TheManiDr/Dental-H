@@ -95,6 +95,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\PacienteCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PacienteCard.Designer.cs">
+      <DependentUpon>PacienteCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\PacienteController.cs" />
     <Compile Include="DAO\PacienteDAO.cs" />
@@ -126,6 +132,15 @@
     <Compile Include="View\PacienteForm.Designer.cs">
       <DependentUpon>PacienteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PacienteListaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PacienteListaForm.Designer.cs">
+      <DependentUpon>PacienteListaForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Components\PacienteCard.resx">
+      <DependentUpon>PacienteCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PacienteForm.resx">
       <DependentUpon>PacienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PacienteListaForm.resx">
+      <DependentUpon>PacienteListaForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

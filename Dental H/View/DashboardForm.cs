@@ -20,12 +20,6 @@ namespace Dental_H.View
         public DashboardForm()
         {
             InitializeComponent();
-            MessageBox.Show("Bienvenido " + Sesion.UsuarioActual.NombreUsuario);
-            MessageBox.Show("Rol: " + Sesion.UsuarioActual.IdRol);
-            if (Sesion.UsuarioActual.IdRol != (int)Rol.ADMINISTRADOR)
-            {
-                btnUsuarios.Enabled = false;
-            }
         }
 
 
@@ -37,8 +31,8 @@ namespace Dental_H.View
 
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            PacienteForm pacientes = new PacienteForm();
-            pacientes.Show();
+            PacienteListaForm pacientelista = new PacienteListaForm();
+            pacientelista.Show();
             this.Hide();
         }
     }
