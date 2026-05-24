@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dental_H.Util;
 using Dental_H.Enums;
+using Dental_H.Controller;
+using Dental_H.Model;
+using Dental_H.View;
 
 namespace Dental_H.View
 {
@@ -30,6 +33,13 @@ namespace Dental_H.View
         private void DashboardForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPacientes_Click(object sender, EventArgs e)
+        {
+            PacienteForm pacientes = new PacienteForm();
+            pacientes.Show();
+            this.Hide();
         }
     }
 }

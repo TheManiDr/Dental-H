@@ -73,13 +73,11 @@ namespace Dental_H.DAO
                 int filasAfectadas =
                     comando.ExecuteNonQuery();
 
-                conexion.Close();
 
                 return filasAfectadas > 0;
             }
             catch
             {
-                conexion.Close();
 
                 return false;
             }

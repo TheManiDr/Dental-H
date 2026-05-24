@@ -78,13 +78,11 @@ namespace Dental_H.DAO
                         comando.ExecuteScalar()
                     );
 
-                conexion.Close();
 
                 return idGenerado;
             }
             catch
             {
-                conexion.Close();
 
                 return -1;
             }

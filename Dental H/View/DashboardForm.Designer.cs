@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnPacientes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUsuarios
@@ -40,11 +41,22 @@
             this.btnUsuarios.Text = "button1";
             this.btnUsuarios.UseVisualStyleBackColor = true;
             // 
+            // btnPacientes
+            // 
+            this.btnPacientes.Location = new System.Drawing.Point(370, 153);
+            this.btnPacientes.Name = "btnPacientes";
+            this.btnPacientes.Size = new System.Drawing.Size(75, 23);
+            this.btnPacientes.TabIndex = 1;
+            this.btnPacientes.Text = "Pacientes";
+            this.btnPacientes.UseVisualStyleBackColor = true;
+            this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPacientes);
             this.Controls.Add(this.btnUsuarios);
             this.Name = "DashboardForm";
             this.Text = "DashboardForm";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button btnPacientes;
     }
 }

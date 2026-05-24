@@ -22,33 +22,101 @@ namespace Dental_H.View
 
         private void PacienteForm_Load(object sender, EventArgs e)
         {
+            cbGenero.Items.Add("Masculino");
+            cbGenero.Items.Add("Femenino");
 
+            cbTipoSangre.Items.Add("A+");
+            cbTipoSangre.Items.Add("A-");
+
+            cbTipoSangre.Items.Add("B+");
+            cbTipoSangre.Items.Add("B-");
+
+            cbTipoSangre.Items.Add("AB+");
+            cbTipoSangre.Items.Add("AB-");
+
+            cbTipoSangre.Items.Add("O+");
+            cbTipoSangre.Items.Add("O-");
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Paciente paciente = new Paciente();
 
-            paciente.TipoSangre = txtTipoSangre.Text;
+            paciente.Nombre =
+                txtNombre.Text;
 
-            paciente.Alergias = txtAlergias.Text;
+            paciente.ApellidoPaterno =
+                txtApellidoPaterno.Text;
 
-            paciente.NombreEmergencia = txtNombreEmergencia.Text;
+            paciente.ApellidoMaterno =
+                txtApellidoMaterno.Text;
 
-            paciente.NumeroEmergencia = txtNumeroEmergencia.Text;
+            paciente.FechaNacimiento =
+                dtpFechaNacimiento.Value;
 
-            PacienteController controller = new PacienteController();
+            paciente.Genero =
+                cbGenero.Text;
 
-            bool registrado = controller.RegistrarPaciente(paciente);
+            paciente.TipoSangre =
+                cbTipoSangre.Text;
+
+            paciente.Alergias =
+                txtAlergias.Text;
+
+            paciente.ContactoEmergencia =
+                txtContactoEmergencia.Text;
+
+            paciente.NumeroEmergencia =
+                txtNumeroEmergencia.Text;
+
+            PacienteController controller =
+                new PacienteController();
+
+            bool registrado =
+                controller.RegistrarPaciente(
+                    paciente
+                );
 
             if (registrado)
             {
-                MessageBox.Show("Paciente registrado");
+                MessageBox.Show(
+                    "Paciente registrado correctamente"
+                );
+
+                LimpiarFormulario();
             }
             else
             {
-                MessageBox.Show("Error al registrar");
+                MessageBox.Show(
+                    "Error al registrar paciente"
+                );
             }
+        }
+        private void LimpiarFormulario()
+        {
+            txtNombre.Clear();
+
+            txtApellidoPaterno.Clear();
+
+            txtApellidoMaterno.Clear();
+
+            txtAlergias.Clear();
+
+            txtContactoEmergencia.Clear();
+
+            txtNumeroEmergencia.Clear();
+
+            cbGenero.SelectedIndex = -1;
+
+            cbTipoSangre.SelectedIndex = -1;
+
+            dtpFechaNacimiento.Value =
+                DateTime.Now;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
         }
     }
 }
