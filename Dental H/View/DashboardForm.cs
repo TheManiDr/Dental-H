@@ -25,6 +25,8 @@ namespace Dental_H.View
             }
         }
 
+
+
         private void DashboardForm_Load(object sender, EventArgs e)
         {
 
