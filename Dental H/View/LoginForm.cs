@@ -20,7 +20,7 @@ namespace Dental_H
         public LoginForm()
         {
             InitializeComponent();
-
+        }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
