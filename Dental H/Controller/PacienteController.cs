@@ -75,5 +75,9 @@ namespace Dental_H.Controller
                 conexion.Close();
             }
         }
+        public List<Paciente> ObtenerPacientes()
+        {
+            return pacienteDAO.ObtenerPacientes();
+        }
     }
 }

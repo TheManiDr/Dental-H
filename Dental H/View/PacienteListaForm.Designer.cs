@@ -71,7 +71,7 @@
             this.flpPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpPacientes.Location = new System.Drawing.Point(0, 80);
             this.flpPacientes.Name = "flpPacientes";
-            this.flpPacientes.Padding = new System.Windows.Forms.Padding(20);
+            this.flpPacientes.Padding = new System.Windows.Forms.Padding(25);
             this.flpPacientes.Size = new System.Drawing.Size(800, 370);
             this.flpPacientes.TabIndex = 1;
             // 
