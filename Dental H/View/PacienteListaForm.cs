@@ -51,11 +51,7 @@ namespace Dental_H.View
                 card.TipoSangre =
                     paciente.TipoSangre;
 
-                card.EdadPaciente =
-                    CalcularEdad(
-                        paciente.FechaNacimiento
-                    ) + " años";
-
+                card.EdadPaciente = CalcularEdad(paciente.FechaNacimiento) + " años";
                 flpPacientes.Controls.Add(card);
             }
         }
@@ -68,9 +64,7 @@ namespace Dental_H.View
         }
         private int CalcularEdad(DateTime fechaNacimiento)
         {
-            int edad =
-                DateTime.Now.Year -
-                fechaNacimiento.Year;
+            int edad = DateTime.Now.Year - fechaNacimiento.Year;
 
             if (DateTime.Now < fechaNacimiento.AddYears(edad))
             {
