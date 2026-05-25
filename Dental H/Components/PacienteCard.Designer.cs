@@ -85,6 +85,7 @@
             this.btnVerPerfil.TabIndex = 4;
             this.btnVerPerfil.Text = "Ver Expediente";
             this.btnVerPerfil.UseVisualStyleBackColor = false;
+            this.btnVerPerfil.Click += new System.EventHandler(this.btnVerPerfil_Click);
             // 
             // PacienteCard
             // 

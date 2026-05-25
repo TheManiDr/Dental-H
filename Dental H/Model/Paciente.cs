@@ -16,6 +16,16 @@ namespace Dental_H.Model
 
         public string NumeroEmergencia { get; set; }
 
+        public string Calle { get; set; }
+
+        public string Ciudad { get; set; }
+
+        public string Estado { get; set; }
+
+        public string CodigoPostal { get; set; }
+
+        public string Telefono { get; set; }
+
         public Paciente()
         {
 
