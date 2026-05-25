@@ -51,6 +51,8 @@ namespace Dental_H.View
                 card.TipoSangre =
                     paciente.TipoSangre;
 
+                card.IdPaciente = paciente.IdPersona;
+
                 card.EdadPaciente = CalcularEdad(paciente.FechaNacimiento) + " años";
                 flpPacientes.Controls.Add(card);
             }

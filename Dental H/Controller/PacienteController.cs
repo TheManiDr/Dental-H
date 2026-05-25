@@ -79,5 +79,9 @@ namespace Dental_H.Controller
         {
             return pacienteDAO.ObtenerPacientes();
         }
+        public Paciente ObtenerPacientePorId(int idPaciente)
+        {
+            return pacienteDAO.ObtenerPacientePorId(idPaciente);
+        }
     }
 }
