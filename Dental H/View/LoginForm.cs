@@ -20,7 +20,8 @@ namespace Dental_H
         public LoginForm()
         {
             InitializeComponent();
-        }
+        } 
+
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -52,6 +53,11 @@ namespace Dental_H
             {
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
+        }
+
+        private void panelLogin_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
