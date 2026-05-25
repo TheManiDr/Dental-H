@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -43,26 +44,28 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.txtUsuario.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtUsuario.Location = new System.Drawing.Point(131, 456);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(236, 22);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.Text = "Usuario";
             // 
             // txtContraseña
             // 
-            this.txtContraseña.BackColor = System.Drawing.SystemColors.Highlight;
+            this.txtContraseña.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtContraseña.Location = new System.Drawing.Point(131, 510);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(236, 22);
             this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.Text = "Contraseña";
             // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(192, 556);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(133, 28);
             this.btnLogin.TabIndex = 2;
@@ -87,6 +90,7 @@
             // 
             // picLogo
             // 
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
             this.picLogo.Location = new System.Drawing.Point(116, 91);
             this.picLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picLogo.Name = "picLogo";
@@ -110,6 +114,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(100, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
@@ -129,7 +134,7 @@
             this.Controls.Add(this.panelLogin);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1200, 800);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

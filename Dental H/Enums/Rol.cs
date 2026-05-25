@@ -8,7 +8,7 @@ namespace Dental_H.Enums
 {
     public enum Rol
     {
-        ADMINISTRADOR = 1,
+        ADMINISTRADOR = 1 ,
         ODONTOLOGO = 2,
         ASISTENTE = 3
     }
