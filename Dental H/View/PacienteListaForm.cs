@@ -22,14 +22,42 @@ namespace Dental_H.View
         {
             InitializeComponent();
         }
-
         private void PacienteListaForm_Load(object sender, EventArgs e)
         {
-            PacienteCard card = new PacienteCard();
-            card.NombrePaciente = "Manuel Viveros";
-            card.EdadPaciente = "24 años";
-            card.TipoSangre = "O+";
-            flpPacientes.Controls.Add(card);
+            CargarPacientes();
+        }
+
+
+
+        private void CargarPacientes()
+        {
+            flpPacientes.Controls.Clear();
+
+            PacienteController controller =
+                new PacienteController();
+
+            List<Paciente> pacientes =
+                controller.ObtenerPacientes();
+
+            foreach (Paciente paciente in pacientes)
+            {
+                PacienteCard card =
+                    new PacienteCard();
+
+                card.NombrePaciente =
+                    paciente.Nombre + " " +
+                    paciente.ApellidoPaterno;
+
+                card.TipoSangre =
+                    paciente.TipoSangre;
+
+                card.EdadPaciente =
+                    CalcularEdad(
+                        paciente.FechaNacimiento
+                    ) + " años";
+
+                flpPacientes.Controls.Add(card);
+            }
         }
 
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
@@ -37,6 +65,19 @@ namespace Dental_H.View
             PacienteForm pacientefrom = new PacienteForm();
             pacientefrom.Show();
             this.Hide();
+        }
+        private int CalcularEdad(DateTime fechaNacimiento)
+        {
+            int edad =
+                DateTime.Now.Year -
+                fechaNacimiento.Year;
+
+            if (DateTime.Now < fechaNacimiento.AddYears(edad))
+            {
+                edad--;
+            }
+
+            return edad;
         }
     }
 }

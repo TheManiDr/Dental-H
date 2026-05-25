@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Dental_H.Model;
+using Dental_H.Util;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using Dental_H.Model;
-using Dental_H.Util;
-using MySql.Data.MySqlClient;
 
 namespace Dental_H.DAO
 {
@@ -81,6 +80,82 @@ namespace Dental_H.DAO
 
                 return false;
             }
+        }
+        public List<Paciente> ObtenerPacientes()
+        {
+            List<Paciente> lista =
+                new List<Paciente>();
+
+            MySqlConnection conexion =
+                Conexion.obtenerConexion();
+
+            try
+            {
+                conexion.Open();
+
+                string consulta =
+                @"SELECT
+            p.id_persona,
+            p.nombre,
+            p.apellido_paterno,
+            p.apellido_materno,
+            p.fecha_nacimiento,
+            p.genero,
+            pa.tipo_sangre,
+            pa.alergias,
+            pa.contacto_emergencia,
+            pa.numero_emergencia
+        FROM Persona p
+        INNER JOIN Paciente pa
+            ON p.id_persona = pa.id_persona";
+
+                MySqlCommand comando =
+                    new MySqlCommand(
+                        consulta,
+                        conexion);
+
+                MySqlDataReader reader =
+                    comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Paciente paciente =
+                        new Paciente();
+
+                    paciente.IdPersona =
+                        Convert.ToInt32(
+                            reader["id_persona"]);
+
+                    paciente.Nombre =
+                        reader["nombre"].ToString();
+
+                    paciente.ApellidoPaterno =
+                        reader["apellido_paterno"].ToString();
+
+                    paciente.ApellidoMaterno =
+                        reader["apellido_materno"].ToString();
+
+                    paciente.TipoSangre =
+                        reader["tipo_sangre"].ToString();
+
+                    paciente.Alergias =
+                        reader["alergias"].ToString();
+
+                    lista.Add(paciente);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return lista;
         }
     }
 }
