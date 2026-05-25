@@ -82,7 +82,7 @@ namespace Dental_H.DAO
                 return false;
             }
         }
-        public List<Paciente> ObtenerPacientes(int idPaciente)
+        public List<Paciente> ObtenerPacientes()
         {
             List<Paciente> lista =
                 new List<Paciente>();
@@ -164,97 +164,112 @@ namespace Dental_H.DAO
                 conexion.Open();
 
                 string consulta = @"
-                SELECT
-                    p.id_persona,
-                    p.nombre,
-                    p.apellido_paterno,
-                    p.apellido_materno,
-                    p.fecha_nacimiento,
-                    p.genero,
+        SELECT
+            p.id_persona,
+            p.nombre,
+            p.apellido_paterno,
+            p.apellido_materno,
+            p.fecha_nacimiento,
+            p.genero,
 
-                    pa.tipo_sangre,
-                    pa.alergias,
-                    pa.contacto_emergencia,
-                    pa.numero_emergencia,
+            pa.tipo_sangre,
+            pa.alergias,
+            pa.contacto_emergencia,
+            pa.numero_emergencia,
 
-                    d.calle,
-                    d.ciudad,
-                    d.estado,
-                    d.codigo_postal,
+            d.calle,
+            d.ciudad,
+            d.estado,
+            d.codigo_postal,
 
-                    t.telefono
+            t.telefono
 
-                FROM Persona p
+        FROM Persona p
 
-                INNER JOIN Paciente pa
-                ON p.id_persona = pa.id_persona
+        INNER JOIN Paciente pa
+            ON p.id_persona = pa.id_persona
 
-                LEFT JOIN DireccionPersona d
-                ON p.id_persona = d.id_persona
+        LEFT JOIN DireccionPersona d
+            ON p.id_persona = d.id_persona
 
-                LEFT JOIN TelefonoPersona t
-                ON p.id_persona = t.id_persona
+        LEFT JOIN TelefonoPersona t
+            ON p.id_persona = t.id_persona
 
-                WHERE p.id_persona = @idPaciente";
+        WHERE p.id_persona = @idPaciente";
+
+                MySqlCommand comando =
+                    new MySqlCommand(consulta, conexion);
+
+                comando.Parameters.AddWithValue(
+                    "@idPaciente",
+                    idPaciente);
+
+                MySqlDataReader reader =
+                    comando.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    paciente = new Paciente();
+
+                    paciente.IdPersona =
+                        Convert.ToInt32(reader["id_persona"]);
+
+                    paciente.Nombre =
+                        reader["nombre"].ToString();
+
+                    paciente.ApellidoPaterno =
+                        reader["apellido_paterno"].ToString();
+
+                    paciente.ApellidoMaterno =
+                        reader["apellido_materno"].ToString();
+
+                    paciente.FechaNacimiento =
+                        Convert.ToDateTime(reader["fecha_nacimiento"]);
+
+                    paciente.Genero =
+                        reader["genero"].ToString();
+
+                    paciente.TipoSangre =
+                        reader["tipo_sangre"].ToString();
+
+                    paciente.Alergias =
+                        reader["alergias"].ToString();
+
+                    paciente.ContactoEmergencia =
+                        reader["contacto_emergencia"].ToString();
+
+                    paciente.NumeroEmergencia =
+                        reader["numero_emergencia"].ToString();
+
+                    paciente.Calle =
+                        reader["calle"].ToString();
+
+                    paciente.Ciudad =
+                        reader["ciudad"].ToString();
+
+                    paciente.Estado =
+                        reader["estado"].ToString();
+
+                    paciente.CodigoPostal =
+                        reader["codigo_postal"].ToString();
+
+                    paciente.Telefono =
+                        reader["telefono"].ToString();
+                }
+
+                reader.Close();
+
+                return paciente;
             }
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-            comando.Parameters.AddWithValue("@idPaciente", idPaciente);
-
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            if (reader.Read())
+            catch (Exception ex)
             {
-                paciente = new Paciente();
-
-                paciente.IdPersona =
-                    Convert.ToInt32(reader["id_persona"]);
-
-                paciente.Nombre =
-                    reader["nombre"].ToString();
-
-                paciente.ApellidoPaterno =
-                    reader["apellido_paterno"].ToString();
-
-                paciente.ApellidoMaterno =
-                    reader["apellido_materno"].ToString();
-
-                paciente.FechaNacimiento =
-                    Convert.ToDateTime(reader["fecha_nacimiento"]);
-
-                paciente.Genero =
-                    reader["genero"].ToString();
-
-                paciente.TipoSangre =
-                    reader["tipo_sangre"].ToString();
-
-                paciente.Alergias =
-                    reader["alergias"].ToString();
-
-                paciente.NombreEmergencia =
-                    reader["contacto_emergencia"].ToString();
-
-                paciente.NumeroEmergencia =
-                    reader["numero_emergencia"].ToString();
-
-                paciente.Calle =
-                    reader["calle"].ToString();
-
-                paciente.Ciudad =
-                    reader["ciudad"].ToString();
-
-                paciente.Estado =
-                    reader["estado"].ToString();
-
-                paciente.CodigoPostal =
-                    reader["codigo_postal"].ToString();
-
-                paciente.Telefono =
-                    reader["telefono"].ToString();
+                MessageBox.Show(ex.Message);
+                return null;
             }
-            return paciente;
-
-
+            finally
+            {
+                conexion.Close();
+            }
         }
 
     }

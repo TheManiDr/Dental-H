@@ -20,9 +20,9 @@ namespace Dental_H.View
         {
             InitializeComponent();
             this.idPaciente = idPaciente;
-            CargarDatosPaciente();
+            CargarPaciente();
         }
-        private void CargarDatosPaciente()
+        private void CargarPaciente()
         {
             PacienteController controller =
                 new PacienteController();
@@ -35,8 +35,45 @@ namespace Dental_H.View
                 MessageBox.Show("Paciente no encontrado");
                 return;
             }
-            MessageBox.Show(paciente.Nombre + " " + paciente.ApellidoPaterno);
+
+            txtNombre.Text = paciente.Nombre;
+            txtApellidoPaterno.Text = paciente.ApellidoPaterno;
+            txtApellidoMaterno.Text = paciente.ApellidoMaterno;
+
+            dtpFechaNacimiento.Value =
+                paciente.FechaNacimiento;
+
+            cmbGenero.Text =
+                paciente.Genero;
+
+            cmbTipoSangre.Text =
+                paciente.TipoSangre;
+
+            txtAlergias.Text =
+                paciente.Alergias;
+
+            txtContactoEmergencia.Text =
+                paciente.ContactoEmergencia;
+
+            txtNumeroEmergencia.Text =
+                paciente.NumeroEmergencia;
+
+            txtCalle.Text =
+                paciente.Calle;
+
+            txtCiudad.Text =
+                paciente.Ciudad;
+
+            txtEstado.Text =
+                paciente.Estado;
+
+            txtCodigoPostal.Text =
+                paciente.CodigoPostal;
+
+            txtTelefono.Text =
+                paciente.Telefono;
         }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
