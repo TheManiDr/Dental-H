@@ -120,27 +120,21 @@ namespace Dental_H.DAO
 
                 while (reader.Read())
                 {
-                    Paciente paciente =
-                        new Paciente();
+                    Paciente paciente = new Paciente();
 
-                    paciente.IdPersona =
-                        Convert.ToInt32(
-                            reader["id_persona"]);
+                    paciente.IdPersona = Convert.ToInt32(reader["id_persona"]);
 
-                    paciente.Nombre =
-                        reader["nombre"].ToString();
+                    paciente.Nombre = reader["nombre"].ToString();
 
-                    paciente.ApellidoPaterno =
-                        reader["apellido_paterno"].ToString();
+                    paciente.ApellidoPaterno = reader["apellido_paterno"].ToString();
 
-                    paciente.ApellidoMaterno =
-                        reader["apellido_materno"].ToString();
+                    paciente.ApellidoMaterno = reader["apellido_materno"].ToString();
 
-                    paciente.TipoSangre =
-                        reader["tipo_sangre"].ToString();
+                    paciente.TipoSangre = reader["tipo_sangre"].ToString();
 
-                    paciente.Alergias =
-                        reader["alergias"].ToString();
+                    paciente.Alergias = reader["alergias"].ToString();
+
+                    paciente.FechaNacimiento = Convert.ToDateTime(reader["fecha_nacimiento"]);
 
                     lista.Add(paciente);
                 }
