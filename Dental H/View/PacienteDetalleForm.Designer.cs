@@ -32,7 +32,7 @@
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblNombrePaciente = new System.Windows.Forms.Label();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.picAvatarPaciente = new System.Windows.Forms.PictureBox();
             this.pnlTabs = new System.Windows.Forms.Panel();
             this.btnRadiografia = new System.Windows.Forms.Button();
             this.btnPlanesTratamientos = new System.Windows.Forms.Button();
@@ -76,7 +76,7 @@
             this.lblApellidoPaterno = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatarPaciente)).BeginInit();
             this.pnlTabs.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.pnlInfoBasica.SuspendLayout();
@@ -88,7 +88,7 @@
             this.pnlHeader.Controls.Add(this.lblEdad);
             this.pnlHeader.Controls.Add(this.lblPaciente);
             this.pnlHeader.Controls.Add(this.lblNombrePaciente);
-            this.pnlHeader.Controls.Add(this.pbFoto);
+            this.pnlHeader.Controls.Add(this.picAvatarPaciente);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
@@ -128,14 +128,14 @@
             this.lblNombrePaciente.TabIndex = 1;
             this.lblNombrePaciente.Text = "Nombre Paciente";
             // 
-            // pbFoto
+            // picAvatarPaciente
             // 
-            this.pbFoto.Location = new System.Drawing.Point(20, 20);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(80, 80);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto.TabIndex = 0;
-            this.pbFoto.TabStop = false;
+            this.picAvatarPaciente.Location = new System.Drawing.Point(20, 20);
+            this.picAvatarPaciente.Name = "picAvatarPaciente";
+            this.picAvatarPaciente.Size = new System.Drawing.Size(80, 80);
+            this.picAvatarPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatarPaciente.TabIndex = 0;
+            this.picAvatarPaciente.TabStop = false;
             // 
             // pnlTabs
             // 
@@ -567,7 +567,7 @@
             this.Text = "PacienteDetalleForm";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatarPaciente)).EndInit();
             this.pnlTabs.ResumeLayout(false);
             this.pnlContenido.ResumeLayout(false);
             this.pnlContenido.PerformLayout();
@@ -580,7 +580,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.PictureBox picAvatarPaciente;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblPaciente;
         private System.Windows.Forms.Label lblNombrePaciente;

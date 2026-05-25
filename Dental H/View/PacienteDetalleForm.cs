@@ -75,6 +75,17 @@ namespace Dental_H.View
 
             txtTelefono.Text =
                 paciente.Telefono;
+
+            if (paciente.Genero == "Masculino")
+            {
+                picAvatarPaciente.Image =
+                    Properties.Resources.avatar_hombre;
+            }
+            else
+            {
+                picAvatarPaciente.Image =
+                    Properties.Resources.avatar_mujer;
+            }
         }
         private int CalcularEdad(DateTime fechaNacimiento)
         {

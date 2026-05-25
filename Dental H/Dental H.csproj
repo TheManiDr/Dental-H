@@ -155,6 +155,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
@@ -186,18 +187,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\" />
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Recurso 1.png" />
-    <Content Include="Assets\Recurso 2.png" />
-    <Content Include="Assets\Recurso 3.png" />
-    <Content Include="Assets\Recurso 4.png" />
-    <Content Include="Assets\Recurso 5.png" />
-    <Content Include="Assets\Recurso 6.png" />
-    <Content Include="Assets\Recurso 7.png" />
-    <Content Include="Assets\Recurso 8.png" />
-    <Content Include="Assets\Recurso 9.png" />
+    <None Include="Resources\avatar_hombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar_mujer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

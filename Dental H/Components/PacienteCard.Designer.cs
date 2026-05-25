@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblTipoSangre = new System.Windows.Forms.Label();
             this.btnVerPerfil = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbFoto
+            // picAvatar
             // 
-            this.pbFoto.Location = new System.Drawing.Point(57, 24);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(120, 120);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto.TabIndex = 0;
-            this.pbFoto.TabStop = false;
+            this.picAvatar.Location = new System.Drawing.Point(57, 24);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(120, 120);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 0;
+            this.picAvatar.TabStop = false;
             // 
             // lblNombre
             // 
@@ -96,10 +96,10 @@
             this.Controls.Add(this.lblTipoSangre);
             this.Controls.Add(this.lblEdad);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.pbFoto);
+            this.Controls.Add(this.picAvatar);
             this.Name = "PacienteCard";
             this.Size = new System.Drawing.Size(250, 320);
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,7 +107,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblTipoSangre;

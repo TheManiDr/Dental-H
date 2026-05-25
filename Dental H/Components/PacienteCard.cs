@@ -15,6 +15,11 @@ namespace Dental_H.Components
     public partial class PacienteCard : UserControl
     {
         public int IdPaciente { get; set; }
+        public Image AvatarPaciente
+        {
+            get => picAvatar.Image;
+            set => picAvatar.Image = value;
+        }
         public string NombrePaciente
         {
             get => lblNombre.Text;

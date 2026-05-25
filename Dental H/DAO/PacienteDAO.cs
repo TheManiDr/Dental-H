@@ -130,6 +130,8 @@ namespace Dental_H.DAO
 
                     paciente.ApellidoMaterno = reader["apellido_materno"].ToString();
 
+                    paciente.Genero =reader["genero"].ToString();
+
                     paciente.TipoSangre = reader["tipo_sangre"].ToString();
 
                     paciente.Alergias = reader["alergias"].ToString();

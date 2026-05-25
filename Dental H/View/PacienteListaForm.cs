@@ -54,6 +54,17 @@ namespace Dental_H.View
                 card.IdPaciente = paciente.IdPersona;
 
                 card.EdadPaciente = CalcularEdad(paciente.FechaNacimiento) + " años";
+
+                if (paciente.Genero == "Masculino")
+                {
+                    card.AvatarPaciente =
+                        Properties.Resources.avatar_hombre;
+                }
+                else
+                {
+                    card.AvatarPaciente =
+                        Properties.Resources.avatar_mujer;
+                }
                 flpPacientes.Controls.Add(card);
             }
         }
