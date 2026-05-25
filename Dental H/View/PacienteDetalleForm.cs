@@ -35,6 +35,9 @@ namespace Dental_H.View
                 MessageBox.Show("Paciente no encontrado");
                 return;
             }
+            lblNombrePaciente.Text =paciente.Nombre + " " + paciente.ApellidoPaterno + " " + paciente.ApellidoMaterno;
+
+            lblEdad.Text = CalcularEdad(paciente.FechaNacimiento) + " años";
 
             txtNombre.Text = paciente.Nombre;
             txtApellidoPaterno.Text = paciente.ApellidoPaterno;
@@ -72,6 +75,17 @@ namespace Dental_H.View
 
             txtTelefono.Text =
                 paciente.Telefono;
+        }
+        private int CalcularEdad(DateTime fechaNacimiento)
+        {
+            int edad = DateTime.Now.Year - fechaNacimiento.Year;
+
+            if (DateTime.Now < fechaNacimiento.AddYears(edad))
+            {
+                edad--;
+            }
+
+            return edad;
         }
 
 

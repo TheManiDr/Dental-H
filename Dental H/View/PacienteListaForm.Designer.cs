@@ -43,7 +43,7 @@
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(800, 80);
+            this.panelSuperior.Size = new System.Drawing.Size(1280, 80);
             this.panelSuperior.TabIndex = 0;
             // 
             // btnNuevoPaciente
@@ -72,7 +72,7 @@
             this.flpPacientes.Location = new System.Drawing.Point(0, 80);
             this.flpPacientes.Name = "flpPacientes";
             this.flpPacientes.Padding = new System.Windows.Forms.Padding(25);
-            this.flpPacientes.Size = new System.Drawing.Size(800, 370);
+            this.flpPacientes.Size = new System.Drawing.Size(1280, 794);
             this.flpPacientes.TabIndex = 1;
             // 
             // PacienteListaForm
@@ -80,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1280, 874);
             this.Controls.Add(this.flpPacientes);
             this.Controls.Add(this.panelSuperior);
             this.Name = "PacienteListaForm";
