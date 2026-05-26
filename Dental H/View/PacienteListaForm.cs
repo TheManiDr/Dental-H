@@ -18,7 +18,7 @@ namespace Dental_H.View
 {
     public partial class PacienteListaForm : Form
     {
-        public PacienteListaForm()
+        public PacienteListaForm(DashboardForm dashboardForm)
         {
             InitializeComponent();
         }

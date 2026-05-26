@@ -40,10 +40,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.mySqlConnection1 = new MySql.Data.MySqlClient.MySqlConnection();
+            this.dgvCalendario = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPacientes
@@ -67,7 +69,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1902, 114);
+            this.panel1.Size = new System.Drawing.Size(1904, 114);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox1
@@ -82,12 +84,13 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dgvCalendario);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 114);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1902, 919);
+            this.panel2.Size = new System.Drawing.Size(1904, 927);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -100,10 +103,10 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1542, 0);
+            this.panel3.Location = new System.Drawing.Point(1544, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(360, 919);
+            this.panel3.Size = new System.Drawing.Size(360, 927);
             this.panel3.TabIndex = 2;
             // 
             // button5
@@ -169,11 +172,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dgvCalendario
+            // 
+            this.dgvCalendario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCalendario.Location = new System.Drawing.Point(317, 129);
+            this.dgvCalendario.Name = "dgvCalendario";
+            this.dgvCalendario.RowTemplate.Height = 24;
+            this.dgvCalendario.Size = new System.Drawing.Size(240, 150);
+            this.dgvCalendario.TabIndex = 3;
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -185,6 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCalendario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +214,6 @@
         private System.Windows.Forms.Button button5;
         private MySql.Data.MySqlClient.MySqlConnection mySqlConnection1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgvCalendario;
     }
 }

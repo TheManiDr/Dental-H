@@ -42,15 +42,17 @@
             this.panelSuperior.Controls.Add(this.txtBuscar);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1280, 80);
+            this.panelSuperior.Size = new System.Drawing.Size(1904, 98);
             this.panelSuperior.TabIndex = 0;
             // 
             // btnNuevoPaciente
             // 
-            this.btnNuevoPaciente.Location = new System.Drawing.Point(669, 27);
+            this.btnNuevoPaciente.Location = new System.Drawing.Point(892, 33);
+            this.btnNuevoPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevoPaciente.Name = "btnNuevoPaciente";
-            this.btnNuevoPaciente.Size = new System.Drawing.Size(107, 23);
+            this.btnNuevoPaciente.Size = new System.Drawing.Size(143, 28);
             this.btnNuevoPaciente.TabIndex = 1;
             this.btnNuevoPaciente.Text = "+ Nuevo Paciente";
             this.btnNuevoPaciente.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtBuscar.Location = new System.Drawing.Point(21, 27);
+            this.txtBuscar.Location = new System.Drawing.Point(28, 33);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(350, 29);
+            this.txtBuscar.Size = new System.Drawing.Size(465, 29);
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.Text = "Buscar paciente...";
             // 
@@ -69,20 +72,22 @@
             // 
             this.flpPacientes.AutoScroll = true;
             this.flpPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpPacientes.Location = new System.Drawing.Point(0, 80);
+            this.flpPacientes.Location = new System.Drawing.Point(0, 98);
+            this.flpPacientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flpPacientes.Name = "flpPacientes";
-            this.flpPacientes.Padding = new System.Windows.Forms.Padding(25);
-            this.flpPacientes.Size = new System.Drawing.Size(1280, 794);
+            this.flpPacientes.Padding = new System.Windows.Forms.Padding(33, 31, 33, 31);
+            this.flpPacientes.Size = new System.Drawing.Size(1904, 943);
             this.flpPacientes.TabIndex = 1;
             // 
             // PacienteListaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1280, 874);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.flpPacientes);
             this.Controls.Add(this.panelSuperior);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PacienteListaForm";
             this.Text = "Pacientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

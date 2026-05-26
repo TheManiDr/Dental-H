@@ -53,7 +53,7 @@
             // txtAlergias
             // 
             this.txtAlergias.Location = new System.Drawing.Point(444, 95);
-            this.txtAlergias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAlergias.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(132, 22);
             this.txtAlergias.TabIndex = 1;
@@ -61,7 +61,7 @@
             // txtContactoEmergencia
             // 
             this.txtContactoEmergencia.Location = new System.Drawing.Point(444, 149);
-            this.txtContactoEmergencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContactoEmergencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactoEmergencia.Name = "txtContactoEmergencia";
             this.txtContactoEmergencia.Size = new System.Drawing.Size(132, 22);
             this.txtContactoEmergencia.TabIndex = 2;
@@ -69,7 +69,7 @@
             // txtNumeroEmergencia
             // 
             this.txtNumeroEmergencia.Location = new System.Drawing.Point(444, 207);
-            this.txtNumeroEmergencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumeroEmergencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroEmergencia.Name = "txtNumeroEmergencia";
             this.txtNumeroEmergencia.Size = new System.Drawing.Size(132, 22);
             this.txtNumeroEmergencia.TabIndex = 3;
@@ -77,7 +77,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(772, 203);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
             this.btnGuardar.TabIndex = 4;
@@ -98,7 +98,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(48, 41);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 6;
@@ -106,7 +106,7 @@
             // txtApellidoPaterno
             // 
             this.txtApellidoPaterno.Location = new System.Drawing.Point(48, 95);
-            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(132, 22);
             this.txtApellidoPaterno.TabIndex = 7;
@@ -114,7 +114,7 @@
             // txtApellidoMaterno
             // 
             this.txtApellidoMaterno.Location = new System.Drawing.Point(48, 149);
-            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(132, 22);
             this.txtApellidoMaterno.TabIndex = 8;
@@ -122,7 +122,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(48, 207);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaNacimiento.TabIndex = 9;
@@ -131,7 +131,7 @@
             // 
             this.cbGenero.FormattingEnabled = true;
             this.cbGenero.Location = new System.Drawing.Point(48, 260);
-            this.cbGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(160, 24);
             this.cbGenero.TabIndex = 10;
@@ -140,7 +140,7 @@
             // 
             this.cbTipoSangre.FormattingEnabled = true;
             this.cbTipoSangre.Location = new System.Drawing.Point(444, 41);
-            this.cbTipoSangre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTipoSangre.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipoSangre.Name = "cbTipoSangre";
             this.cbTipoSangre.Size = new System.Drawing.Size(160, 24);
             this.cbTipoSangre.TabIndex = 11;
@@ -148,7 +148,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(772, 149);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
             this.btnLimpiar.TabIndex = 12;
@@ -240,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.NumeroEmergencia);
             this.Controls.Add(this.lbContactoEmergencia);
             this.Controls.Add(this.lbAlergias);
@@ -261,7 +261,7 @@
             this.Controls.Add(this.txtNumeroEmergencia);
             this.Controls.Add(this.txtContactoEmergencia);
             this.Controls.Add(this.txtAlergias);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PacienteForm";
             this.Text = "PacienteForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
