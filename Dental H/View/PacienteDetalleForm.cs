@@ -16,12 +16,18 @@ namespace Dental_H.View
     {
         private int idPaciente;
 
-        public PacienteDetalleForm(int idPaciente)
+        // 1. VARIABLE GLOBAL PARA RECORDAR LA VENTANA ANTERIOR
+        private Form _ventanaAnterior;
+
+        // 2. CONSTRUCTOR MODIFICADO (Ahora recibe el ID del paciente Y la ventana de origen)
+        public PacienteDetalleForm(int idPaciente, Form anterior)
         {
             InitializeComponent();
             this.idPaciente = idPaciente;
+            this._ventanaAnterior = anterior; // Guardamos la lista de pacientes en memoria
             CargarPaciente();
         }
+
         private void CargarPaciente()
         {
             PacienteController controller =
@@ -35,7 +41,7 @@ namespace Dental_H.View
                 MessageBox.Show("Paciente no encontrado");
                 return;
             }
-            lblNombrePaciente.Text =paciente.Nombre + " " + paciente.ApellidoPaterno + " " + paciente.ApellidoMaterno;
+            lblNombrePaciente.Text = paciente.Nombre + " " + paciente.ApellidoPaterno + " " + paciente.ApellidoMaterno;
 
             lblEdad.Text = CalcularEdad(paciente.FechaNacimiento) + " años";
 
@@ -87,6 +93,7 @@ namespace Dental_H.View
                     Properties.Resources.avatar_mujer;
             }
         }
+
         private int CalcularEdad(DateTime fechaNacimiento)
         {
             int edad = DateTime.Now.Year - fechaNacimiento.Year;
@@ -99,45 +106,27 @@ namespace Dental_H.View
             return edad;
         }
 
-
-        private void label2_Click(object sender, EventArgs e)
+        // ============================================================
+        // 3. EVENTO DEL BOTÓN DE REGRESO (Usando tu método existente)
+        // ============================================================
+        private void back2_Click(object sender, EventArgs e)
         {
-
+            if (this._ventanaAnterior != null)
+            {
+                this._ventanaAnterior.Show(); // Volvemos a mostrar la lista de pacientes
+                this.Close();                 // Cerramos esta vista detallada
+            }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        // Métodos vacíos del diseñador preservados por seguridad
+        private void label2_Click(object sender, EventArgs e) { }
+        private void label3_Click(object sender, EventArgs e) { }
+        private void label6_Click(object sender, EventArgs e) { }
+        private void label9_Click(object sender, EventArgs e) { }
+        private void label14_Click(object sender, EventArgs e) { }
+        private void label13_Click(object sender, EventArgs e) { }
+        private void textBox2_TextChanged(object sender, EventArgs e) { }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+        private void pnlHeader_Paint(object sender, PaintEventArgs e) { }
     }
 }

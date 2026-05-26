@@ -18,52 +18,41 @@ namespace Dental_H.View
 {
     public partial class PacienteListaForm : Form
     {
-        public PacienteListaForm(DashboardForm dashboardForm)
+        private Form _dashboardAnterior;
+
+        public PacienteListaForm(Form dashboardForm)
         {
             InitializeComponent();
+            this._dashboardAnterior = dashboardForm;
         }
+
         private void PacienteListaForm_Load(object sender, EventArgs e)
         {
             CargarPacientes();
         }
 
-
-
         private void CargarPacientes()
         {
             flpPacientes.Controls.Clear();
-
-            PacienteController controller =
-                new PacienteController();
-
-            List<Paciente> pacientes =
-                controller.ObtenerPacientes();
+            PacienteController controller = new PacienteController();
+            List<Paciente> pacientes = controller.ObtenerPacientes();
 
             foreach (Paciente paciente in pacientes)
             {
-                PacienteCard card =
-                    new PacienteCard();
-
-                card.NombrePaciente =
-                    paciente.Nombre + " " +
-                    paciente.ApellidoPaterno;
-
-                card.TipoSangre =
-                    paciente.TipoSangre;
-
+                PacienteCard card = new PacienteCard();
+                card.NombrePaciente = paciente.Nombre + " " + paciente.ApellidoPaterno;
+                card.TipoSangre = paciente.TipoSangre;
                 card.IdPaciente = paciente.IdPersona;
-
                 card.EdadPaciente = CalcularEdad(paciente.FechaNacimiento) + " años";
+                card.Tag = this;
 
                 if (paciente.Genero == "Masculino")
                 {
-                    card.AvatarPaciente =
-                        Properties.Resources.avatar_hombre;
+                    card.AvatarPaciente = Properties.Resources.avatar_hombre;
                 }
                 else
                 {
-                    card.AvatarPaciente =
-                        Properties.Resources.avatar_mujer;
+                    card.AvatarPaciente = Properties.Resources.avatar_mujer;
                 }
                 flpPacientes.Controls.Add(card);
             }
@@ -71,20 +60,39 @@ namespace Dental_H.View
 
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
         {
-            PacienteForm pacientefrom = new PacienteForm();
+            PacienteForm pacientefrom = new PacienteForm(this);
             pacientefrom.Show();
             this.Hide();
         }
+
         private int CalcularEdad(DateTime fechaNacimiento)
         {
             int edad = DateTime.Now.Year - fechaNacimiento.Year;
-
             if (DateTime.Now < fechaNacimiento.AddYears(edad))
             {
                 edad--;
             }
-
             return edad;
+        }
+
+        // Método genérico de regreso
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            if (this._dashboardAnterior != null)
+            {
+                this._dashboardAnterior.Show();
+                this.Close();
+            }
+        }
+
+        private void flpPacientes_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        // SOLUCIÓN A LA CAPTURA 3: Este método DEBE existir porque el diseñador lo busca
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnVolver_Click(sender, e);
         }
     }
 }

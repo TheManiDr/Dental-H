@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.back2 = new System.Windows.Forms.Button();
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblNombrePaciente = new System.Windows.Forms.Label();
@@ -85,16 +86,28 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(156)))), ((int)(((byte)(232)))));
+            this.pnlHeader.Controls.Add(this.back2);
             this.pnlHeader.Controls.Add(this.lblEdad);
             this.pnlHeader.Controls.Add(this.lblPaciente);
             this.pnlHeader.Controls.Add(this.lblNombrePaciente);
             this.pnlHeader.Controls.Add(this.picAvatarPaciente);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1904, 148);
             this.pnlHeader.TabIndex = 0;
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
+            // 
+            // back2
+            // 
+            this.back2.Location = new System.Drawing.Point(1797, 43);
+            this.back2.Name = "back2";
+            this.back2.Size = new System.Drawing.Size(95, 50);
+            this.back2.TabIndex = 3;
+            this.back2.Text = "<";
+            this.back2.UseVisualStyleBackColor = true;
+            this.back2.Click += new System.EventHandler(this.back2_Click);
             // 
             // lblEdad
             // 
@@ -135,7 +148,7 @@
             // picAvatarPaciente
             // 
             this.picAvatarPaciente.Location = new System.Drawing.Point(27, 25);
-            this.picAvatarPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picAvatarPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.picAvatarPaciente.Name = "picAvatarPaciente";
             this.picAvatarPaciente.Size = new System.Drawing.Size(107, 98);
             this.picAvatarPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,7 +164,7 @@
             this.pnlTabs.Controls.Add(this.btnDatosPersonales);
             this.pnlTabs.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTabs.Location = new System.Drawing.Point(0, 148);
-            this.pnlTabs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTabs.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTabs.Name = "pnlTabs";
             this.pnlTabs.Size = new System.Drawing.Size(1904, 49);
             this.pnlTabs.TabIndex = 1;
@@ -163,7 +176,7 @@
             this.btnRadiografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRadiografia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnRadiografia.Location = new System.Drawing.Point(512, 9);
-            this.btnRadiografia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRadiografia.Margin = new System.Windows.Forms.Padding(4);
             this.btnRadiografia.Name = "btnRadiografia";
             this.btnRadiografia.Size = new System.Drawing.Size(100, 28);
             this.btnRadiografia.TabIndex = 3;
@@ -177,7 +190,7 @@
             this.btnPlanesTratamientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlanesTratamientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnPlanesTratamientos.Location = new System.Drawing.Point(329, 9);
-            this.btnPlanesTratamientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPlanesTratamientos.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlanesTratamientos.Name = "btnPlanesTratamientos";
             this.btnPlanesTratamientos.Size = new System.Drawing.Size(173, 28);
             this.btnPlanesTratamientos.TabIndex = 2;
@@ -191,7 +204,7 @@
             this.btnExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnExpediente.Location = new System.Drawing.Point(173, 9);
-            this.btnExpediente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExpediente.Margin = new System.Windows.Forms.Padding(4);
             this.btnExpediente.Name = "btnExpediente";
             this.btnExpediente.Size = new System.Drawing.Size(147, 28);
             this.btnExpediente.TabIndex = 1;
@@ -205,7 +218,7 @@
             this.btnDatosPersonales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDatosPersonales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnDatosPersonales.Location = new System.Drawing.Point(27, 9);
-            this.btnDatosPersonales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDatosPersonales.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatosPersonales.Name = "btnDatosPersonales";
             this.btnDatosPersonales.Size = new System.Drawing.Size(137, 28);
             this.btnDatosPersonales.TabIndex = 0;
@@ -242,7 +255,7 @@
             this.pnlContenido.Controls.Add(this.pnlInfoBasica);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 197);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(1904, 844);
             this.pnlContenido.TabIndex = 2;
@@ -260,7 +273,7 @@
             // txtNumeroEmergencia
             // 
             this.txtNumeroEmergencia.Location = new System.Drawing.Point(997, 505);
-            this.txtNumeroEmergencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumeroEmergencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroEmergencia.Name = "txtNumeroEmergencia";
             this.txtNumeroEmergencia.Size = new System.Drawing.Size(132, 22);
             this.txtNumeroEmergencia.TabIndex = 26;
@@ -280,7 +293,7 @@
             // txtContactoEmergencia
             // 
             this.txtContactoEmergencia.Location = new System.Drawing.Point(997, 443);
-            this.txtContactoEmergencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContactoEmergencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactoEmergencia.Name = "txtContactoEmergencia";
             this.txtContactoEmergencia.Size = new System.Drawing.Size(132, 22);
             this.txtContactoEmergencia.TabIndex = 24;
@@ -301,7 +314,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(997, 215);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(132, 22);
             this.txtCorreo.TabIndex = 22;
@@ -319,7 +332,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(997, 154);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(132, 22);
             this.txtTelefono.TabIndex = 20;
@@ -348,7 +361,7 @@
             // txtCodigoPostal
             // 
             this.txtCodigoPostal.Location = new System.Drawing.Point(568, 555);
-            this.txtCodigoPostal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoPostal.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(132, 22);
             this.txtCodigoPostal.TabIndex = 17;
@@ -367,7 +380,7 @@
             // txtEstado
             // 
             this.txtEstado.Location = new System.Drawing.Point(568, 491);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(132, 22);
             this.txtEstado.TabIndex = 15;
@@ -385,7 +398,7 @@
             // txtCiudad
             // 
             this.txtCiudad.Location = new System.Drawing.Point(568, 433);
-            this.txtCiudad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCiudad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(132, 22);
             this.txtCiudad.TabIndex = 13;
@@ -403,7 +416,7 @@
             // txtCalle
             // 
             this.txtCalle.Location = new System.Drawing.Point(568, 372);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCalle.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(132, 22);
             this.txtCalle.TabIndex = 11;
@@ -433,7 +446,7 @@
             // txtAlergias
             // 
             this.txtAlergias.Location = new System.Drawing.Point(564, 215);
-            this.txtAlergias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAlergias.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(132, 22);
             this.txtAlergias.TabIndex = 8;
@@ -451,7 +464,7 @@
             // cmbTipoSangre
             // 
             this.cmbTipoSangre.Location = new System.Drawing.Point(564, 154);
-            this.cmbTipoSangre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoSangre.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoSangre.Name = "cmbTipoSangre";
             this.cmbTipoSangre.Size = new System.Drawing.Size(132, 22);
             this.cmbTipoSangre.TabIndex = 6;
@@ -494,7 +507,7 @@
             this.pnlInfoBasica.Controls.Add(this.lblApellidoPaterno);
             this.pnlInfoBasica.Controls.Add(this.lblNombre);
             this.pnlInfoBasica.Location = new System.Drawing.Point(0, 0);
-            this.pnlInfoBasica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlInfoBasica.Margin = new System.Windows.Forms.Padding(4);
             this.pnlInfoBasica.Name = "pnlInfoBasica";
             this.pnlInfoBasica.Size = new System.Drawing.Size(533, 729);
             this.pnlInfoBasica.TabIndex = 0;
@@ -514,7 +527,7 @@
             // 
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(45, 409);
-            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(160, 24);
             this.cmbGenero.TabIndex = 3;
@@ -522,7 +535,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(45, 346);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaNacimiento.TabIndex = 2;
@@ -530,7 +543,7 @@
             // txtApellidoMaterno
             // 
             this.txtApellidoMaterno.Location = new System.Drawing.Point(45, 282);
-            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(132, 22);
             this.txtApellidoMaterno.TabIndex = 1;
@@ -538,7 +551,7 @@
             // txtApellidoPaterno
             // 
             this.txtApellidoPaterno.Location = new System.Drawing.Point(45, 214);
-            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(132, 22);
             this.txtApellidoPaterno.TabIndex = 1;
@@ -546,7 +559,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(45, 153);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 1;
@@ -610,7 +623,7 @@
             this.Controls.Add(this.pnlContenido);
             this.Controls.Add(this.pnlTabs);
             this.Controls.Add(this.pnlHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PacienteDetalleForm";
             this.Text = "PacienteDetalleForm";
             this.pnlHeader.ResumeLayout(false);
@@ -674,5 +687,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button back2;
     }
 }

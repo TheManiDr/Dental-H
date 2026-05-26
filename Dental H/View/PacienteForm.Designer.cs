@@ -48,11 +48,14 @@
             this.lbAlergias = new System.Windows.Forms.Label();
             this.lbContactoEmergencia = new System.Windows.Forms.Label();
             this.NumeroEmergencia = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.back = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtAlergias
             // 
-            this.txtAlergias.Location = new System.Drawing.Point(444, 95);
+            this.txtAlergias.Location = new System.Drawing.Point(442, 215);
             this.txtAlergias.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(132, 22);
@@ -60,7 +63,7 @@
             // 
             // txtContactoEmergencia
             // 
-            this.txtContactoEmergencia.Location = new System.Drawing.Point(444, 149);
+            this.txtContactoEmergencia.Location = new System.Drawing.Point(442, 269);
             this.txtContactoEmergencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactoEmergencia.Name = "txtContactoEmergencia";
             this.txtContactoEmergencia.Size = new System.Drawing.Size(132, 22);
@@ -68,7 +71,7 @@
             // 
             // txtNumeroEmergencia
             // 
-            this.txtNumeroEmergencia.Location = new System.Drawing.Point(444, 207);
+            this.txtNumeroEmergencia.Location = new System.Drawing.Point(442, 327);
             this.txtNumeroEmergencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroEmergencia.Name = "txtNumeroEmergencia";
             this.txtNumeroEmergencia.Size = new System.Drawing.Size(132, 22);
@@ -76,7 +79,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(772, 203);
+            this.btnGuardar.Location = new System.Drawing.Point(770, 323);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
@@ -88,7 +91,7 @@
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(44, 20);
+            this.lbNombre.Location = new System.Drawing.Point(42, 140);
             this.lbNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(56, 16);
@@ -97,7 +100,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(48, 41);
+            this.txtNombre.Location = new System.Drawing.Point(46, 161);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
@@ -105,7 +108,7 @@
             // 
             // txtApellidoPaterno
             // 
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(48, 95);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(46, 215);
             this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(132, 22);
@@ -113,7 +116,7 @@
             // 
             // txtApellidoMaterno
             // 
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(48, 149);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(46, 269);
             this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(132, 22);
@@ -121,7 +124,7 @@
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(48, 207);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(46, 327);
             this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(265, 22);
@@ -130,7 +133,7 @@
             // cbGenero
             // 
             this.cbGenero.FormattingEnabled = true;
-            this.cbGenero.Location = new System.Drawing.Point(48, 260);
+            this.cbGenero.Location = new System.Drawing.Point(46, 380);
             this.cbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(160, 24);
@@ -139,7 +142,7 @@
             // cbTipoSangre
             // 
             this.cbTipoSangre.FormattingEnabled = true;
-            this.cbTipoSangre.Location = new System.Drawing.Point(444, 41);
+            this.cbTipoSangre.Location = new System.Drawing.Point(442, 161);
             this.cbTipoSangre.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipoSangre.Name = "cbTipoSangre";
             this.cbTipoSangre.Size = new System.Drawing.Size(160, 24);
@@ -147,7 +150,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(772, 149);
+            this.btnLimpiar.Location = new System.Drawing.Point(770, 269);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
@@ -159,7 +162,7 @@
             // lbApellidoPaterno
             // 
             this.lbApellidoPaterno.AutoSize = true;
-            this.lbApellidoPaterno.Location = new System.Drawing.Point(48, 74);
+            this.lbApellidoPaterno.Location = new System.Drawing.Point(46, 194);
             this.lbApellidoPaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbApellidoPaterno.Name = "lbApellidoPaterno";
             this.lbApellidoPaterno.Size = new System.Drawing.Size(107, 16);
@@ -169,7 +172,7 @@
             // lbApellidoMaterno
             // 
             this.lbApellidoMaterno.AutoSize = true;
-            this.lbApellidoMaterno.Location = new System.Drawing.Point(48, 128);
+            this.lbApellidoMaterno.Location = new System.Drawing.Point(46, 248);
             this.lbApellidoMaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbApellidoMaterno.Name = "lbApellidoMaterno";
             this.lbApellidoMaterno.Size = new System.Drawing.Size(109, 16);
@@ -179,7 +182,7 @@
             // lbFechaNacimiento
             // 
             this.lbFechaNacimiento.AutoSize = true;
-            this.lbFechaNacimiento.Location = new System.Drawing.Point(48, 182);
+            this.lbFechaNacimiento.Location = new System.Drawing.Point(46, 302);
             this.lbFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbFechaNacimiento.Name = "lbFechaNacimiento";
             this.lbFechaNacimiento.Size = new System.Drawing.Size(116, 16);
@@ -189,7 +192,7 @@
             // lbGenero
             // 
             this.lbGenero.AutoSize = true;
-            this.lbGenero.Location = new System.Drawing.Point(48, 240);
+            this.lbGenero.Location = new System.Drawing.Point(46, 360);
             this.lbGenero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGenero.Name = "lbGenero";
             this.lbGenero.Size = new System.Drawing.Size(52, 16);
@@ -199,7 +202,7 @@
             // lbTipoSangre
             // 
             this.lbTipoSangre.AutoSize = true;
-            this.lbTipoSangre.Location = new System.Drawing.Point(444, 18);
+            this.lbTipoSangre.Location = new System.Drawing.Point(442, 138);
             this.lbTipoSangre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTipoSangre.Name = "lbTipoSangre";
             this.lbTipoSangre.Size = new System.Drawing.Size(82, 16);
@@ -209,7 +212,7 @@
             // lbAlergias
             // 
             this.lbAlergias.AutoSize = true;
-            this.lbAlergias.Location = new System.Drawing.Point(444, 74);
+            this.lbAlergias.Location = new System.Drawing.Point(442, 194);
             this.lbAlergias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAlergias.Name = "lbAlergias";
             this.lbAlergias.Size = new System.Drawing.Size(57, 16);
@@ -219,7 +222,7 @@
             // lbContactoEmergencia
             // 
             this.lbContactoEmergencia.AutoSize = true;
-            this.lbContactoEmergencia.Location = new System.Drawing.Point(444, 128);
+            this.lbContactoEmergencia.Location = new System.Drawing.Point(442, 248);
             this.lbContactoEmergencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbContactoEmergencia.Name = "lbContactoEmergencia";
             this.lbContactoEmergencia.Size = new System.Drawing.Size(136, 16);
@@ -229,18 +232,40 @@
             // NumeroEmergencia
             // 
             this.NumeroEmergencia.AutoSize = true;
-            this.NumeroEmergencia.Location = new System.Drawing.Point(444, 182);
+            this.NumeroEmergencia.Location = new System.Drawing.Point(442, 302);
             this.NumeroEmergencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NumeroEmergencia.Name = "NumeroEmergencia";
             this.NumeroEmergencia.Size = new System.Drawing.Size(131, 16);
             this.NumeroEmergencia.TabIndex = 20;
             this.NumeroEmergencia.Text = "Numero Emergencia";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.back);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(984, 100);
+            this.panel1.TabIndex = 21;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // back
+            // 
+            this.back.Location = new System.Drawing.Point(835, 23);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(95, 50);
+            this.back.TabIndex = 4;
+            this.back.Text = "<";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click_1);
+            // 
             // PacienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(984, 611);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.NumeroEmergencia);
             this.Controls.Add(this.lbContactoEmergencia);
             this.Controls.Add(this.lbAlergias);
@@ -264,8 +289,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PacienteForm";
             this.Text = "PacienteForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PacienteForm_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +317,7 @@
         private System.Windows.Forms.Label lbAlergias;
         private System.Windows.Forms.Label lbContactoEmergencia;
         private System.Windows.Forms.Label NumeroEmergencia;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button back;
     }
 }
