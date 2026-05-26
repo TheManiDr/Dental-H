@@ -101,6 +101,12 @@
     <Compile Include="Components\PacienteCard.Designer.cs">
       <DependentUpon>PacienteCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\HeaderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\HeaderControl.Designer.cs">
+      <DependentUpon>HeaderControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\PacienteController.cs" />
     <Compile Include="DAO\PacienteDAO.cs" />
@@ -144,6 +150,9 @@
     <Compile Include="View\PacienteListaForm.Designer.cs">
       <DependentUpon>PacienteListaForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Components\HeaderControl.resx">
+      <DependentUpon>HeaderControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\PacienteCard.resx">
       <DependentUpon>PacienteCard.cs</DependentUpon>
     </EmbeddedResource>
