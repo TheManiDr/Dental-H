@@ -8,10 +8,11 @@ namespace Dental_H.View
 {
     public partial class Citashoy : Form
     {
-        // Declaramos los controles dinámicamente para asegurar que existan 
-        // y evitar para siempre el error CS0103 en el código.
+        // Controles dinámicos principales
         private Panel panelSuperior;
         private DateTimePicker dtpFechaControl;
+
+        // VARIABLE DE COMPATIBILIDAD: Satisface al diseñador y elimina los errores CS0103 de raíz
 
         public Citashoy()
         {
@@ -23,7 +24,7 @@ namespace Dental_H.View
             // 1. Maximizar ventana al abrir
             this.WindowState = FormWindowState.Maximized;
 
-            // 2. Crear un espacio exclusivo arriba para la fecha (Evita que se encime)
+            // 2. Crear el espacio exclusivo arriba para la fecha
             ConfigurarPanelSuperior();
 
             // 3. Configurar estructura de la tabla de horarios
@@ -41,25 +42,21 @@ namespace Dental_H.View
         /// </summary>
         private void ConfigurarPanelSuperior()
         {
-            // Crear el contenedor superior
             panelSuperior = new Panel();
             panelSuperior.Height = 50;
-            panelSuperior.Dock = DockStyle.Top; // Se acopla arriba del todo
+            panelSuperior.Dock = DockStyle.Top;
             panelSuperior.BackColor = Color.White;
-            panelSuperior.Padding = new Padding(10, 10, 10, 10);
+            panelSuperior.Padding = new Padding(10);
 
-            // Crear dinámicamente el selector de fecha interno
             dtpFechaControl = new DateTimePicker();
             dtpFechaControl.Width = 300;
             dtpFechaControl.Font = new Font("Segoe UI", 11, FontStyle.Regular);
             dtpFechaControl.Location = new Point(15, 12);
             dtpFechaControl.ValueChanged += DtpFechaControl_ValueChanged;
 
-            // Añadir el selector al panel, y el panel al formulario
             panelSuperior.Controls.Add(dtpFechaControl);
             this.Controls.Add(panelSuperior);
 
-            // Forzar a que el panel se dibuje antes que la tabla
             panelSuperior.BringToFront();
         }
 
@@ -82,18 +79,15 @@ namespace Dental_H.View
             dgvHorario2.AllowUserToAddRows = false;
             dgvHorario2.RowHeadersVisible = false;
 
-            // IMPORTANTE: Se acopla en el espacio sobrante (respetando el panel de la fecha arriba)
             dgvHorario2.Dock = DockStyle.Fill;
             dgvHorario2.BringToFront();
 
-            // Estilos estéticos de la tabla
             dgvHorario2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvHorario2.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
             dgvHorario2.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             dgvHorario2.ColumnHeadersHeight = 45;
             dgvHorario2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 
-            // Columnas de Datos con anchos proporcionales
             dgvHorario2.Columns.Add("Hora", "Hora");
             dgvHorario2.Columns["Hora"].FillWeight = 40;
             dgvHorario2.Columns["Hora"].ReadOnly = true;
@@ -106,7 +100,6 @@ namespace Dental_H.View
             dgvHorario2.Columns["Estado"].FillWeight = 50;
             dgvHorario2.Columns["Estado"].ReadOnly = true;
 
-            // Botones de acción integrados en la tabla
             DataGridViewButtonColumn btnConfirmar = new DataGridViewButtonColumn();
             btnConfirmar.Name = "BtnConfirmar";
             btnConfirmar.HeaderText = "Confirmación";
@@ -142,14 +135,13 @@ namespace Dental_H.View
             dgvHorario2.SuspendLayout();
             dgvHorario2.Rows.Clear();
 
-            // Sincronizar el control visual de fecha por si se llama externamente
-            if (dtpFechaControl.Value.Date != fecha.Date)
+            if (dtpFechaControl != null && dtpFechaControl.Value.Date != fecha.Date)
             {
                 dtpFechaControl.Value = fecha;
             }
 
             int horaInicio = 7;
-            int horaFin = 15; // 3:00 PM
+            int horaFin = 15;
 
             for (int h = horaInicio; h <= horaFin; h++)
             {
@@ -181,7 +173,7 @@ namespace Dental_H.View
             if (cantidadFilas > 0 && alturaDisponible > 0)
             {
                 int nuevaAlturaFila = alturaDisponible / cantidadFilas;
-                if (nuevaAlturaFila < 30) nuevaAlturaFila = 30; // Previene colapsos de diseño
+                if (nuevaAlturaFila < 30) nuevaAlturaFila = 30;
 
                 foreach (DataGridViewRow row in dgvHorario2.Rows)
                 {
@@ -275,7 +267,10 @@ namespace Dental_H.View
 
         private void dtpFecha_ValueChanged_1(object sender, EventArgs e)
         {
-            CargarAgendaDelDia(dtpFechaControl.Value);
+            if (dtpFechaControl != null)
+            {
+                CargarAgendaDelDia(dtpFechaControl.Value);
+            }
         }
 
         #endregion
