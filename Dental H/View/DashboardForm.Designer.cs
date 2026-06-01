@@ -192,7 +192,7 @@
             this.ClientSize = new System.Drawing.Size(1428, 846);
             this.Controls.Add(this.pnlContenido);
             this.Name = "DashboardForm";
-            this.Text = "DashboardForm";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.pnlContenido.ResumeLayout(false);

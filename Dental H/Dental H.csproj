@@ -118,6 +118,12 @@
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Util\Conexion.cs" />
     <Compile Include="Util\Sesion.cs" />
+    <Compile Include="View\AgendarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AgendarCita.Designer.cs">
+      <DependentUpon>AgendarCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Citashoy.cs">
       <SubType>Form</SubType>
     </Compile>

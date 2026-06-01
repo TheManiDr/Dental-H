@@ -47,6 +47,7 @@
             this.Controls.Add(this.headerControl1);
             this.Name = "Consultas";
             this.Text = "Consultas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
