@@ -172,5 +172,15 @@ namespace Dental_H.View
 
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // 1. Creamos la instancia de la ventana flotante que programamos antes
+            using (Dental_H.View.AgendarCita ventanaAgendar = new Dental_H.View.AgendarCita())
+            {
+                // 2. Mostramos la ventana al frente de la pantalla como un cuadro de diálogo
+                ventanaAgendar.ShowDialog();
+            }
+        }
     }
 }

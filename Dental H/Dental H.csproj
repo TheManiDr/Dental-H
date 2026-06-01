@@ -196,6 +196,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\AgendarCita.resx">
+      <DependentUpon>AgendarCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Citashoy.resx">
       <DependentUpon>Citashoy.cs</DependentUpon>
     </EmbeddedResource>
