@@ -28,94 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelSuperior = new System.Windows.Forms.Panel();
-            this.btnNuevoPaciente = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.flpPacientes = new System.Windows.Forms.FlowLayoutPanel();
-            this.regresar = new System.Windows.Forms.Button();
-            this.panelSuperior.SuspendLayout();
+            this.headerControl1 = new Dental_H.Components.HeaderControl();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelSuperior
+            // panel1
             // 
-            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(143)))), ((int)(((byte)(216)))));
-            this.panelSuperior.Controls.Add(this.regresar);
-            this.panelSuperior.Controls.Add(this.btnNuevoPaciente);
-            this.panelSuperior.Controls.Add(this.txtBuscar);
-            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuperior.Location = new System.Drawing.Point(0, 0);
-            this.panelSuperior.Margin = new System.Windows.Forms.Padding(4);
-            this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1904, 98);
-            this.panelSuperior.TabIndex = 0;
-            // 
-            // btnNuevoPaciente
-            // 
-            this.btnNuevoPaciente.Location = new System.Drawing.Point(892, 33);
-            this.btnNuevoPaciente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevoPaciente.Name = "btnNuevoPaciente";
-            this.btnNuevoPaciente.Size = new System.Drawing.Size(143, 28);
-            this.btnNuevoPaciente.TabIndex = 1;
-            this.btnNuevoPaciente.Text = "+ Nuevo Paciente";
-            this.btnNuevoPaciente.UseVisualStyleBackColor = true;
-            this.btnNuevoPaciente.Click += new System.EventHandler(this.btnNuevoPaciente_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtBuscar.Location = new System.Drawing.Point(28, 33);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(465, 29);
-            this.txtBuscar.TabIndex = 0;
-            this.txtBuscar.Text = "Buscar paciente...";
+            this.panel1.Controls.Add(this.flpPacientes);
+            this.panel1.Controls.Add(this.headerControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1904, 1041);
+            this.panel1.TabIndex = 2;
             // 
             // flpPacientes
             // 
             this.flpPacientes.AutoScroll = true;
             this.flpPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpPacientes.Location = new System.Drawing.Point(0, 98);
-            this.flpPacientes.Margin = new System.Windows.Forms.Padding(4);
+            this.flpPacientes.Location = new System.Drawing.Point(0, 110);
             this.flpPacientes.Name = "flpPacientes";
-            this.flpPacientes.Padding = new System.Windows.Forms.Padding(33, 31, 33, 31);
-            this.flpPacientes.Size = new System.Drawing.Size(1904, 943);
-            this.flpPacientes.TabIndex = 1;
-            this.flpPacientes.Paint += new System.Windows.Forms.PaintEventHandler(this.flpPacientes_Paint);
+            this.flpPacientes.Padding = new System.Windows.Forms.Padding(25);
+            this.flpPacientes.Size = new System.Drawing.Size(1904, 931);
+            this.flpPacientes.TabIndex = 2;
             // 
-            // regresar
+            // headerControl1
             // 
-            this.regresar.Location = new System.Drawing.Point(1765, 25);
-            this.regresar.Name = "regresar";
-            this.regresar.Size = new System.Drawing.Size(108, 44);
-            this.regresar.TabIndex = 2;
-            this.regresar.Text = "<";
-            this.regresar.UseVisualStyleBackColor = true;
-            this.regresar.Click += new System.EventHandler(this.button1_Click);
+            this.headerControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerControl1.Location = new System.Drawing.Point(0, 0);
+            this.headerControl1.Name = "headerControl1";
+            this.headerControl1.Size = new System.Drawing.Size(1904, 110);
+            this.headerControl1.TabIndex = 0;
             // 
             // PacienteListaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.flpPacientes);
-            this.Controls.Add(this.panelSuperior);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Controls.Add(this.panel1);
             this.Name = "PacienteListaForm";
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.PacienteListaForm_Load);
-            this.panelSuperior.ResumeLayout(false);
-            this.panelSuperior.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelSuperior;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnNuevoPaciente;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flpPacientes;
-        private System.Windows.Forms.Button regresar;
+        private Components.HeaderControl headerControl1;
     }
 }

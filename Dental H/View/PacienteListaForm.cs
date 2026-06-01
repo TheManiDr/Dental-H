@@ -18,12 +18,10 @@ namespace Dental_H.View
 {
     public partial class PacienteListaForm : Form
     {
-        private Form _dashboardAnterior;
 
-        public PacienteListaForm(Form dashboardForm)
+        public PacienteListaForm()
         {
             InitializeComponent();
-            this._dashboardAnterior = dashboardForm;
         }
 
         private void PacienteListaForm_Load(object sender, EventArgs e)
@@ -75,24 +73,8 @@ namespace Dental_H.View
             return edad;
         }
 
-        // Método genérico de regreso
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            if (this._dashboardAnterior != null)
-            {
-                this._dashboardAnterior.Show();
-                this.Close();
-            }
-        }
-
         private void flpPacientes_Paint(object sender, PaintEventArgs e)
         {
-        }
-
-        // SOLUCIÓN A LA CAPTURA 3: Este método DEBE existir porque el diseñador lo busca
-        private void button1_Click(object sender, EventArgs e)
-        {
-            btnVolver_Click(sender, e);
         }
     }
 }

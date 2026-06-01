@@ -128,14 +128,9 @@ namespace Dental_H.View
             }
         }
 
-        // ==========================================
-        //       MANEJO DE EVENTOS DE TUS BOTONES
-        // ==========================================
-
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            // Le pasamos 'this' para habilitar que PacienteListaForm pueda regresar aquí con su botón Volver
-            PacienteListaForm pacientelista = new PacienteListaForm(this);
+            PacienteListaForm pacientelista = new PacienteListaForm();
             pacientelista.Show();
             this.Hide();
         }
