@@ -124,4 +124,34 @@
   <data name="avatar_mujer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar_mujer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="circulo_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo_azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_azulcielo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo_azulcielo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_gris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo_gris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_rosa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo_rosa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circulo_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diente_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recurso 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vista_superior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recurso 6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
