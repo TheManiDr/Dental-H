@@ -134,5 +134,43 @@ namespace Dental_H.View
             pacientelista.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            Personal formPersonal = new Personal();
+
+            formPersonal.Show();
+
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            Consultas formConsultas = new Consultas();
+
+            formConsultas.Show();
+
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Tratamientos formTratamientos = new Tratamientos();
+
+            formTratamientos.Show();
+
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Citashoy formCitasHoy = new Citashoy();
+
+            formCitasHoy.Show();
+
+            this.Hide();
+        }
     }
 }

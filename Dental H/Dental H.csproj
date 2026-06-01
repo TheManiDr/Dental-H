@@ -118,6 +118,18 @@
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Util\Conexion.cs" />
     <Compile Include="Util\Sesion.cs" />
+    <Compile Include="View\Citashoy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Citashoy.Designer.cs">
+      <DependentUpon>Citashoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Consultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Consultas.Designer.cs">
+      <DependentUpon>Consultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +162,18 @@
     <Compile Include="View\PacienteListaForm.Designer.cs">
       <DependentUpon>PacienteListaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Personal.Designer.cs">
+      <DependentUpon>Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tratamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tratamientos.Designer.cs">
+      <DependentUpon>Tratamientos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Components\HeaderControl.resx">
       <DependentUpon>HeaderControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +190,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Citashoy.resx">
+      <DependentUpon>Citashoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Consultas.resx">
+      <DependentUpon>Consultas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +210,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PacienteListaForm.resx">
       <DependentUpon>PacienteListaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Personal.resx">
+      <DependentUpon>Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tratamientos.resx">
+      <DependentUpon>Tratamientos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
