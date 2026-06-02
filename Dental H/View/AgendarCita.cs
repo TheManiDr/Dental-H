@@ -44,81 +44,276 @@ namespace Dental_H.View
 
         private void ConstruirInterfazGraficaDistribuda()
         {
-            Font fuenteLabels = new Font("Segoe UI", 12, FontStyle.Bold);
-            Font fuenteControles = new Font("Segoe UI", 13, FontStyle.Regular);
+            Panel fondo = new Panel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.FromArgb(221, 235, 250),
+                Padding = new Padding(34, 136, 34, 26)
+            };
 
-            TableLayoutPanel contenedorPrincipal = new TableLayoutPanel();
-            contenedorPrincipal.ColumnCount = 1;
-            contenedorPrincipal.RowCount = 7;
-            contenedorPrincipal.Dock = DockStyle.Fill;
-            contenedorPrincipal.Padding = new Padding(100, 40, 100, 40);
-            contenedorPrincipal.BackColor = Color.White;
+            Panel tarjeta = new Panel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.White,
+                Padding = new Padding(34, 26, 34, 24)
+            };
 
-            contenedorPrincipal.RowStyles.Add(new RowStyle(SizeType.Percent, 14f));
-            contenedorPrincipal.RowStyles.Add(new RowStyle(SizeType.Percent, 14f));
-            contenedorPrincipal.RowStyles.Add(new RowStyle(SizeType.Percent, 14f));
-            contenedorPrincipal.RowStyles.Add(new RowStyle(SizeType.Percent, 14f));
-            contenedorPrincipal.RowStyles.Add(new RowStyle(SizeType.Percent, 14f));
-            contenedorPrincipal.RowStyles.Add(new RowStyle(SizeType.Percent, 20f));
-            contenedorPrincipal.RowStyles.Add(new RowStyle(SizeType.Percent, 10f));
+            Label lblTitulo = new Label
+            {
+                Text = "Agendar nueva consulta",
+                Dock = DockStyle.Top,
+                Height = 36,
+                Font = new Font("Segoe UI", 18, FontStyle.Bold),
+                ForeColor = Color.FromArgb(28, 65, 111)
+            };
 
-            Panel pnlPaciente = new Panel { Dock = DockStyle.Fill };
-            Label lblPaciente = new Label { Text = "Seleccionar Paciente:", Location = new Point(0, 0), AutoSize = true, Font = fuenteLabels, ForeColor = Color.FromArgb(44, 62, 80) };
-            cmbPaciente = new ComboBox { Location = new Point(0, 28), Dock = DockStyle.Bottom, Font = fuenteControles, DropDownStyle = ComboBoxStyle.DropDownList };
-            pnlPaciente.Controls.AddRange(new Control[] { lblPaciente, cmbPaciente });
+            Label lblDescripcion = new Label
+            {
+                Text = "Completa los datos para reservar un horario de atención para el paciente.",
+                Dock = DockStyle.Top,
+                Height = 34,
+                Font = new Font("Segoe UI", 10),
+                ForeColor = Color.FromArgb(92, 105, 119)
+            };
 
-            Panel pnlOdontologo = new Panel { Dock = DockStyle.Fill };
-            Label lblOdontologo = new Label { Text = "Odontologo / Especialista Asignado:", Location = new Point(0, 0), AutoSize = true, Font = fuenteLabels, ForeColor = Color.FromArgb(44, 62, 80) };
-            cmbOdontologo = new ComboBox { Location = new Point(0, 28), Dock = DockStyle.Bottom, Font = fuenteControles, DropDownStyle = ComboBoxStyle.DropDownList };
+            Panel lineaTitulo = new Panel
+            {
+                Dock = DockStyle.Top,
+                Height = 2,
+                BackColor = Color.FromArgb(86, 141, 214)
+            };
+
+            TableLayoutPanel columnas = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                ColumnCount = 2,
+                RowCount = 1,
+                Padding = new Padding(0, 22, 0, 10),
+                BackColor = Color.White
+            };
+            columnas.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
+            columnas.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
+
+            Panel columnaPaciente = CrearColumnaFormulario("Paciente y especialista", "Selecciona a las personas relacionadas con la consulta.");
+            Panel columnaConsulta = CrearColumnaFormulario("Fecha y tratamiento", "Define el horario disponible y el motivo de atención.");
+
+            cmbPaciente = CrearCombo();
+            cmbOdontologo = CrearCombo();
             cmbOdontologo.SelectedIndexChanged += (s, e) => CargarHorariosDisponibles();
-            pnlOdontologo.Controls.AddRange(new Control[] { lblOdontologo, cmbOdontologo });
-
-            Panel pnlFecha = new Panel { Dock = DockStyle.Fill };
-            Label lblFecha = new Label { Text = "Fecha Programada de la Cita:", Location = new Point(0, 0), AutoSize = true, Font = fuenteLabels, ForeColor = Color.FromArgb(44, 62, 80) };
-            dtpFechaCita = new DateTimePicker { Location = new Point(0, 28), Dock = DockStyle.Bottom, Font = fuenteControles, Format = DateTimePickerFormat.Long };
+            dtpFechaCita = CrearSelectorFecha();
             dtpFechaCita.ValueChanged += (s, e) => CargarHorariosDisponibles();
-            pnlFecha.Controls.AddRange(new Control[] { lblFecha, dtpFechaCita });
+            cmbHoraCita = CrearCombo();
+            cmbTratamiento = CrearCombo();
+            txtNotas = new TextBox
+            {
+                Dock = DockStyle.Fill,
+                Font = new Font("Segoe UI", 10),
+                Multiline = true,
+                ScrollBars = ScrollBars.Vertical,
+                BorderStyle = BorderStyle.FixedSingle,
+                BackColor = Color.FromArgb(248, 250, 252)
+            };
 
-            Panel pnlHora = new Panel { Dock = DockStyle.Fill };
-            Label lblHora = new Label { Text = "Horarios Disponibles Consultorio (7:00 AM - 3:00 PM):", Location = new Point(0, 0), AutoSize = true, Font = fuenteLabels, ForeColor = Color.FromArgb(44, 62, 80) };
-            cmbHoraCita = new ComboBox { Location = new Point(0, 28), Dock = DockStyle.Bottom, Font = fuenteControles, DropDownStyle = ComboBoxStyle.DropDownList };
-            pnlHora.Controls.AddRange(new Control[] { lblHora, cmbHoraCita });
+            AgregarCampo(columnaPaciente, "Paciente", "Selecciona el paciente que recibirá la atención.", cmbPaciente, 112);
+            AgregarCampo(columnaPaciente, "Odontólogo / especialista", "Asigna al responsable de la consulta.", cmbOdontologo, 112);
+            AgregarAviso(columnaPaciente, "Los horarios se actualizan automáticamente según el especialista y la fecha seleccionados.");
 
-            Panel pnlTratamiento = new Panel { Dock = DockStyle.Fill };
-            Label lblTratamiento = new Label { Text = "Motivo Clinico / Tratamiento:", Location = new Point(0, 0), AutoSize = true, Font = fuenteLabels, ForeColor = Color.FromArgb(44, 62, 80) };
-            cmbTratamiento = new ComboBox { Location = new Point(0, 28), Dock = DockStyle.Bottom, Font = fuenteControles, DropDownStyle = ComboBoxStyle.DropDownList };
-            pnlTratamiento.Controls.AddRange(new Control[] { lblTratamiento, cmbTratamiento });
+            AgregarCampo(columnaConsulta, "Fecha programada", "Elige el día de la consulta.", dtpFechaCita, 112);
+            AgregarCampo(columnaConsulta, "Horario disponible", "Horario del consultorio: 7:00 AM - 3:00 PM.", cmbHoraCita, 112);
+            AgregarCampo(columnaConsulta, "Motivo clínico / tratamiento", "Selecciona el motivo principal de la visita.", cmbTratamiento, 112);
+            AgregarCampo(columnaConsulta, "Notas adicionales", "Describe síntomas o indicaciones importantes.", txtNotas, 154);
 
-            Panel pnlNotas = new Panel { Dock = DockStyle.Fill };
-            Label lblNotas = new Label { Text = "Notas Adicionales / Cuadro Sintomatico Inicial:", Location = new Point(0, 0), AutoSize = true, Font = fuenteLabels, ForeColor = Color.FromArgb(44, 62, 80) };
-            txtNotas = new TextBox { Location = new Point(0, 28), Height = 65, Dock = DockStyle.Bottom, Font = fuenteControles, Multiline = true, ScrollBars = ScrollBars.Vertical };
-            pnlNotas.Controls.AddRange(new Control[] { lblNotas, txtNotas });
+            columnas.Controls.Add(columnaPaciente, 0, 0);
+            columnas.Controls.Add(columnaConsulta, 1, 0);
 
-            TableLayoutPanel pnlBotones = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1 };
-            pnlBotones.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
-            pnlBotones.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
+            FlowLayoutPanel pnlBotones = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Bottom,
+                Height = 58,
+                FlowDirection = FlowDirection.RightToLeft,
+                Padding = new Padding(0, 12, 0, 0),
+                BackColor = Color.White
+            };
 
-            btnCancelar = new Button { Text = "Cancelar Registro", Dock = DockStyle.Fill, Margin = new Padding(10), Font = fuenteLabels, BackColor = Color.FromArgb(231, 76, 60), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
-            btnCancelar.FlatAppearance.BorderSize = 0;
-            btnCancelar.Click += (s, e) => Close();
-
-            btnGuardar = new Button { Text = "Agendar Cita Medica", Dock = DockStyle.Fill, Margin = new Padding(10), Font = fuenteLabels, BackColor = Color.FromArgb(46, 204, 113), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
-            btnGuardar.FlatAppearance.BorderSize = 0;
+            btnGuardar = CrearBoton("Agendar consulta", Color.FromArgb(46, 125, 84), Color.White, 174);
             btnGuardar.Click += BtnGuardar_Click;
 
-            pnlBotones.Controls.Add(btnCancelar, 0, 0);
-            pnlBotones.Controls.Add(btnGuardar, 1, 0);
+            btnCancelar = CrearBoton("Cancelar", Color.White, Color.FromArgb(51, 65, 85), 118);
+            btnCancelar.FlatAppearance.BorderSize = 1;
+            btnCancelar.FlatAppearance.BorderColor = Color.FromArgb(148, 163, 184);
+            btnCancelar.Click += (s, e) => Close();
 
-            contenedorPrincipal.Controls.Add(pnlPaciente, 0, 0);
-            contenedorPrincipal.Controls.Add(pnlOdontologo, 0, 1);
-            contenedorPrincipal.Controls.Add(pnlFecha, 0, 2);
-            contenedorPrincipal.Controls.Add(pnlHora, 0, 3);
-            contenedorPrincipal.Controls.Add(pnlTratamiento, 0, 4);
-            contenedorPrincipal.Controls.Add(pnlNotas, 0, 5);
-            contenedorPrincipal.Controls.Add(pnlBotones, 0, 6);
+            pnlBotones.Controls.Add(btnGuardar);
+            pnlBotones.Controls.Add(btnCancelar);
 
-            Controls.Add(contenedorPrincipal);
+            tarjeta.Controls.Add(columnas);
+            tarjeta.Controls.Add(pnlBotones);
+            tarjeta.Controls.Add(lineaTitulo);
+            tarjeta.Controls.Add(lblDescripcion);
+            tarjeta.Controls.Add(lblTitulo);
+            fondo.Controls.Add(tarjeta);
+            Controls.Add(fondo);
             headerControl1.BringToFront();
+        }
+
+        private Panel CrearColumnaFormulario(string titulo, string descripcion)
+        {
+            Panel columna = new Panel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.White,
+                Padding = new Padding(18, 82, 18, 14),
+                Margin = new Padding(8)
+            };
+
+            Label lblTitulo = new Label
+            {
+                Text = titulo,
+                Location = new Point(18, 14),
+                Size = new Size(520, 26),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
+                Font = new Font("Segoe UI", 13, FontStyle.Bold),
+                ForeColor = Color.FromArgb(37, 99, 163)
+            };
+
+            Label lblDescripcion = new Label
+            {
+                Text = descripcion,
+                Location = new Point(18, 42),
+                Size = new Size(520, 24),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(92, 105, 119)
+            };
+
+            Panel linea = new Panel
+            {
+                Location = new Point(18, 70),
+                Size = new Size(520, 2),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
+                BackColor = Color.FromArgb(86, 141, 214)
+            };
+
+            Panel campos = new Panel
+            {
+                Name = "campos",
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                BackColor = Color.White,
+                Tag = 0
+            };
+
+            columna.Controls.Add(campos);
+            columna.Controls.Add(lblTitulo);
+            columna.Controls.Add(lblDescripcion);
+            columna.Controls.Add(linea);
+            return columna;
+        }
+
+        private void AgregarCampo(Panel columna, string etiqueta, string ayuda, Control control, int alto)
+        {
+            Panel campos = columna.Controls["campos"] as Panel;
+            int y = campos.Tag is int ? (int)campos.Tag : 0;
+            Panel bloque = new Panel
+            {
+                Location = new Point(0, y),
+                Width = Math.Max(240, campos.ClientSize.Width - 22),
+                Height = alto,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
+            };
+
+            Label lblEtiqueta = new Label
+            {
+                Text = etiqueta,
+                Location = new Point(0, 8),
+                Size = new Size(540, 20),
+                Font = new Font("Segoe UI", 9.5f, FontStyle.Bold),
+                ForeColor = Color.FromArgb(51, 65, 85)
+            };
+
+            Label lblAyuda = new Label
+            {
+                Text = ayuda,
+                Location = new Point(0, 30),
+                Size = new Size(540, 18),
+                Font = new Font("Segoe UI", 8.5f),
+                ForeColor = Color.FromArgb(100, 116, 139)
+            };
+
+            control.Location = new Point(0, 56);
+            control.Size = new Size(540, alto - 64);
+            control.Dock = DockStyle.None;
+            control.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            bloque.Controls.Add(lblEtiqueta);
+            bloque.Controls.Add(lblAyuda);
+            bloque.Controls.Add(control);
+            campos.Controls.Add(bloque);
+            campos.Tag = y + alto + 6;
+
+            campos.Resize += (sender, e) =>
+            {
+                bloque.Width = Math.Max(240, campos.ClientSize.Width - 22);
+                control.Width = bloque.Width;
+                lblEtiqueta.Width = bloque.Width;
+                lblAyuda.Width = bloque.Width;
+            };
+        }
+
+        private void AgregarAviso(Panel columna, string texto)
+        {
+            Panel campos = columna.Controls["campos"] as Panel;
+            int y = campos.Tag is int ? (int)campos.Tag : 0;
+            Label aviso = new Label
+            {
+                Text = texto,
+                Location = new Point(0, y + 18),
+                Width = Math.Max(240, campos.ClientSize.Width - 22),
+                Height = 58,
+                Padding = new Padding(12),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(37, 99, 163),
+                BackColor = Color.FromArgb(239, 246, 255)
+            };
+            campos.Controls.Add(aviso);
+            campos.Tag = y + 94;
+            campos.Resize += (sender, e) => aviso.Width = Math.Max(240, campos.ClientSize.Width - 22);
+        }
+
+        private ComboBox CrearCombo()
+        {
+            return new ComboBox
+            {
+                Font = new Font("Segoe UI", 10),
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                BackColor = Color.White
+            };
+        }
+
+        private DateTimePicker CrearSelectorFecha()
+        {
+            return new DateTimePicker
+            {
+                Font = new Font("Segoe UI", 10),
+                Format = DateTimePickerFormat.Long
+            };
+        }
+
+        private Button CrearBoton(string texto, Color fondo, Color colorTexto, int ancho)
+        {
+            Button boton = new Button
+            {
+                Text = texto,
+                Width = ancho,
+                Height = 36,
+                Margin = new Padding(10, 0, 0, 0),
+                BackColor = fondo,
+                ForeColor = colorTexto,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI", 9.5f, FontStyle.Bold)
+            };
+            boton.FlatAppearance.BorderSize = 0;
+            return boton;
         }
 
         private void CargarPacientes()

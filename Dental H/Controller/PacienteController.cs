@@ -95,5 +95,10 @@ namespace Dental_H.Controller
         {
             return pacienteDAO.ActualizarPaciente(paciente);
         }
+
+        public bool EliminarPaciente(int idPaciente)
+        {
+            return pacienteDAO.EliminarPaciente(idPaciente);
+        }
     }
 }

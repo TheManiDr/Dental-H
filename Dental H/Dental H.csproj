@@ -120,10 +120,12 @@
     <Compile Include="Components\TratamientoListaForm.cs" />
     <Compile Include="Controller\CitaMedicaController.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\OdontogramaController.cs" />
     <Compile Include="Controller\PacienteController.cs" />
     <Compile Include="Controller\PersonalController.cs" />
     <Compile Include="DAO\CitaMedicaDAO.cs" />
     <Compile Include="DAO\PacienteDAO.cs" />
+    <Compile Include="DAO\OdontogramaDAO.cs" />
     <Compile Include="DAO\PersonaDAO.cs" />
     <Compile Include="DAO\PersonalDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
@@ -131,6 +133,7 @@
     <Compile Include="Model\ComboItem.cs" />
     <Compile Include="Model\ConsultaInfo.cs" />
     <Compile Include="Model\Paciente.cs" />
+    <Compile Include="Model\OdontogramaRegistro.cs" />
     <Compile Include="Model\Persona.cs" />
     <Compile Include="Model\PersonalInfo.cs" />
     <Compile Include="Model\Usuario.cs" />
@@ -280,6 +283,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avatar_mujer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2026-06-02 081024.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

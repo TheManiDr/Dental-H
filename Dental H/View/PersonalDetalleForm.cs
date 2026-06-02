@@ -31,6 +31,7 @@ namespace Dental_H.View
         private Button btnActualizar;
         private Button btnGuardar;
         private Button btnEliminar;
+        private Button btnCancelar;
         private bool modoEdicion;
         private Dictionary<string, TextBox> camposEditables = new Dictionary<string, TextBox>();
         private DateTimePicker dtpFechaNacimiento;
@@ -207,7 +208,14 @@ namespace Dental_H.View
             AgregarCampoEditable(infoBasica, "Apellido Paterno", "apellidoPaterno", personalActual.ApellidoPaterno);
             AgregarCampoEditable(infoBasica, "Apellido Materno", "apellidoMaterno", personalActual.ApellidoMaterno);
             AgregarDatoDoble(infoBasica, "Edad", CalcularEdad(personalActual.FechaNacimiento).ToString(), "Genero", personalActual.Genero);
-            AgregarFecha(infoBasica, "Fecha de nacimiento", personalActual.FechaNacimiento);
+            if (modoEdicion)
+            {
+                AgregarFecha(infoBasica, "Fecha de nacimiento", personalActual.FechaNacimiento);
+            }
+            else
+            {
+                AgregarDato(infoBasica, "Fecha de nacimiento", personalActual.FechaNacimiento.ToString("dd/MM/yyyy"));
+            }
 
             AgregarCampoEditable(documentos, "CURP", "curp", personalActual.Curp);
             AgregarCampoEditable(documentos, "RFC", "rfc", personalActual.Rfc);
@@ -361,28 +369,39 @@ namespace Dental_H.View
                 ControlPaint.DrawBorder(e.Graphics, hoja.ClientRectangle, Color.FromArgb(203, 213, 225), ButtonBorderStyle.Solid);
             };
 
-            btnActualizar = CrearBotonAccion("Actualizar", Color.FromArgb(86, 141, 214), Color.White);
+            btnActualizar = CrearBotonAccion("Editar", Color.FromArgb(86, 141, 214), Color.White);
             btnGuardar = CrearBotonAccion("Guardar", Color.FromArgb(46, 125, 84), Color.White);
             btnEliminar = CrearBotonAccion("Eliminar", Color.FromArgb(235, 87, 87), Color.White);
+            btnCancelar = CrearBotonAccion("Cancelar", Color.White, Color.FromArgb(51, 65, 85));
 
             btnActualizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnGuardar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnEliminar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCancelar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnActualizar.Click += BtnActualizar_Click;
             btnGuardar.Click += BtnGuardar_Click;
             btnEliminar.Click += BtnEliminar_Click;
-            btnGuardar.Enabled = modoEdicion;
+            btnCancelar.Click += BtnCancelar_Click;
+            btnCancelar.FlatAppearance.BorderSize = 1;
+            btnCancelar.FlatAppearance.BorderColor = Color.FromArgb(100, 116, 139);
+
+            btnActualizar.Visible = !modoEdicion;
+            btnEliminar.Visible = !modoEdicion;
+            btnGuardar.Visible = modoEdicion;
+            btnCancelar.Visible = modoEdicion;
 
             hoja.Resize += (sender, e) =>
             {
-                btnEliminar.Location = new Point(hoja.Width - 118, 18);
-                btnGuardar.Location = new Point(hoja.Width - 228, 18);
-                btnActualizar.Location = new Point(hoja.Width - 348, 18);
+                btnEliminar.Location = new Point(hoja.Width - 152, 18);
+                btnActualizar.Location = new Point(hoja.Width - 284, 18);
+                btnCancelar.Location = new Point(hoja.Width - 152, 18);
+                btnGuardar.Location = new Point(hoja.Width - 284, 18);
             };
 
             hoja.Controls.Add(btnActualizar);
             hoja.Controls.Add(btnGuardar);
             hoja.Controls.Add(btnEliminar);
+            hoja.Controls.Add(btnCancelar);
 
             return hoja;
         }
@@ -392,7 +411,7 @@ namespace Dental_H.View
             Button boton = new Button
             {
                 Text = texto,
-                Size = new Size(100, 30),
+                Size = new Size(120, 34),
                 BackColor = fondo,
                 ForeColor = colorTexto,
                 FlatStyle = FlatStyle.Flat,
@@ -405,7 +424,7 @@ namespace Dental_H.View
 
         private void TraerBotonesAccionAlFrente(Panel hoja)
         {
-            if (btnActualizar == null || btnGuardar == null || btnEliminar == null)
+            if (btnActualizar == null || btnGuardar == null || btnEliminar == null || btnCancelar == null)
             {
                 return;
             }
@@ -413,6 +432,7 @@ namespace Dental_H.View
             btnActualizar.BringToFront();
             btnGuardar.BringToFront();
             btnEliminar.BringToFront();
+            btnCancelar.BringToFront();
         }
 
         private Panel CrearSeccion(string titulo)
@@ -623,6 +643,12 @@ namespace Dental_H.View
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
             modoEdicion = true;
+            MostrarPestanaActual();
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            modoEdicion = false;
             MostrarPestanaActual();
         }
 

@@ -431,6 +431,54 @@ namespace Dental_H.DAO
             }
         }
 
+        public bool EliminarPaciente(int idPaciente)
+        {
+            MySqlConnection conexion = Conexion.obtenerConexion();
+            conexion.Open();
+            MySqlTransaction transaccion = conexion.BeginTransaction();
+
+            try
+            {
+                string validarCitas = "SELECT COUNT(*) FROM CitaMedica WHERE id_paciente = @idPaciente";
+                MySqlCommand validarComando = new MySqlCommand(validarCitas, conexion, transaccion);
+                validarComando.Parameters.AddWithValue("@idPaciente", idPaciente);
+                int citasRegistradas = Convert.ToInt32(validarComando.ExecuteScalar());
+
+                if (citasRegistradas > 0)
+                {
+                    MessageBox.Show("No se puede eliminar este paciente porque tiene citas registradas.", "Paciente con historial", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    transaccion.Rollback();
+                    return false;
+                }
+
+                EjecutarDelete(conexion, transaccion, "DELETE FROM DireccionPersona WHERE id_persona = @idPaciente", idPaciente);
+                EjecutarDelete(conexion, transaccion, "DELETE FROM TelefonoPersona WHERE id_persona = @idPaciente", idPaciente);
+                EjecutarDelete(conexion, transaccion, "DELETE FROM CorreoPersona WHERE id_persona = @idPaciente", idPaciente);
+                EjecutarDelete(conexion, transaccion, "DELETE FROM Paciente WHERE id_persona = @idPaciente", idPaciente);
+                EjecutarDelete(conexion, transaccion, "DELETE FROM Persona WHERE id_persona = @idPaciente", idPaciente);
+
+                transaccion.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                transaccion.Rollback();
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        private void EjecutarDelete(MySqlConnection conexion, MySqlTransaction transaccion, string sql, int idPaciente)
+        {
+            MySqlCommand comando = new MySqlCommand(sql, conexion, transaccion);
+            comando.Parameters.AddWithValue("@idPaciente", idPaciente);
+            comando.ExecuteNonQuery();
+        }
+
         private void EjecutarUpsertDatoRelacionado(
             MySqlConnection conexion,
             string tabla,
