@@ -9,12 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dental_H.Components;
 
 namespace Dental_H.View
 {
     public partial class PacienteDetalleForm : Form
     {
         private int idPaciente;
+        private bool arrastrando = false;
+        private Point puntoInicial;
 
         // 1. VARIABLE GLOBAL PARA RECORDAR LA VENTANA ANTERIOR
         private Form _ventanaAnterior;
@@ -25,6 +28,7 @@ namespace Dental_H.View
             InitializeComponent();
             this.idPaciente = idPaciente;
             this._ventanaAnterior = anterior; // Guardamos la lista de pacientes en memoria
+
             CargarPaciente();
         }
 
@@ -106,22 +110,228 @@ namespace Dental_H.View
             return edad;
         }
 
-        // ============================================================
-        // 3. EVENTO DEL BOTÓN DE REGRESO (Usando tu método existente)
-        // ============================================================
-        private void back2_Click(object sender, EventArgs e)
-        {
-            if (this._ventanaAnterior != null)
-            {
-                this._ventanaAnterior.Show(); // Volvemos a mostrar la lista de pacientes
-                this.Close();                 // Cerramos esta vista detallada
-            }
-        }
-
 
         private void btnPlanesTratamientos_Click(object sender, EventArgs e)
         {
+            panelOdontograma.Visible = true;
 
+            panelDatosPersonales.Visible = false;
+            //panelMedicos.Visible = false;
+            //panelContacto.Visible = false;
+        }
+
+        private void btnDatosPersonales_Click(object sender, EventArgs e)
+        {
+            panelDatosPersonales.Visible = true;
+
+            panelOdontograma.Visible = false;
+            //panelMedicos.Visible = false;
+            //panelContacto.Visible = false;
+        }
+
+        private void picFractura_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+        }
+
+        private void picDesgaste_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+        }
+
+        private void picSensibilidad_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+        }
+
+        private void picPlaca_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+        }
+
+        private void picSarro_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+        }
+
+        private void picInfeccion_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+        }
+
+        private void picInflamacion_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+        }
+
+        private void panelDienteVertical_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.StringFormat))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+        }
+
+        private void panelDienteVertical_DragDrop(object sender, DragEventArgs e)
+        {
+            string padecimiento = e.Data.GetData(DataFormats.StringFormat).ToString();
+
+            Panel panelDiente =
+                (Panel)sender;
+
+            PictureBox marca =
+                new PictureBox();
+
+            marca.Size = new Size(25, 25);
+
+            marca.SizeMode =
+                PictureBoxSizeMode.StretchImage;
+
+            PictureBox iconoOriginal =
+                Controls.Find(
+                    padecimiento,
+                    true)
+                    .FirstOrDefault() as PictureBox;
+
+            if (iconoOriginal != null)
+            {
+                marca.Image =
+                    iconoOriginal.Image;
+            }
+
+            Point p =
+                panelDiente.PointToClient(
+                    new Point(e.X, e.Y));
+
+            marca.Location =
+                new Point(
+                    p.X - marca.Width / 2,
+                    p.Y - marca.Height / 2);
+
+            marca.Cursor = Cursors.Hand;
+
+            marca.MouseDown += Marca_MouseDown;
+            marca.MouseMove += Marca_MouseMove;
+            marca.MouseUp += Marca_MouseUp;
+            marca.MouseClick += Marca_MouseClick;
+
+            panelDiente.Controls.Add(marca);
+
+            marca.BringToFront();
+        }
+
+        private void panelDienteSuperior_DragDrop(object sender, DragEventArgs e)
+        {
+            string padecimiento = e.Data.GetData(DataFormats.StringFormat).ToString();
+
+            Panel panelDiente =
+                (Panel)sender;
+
+            PictureBox marca =
+                new PictureBox();
+
+            marca.Size = new Size(25, 25);
+
+            marca.SizeMode =
+                PictureBoxSizeMode.StretchImage;
+
+            PictureBox iconoOriginal =
+                Controls.Find(
+                    padecimiento,
+                    true)
+                    .FirstOrDefault() as PictureBox;
+
+            if (iconoOriginal != null)
+            {
+                marca.Image =
+                    iconoOriginal.Image;
+            }
+
+            Point p =
+                panelDiente.PointToClient(
+                    new Point(e.X, e.Y));
+
+            marca.Location =
+                new Point(
+                    p.X - marca.Width / 2,
+                    p.Y - marca.Height / 2);
+
+            marca.Cursor = Cursors.Hand;
+
+            marca.MouseDown += Marca_MouseDown;
+            marca.MouseMove += Marca_MouseMove;
+            marca.MouseUp += Marca_MouseUp;
+            marca.MouseClick += Marca_MouseClick;
+
+            panelDiente.Controls.Add(marca);
+
+            marca.BringToFront();
+        }
+
+        private void panelDienteSuperior_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.StringFormat))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+        }
+
+        private void Marca_MouseDown(object sender,MouseEventArgs e)
+        {
+            arrastrando = true;
+
+            puntoInicial = e.Location;
+        }
+        private void Marca_MouseMove(object sender,MouseEventArgs e)
+        {
+            if (!arrastrando)
+                return;
+
+            PictureBox marca =
+                (PictureBox)sender;
+
+            marca.Left += e.X - puntoInicial.X;
+            marca.Top += e.Y - puntoInicial.Y;
+        }
+        private void Marca_MouseUp(object sender,MouseEventArgs e)
+        {
+            arrastrando = false;
+        }
+        private void Marca_MouseClick(object sender,MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                PictureBox marca = (PictureBox)sender;
+
+                marca.BackColor = Color.Transparent;
+
+                marca.Parent.Controls.Remove(marca);
+
+                marca.Dispose();
+            }
+        }
+
+        private void picCaries_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
         }
     }
 }
