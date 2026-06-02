@@ -30,6 +30,55 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PacienteDetalleForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelOdontograma = new System.Windows.Forms.Panel();
+            this.paneltrabajo12 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.dtpFechaPadecimiento = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
+            this.btnAgregarTratamiento = new System.Windows.Forms.Button();
+            this.flpTratamientos = new System.Windows.Forms.FlowLayoutPanel();
+            this.cmbTratamiento = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtNumPieza = new System.Windows.Forms.TextBox();
+            this.panelImagenDinete = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblIndicaciones = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelDienteVertical = new System.Windows.Forms.Panel();
+            this.picDienteVertical = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelDienteSuperior = new System.Windows.Forms.Panel();
+            this.picDienteSuperior = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.picFractura = new System.Windows.Forms.PictureBox();
+            this.picDesgaste = new System.Windows.Forms.PictureBox();
+            this.picSensibilidad = new System.Windows.Forms.PictureBox();
+            this.picPlaca = new System.Windows.Forms.PictureBox();
+            this.picSarro = new System.Windows.Forms.PictureBox();
+            this.picInfeccion = new System.Windows.Forms.PictureBox();
+            this.picInflamacion = new System.Windows.Forms.PictureBox();
+            this.picCaries = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panelDerecho = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTemporales = new System.Windows.Forms.Button();
+            this.btnPermanentes = new System.Windows.Forms.Button();
             this.panelDatosPersonales = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.txtNumeroEmergencia = new System.Windows.Forms.TextBox();
@@ -77,71 +126,76 @@
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblNombrePaciente = new System.Windows.Forms.Label();
             this.picAvatarPaciente = new System.Windows.Forms.PictureBox();
-            this.paneltrabajo12 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelDerecho = new System.Windows.Forms.Panel();
-            this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panelImagenDinete = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.picCaries = new System.Windows.Forms.PictureBox();
-            this.picInflamacion = new System.Windows.Forms.PictureBox();
-            this.picInfeccion = new System.Windows.Forms.PictureBox();
-            this.picSarro = new System.Windows.Forms.PictureBox();
-            this.picPlaca = new System.Windows.Forms.PictureBox();
-            this.picSensibilidad = new System.Windows.Forms.PictureBox();
-            this.picDesgaste = new System.Windows.Forms.PictureBox();
-            this.picFractura = new System.Windows.Forms.PictureBox();
-            this.panelDienteSuperior = new System.Windows.Forms.Panel();
-            this.picDienteSuperior = new System.Windows.Forms.PictureBox();
-            this.panelDienteVertical = new System.Windows.Forms.Panel();
-            this.picDienteVertical = new System.Windows.Forms.PictureBox();
-            this.lblIndicaciones = new System.Windows.Forms.Label();
-            this.txtNumPieza = new System.Windows.Forms.TextBox();
-            this.txtTipo = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cmbTratamiento = new System.Windows.Forms.ComboBox();
-            this.panelOdontograma = new System.Windows.Forms.Panel();
             this.headerControl1 = new Dental_H.Components.HeaderControl();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panelDatosPersonales.SuspendLayout();
-            this.pnlInfoBasica.SuspendLayout();
-            this.pnlTabs.SuspendLayout();
-            this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatarPaciente)).BeginInit();
+            this.panelOdontograma.SuspendLayout();
             this.paneltrabajo12.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
             this.panelImagenDinete.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCaries)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInflamacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfeccion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSarro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlaca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSensibilidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDesgaste)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFractura)).BeginInit();
-            this.panelDienteSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picDienteSuperior)).BeginInit();
             this.panelDienteVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDienteVertical)).BeginInit();
-            this.panelOdontograma.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panelDienteSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDienteSuperior)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFractura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDesgaste)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSensibilidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlaca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSarro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInfeccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInflamacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCaries)).BeginInit();
+            this.panelDerecho.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelDatosPersonales.SuspendLayout();
+            this.pnlInfoBasica.SuspendLayout();
+            this.pnlTabs.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatarPaciente)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,6 +210,608 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1396, 1174);
             this.panel1.TabIndex = 0;
+            // 
+            // panelOdontograma
+            // 
+            this.panelOdontograma.AutoScroll = true;
+            this.panelOdontograma.BackColor = System.Drawing.Color.White;
+            this.panelOdontograma.Controls.Add(this.paneltrabajo12);
+            this.panelOdontograma.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOdontograma.Location = new System.Drawing.Point(0, 270);
+            this.panelOdontograma.Margin = new System.Windows.Forms.Padding(0);
+            this.panelOdontograma.Name = "panelOdontograma";
+            this.panelOdontograma.Size = new System.Drawing.Size(1396, 904);
+            this.panelOdontograma.TabIndex = 1;
+            this.panelOdontograma.Visible = false;
+            // 
+            // paneltrabajo12
+            // 
+            this.paneltrabajo12.Controls.Add(this.tableLayoutPanel1);
+            this.paneltrabajo12.Location = new System.Drawing.Point(0, 0);
+            this.paneltrabajo12.Name = "paneltrabajo12";
+            this.paneltrabajo12.Size = new System.Drawing.Size(1800, 3000);
+            this.paneltrabajo12.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.Controls.Add(this.panelIzquierdo, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelDerecho, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 771F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1800, 3000);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // panelIzquierdo
+            // 
+            this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(142)))), ((int)(((byte)(218)))));
+            this.panelIzquierdo.Controls.Add(this.btnGuardar);
+            this.panelIzquierdo.Controls.Add(this.btnEliminar);
+            this.panelIzquierdo.Controls.Add(this.btnActualizar);
+            this.panelIzquierdo.Controls.Add(this.dtpFechaPadecimiento);
+            this.panelIzquierdo.Controls.Add(this.dtpFechaRegistro);
+            this.panelIzquierdo.Controls.Add(this.btnAgregarTratamiento);
+            this.panelIzquierdo.Controls.Add(this.flpTratamientos);
+            this.panelIzquierdo.Controls.Add(this.cmbTratamiento);
+            this.panelIzquierdo.Controls.Add(this.textBox1);
+            this.panelIzquierdo.Controls.Add(this.checkBox4);
+            this.panelIzquierdo.Controls.Add(this.checkBox3);
+            this.panelIzquierdo.Controls.Add(this.checkBox2);
+            this.panelIzquierdo.Controls.Add(this.checkBox1);
+            this.panelIzquierdo.Controls.Add(this.txtTipo);
+            this.panelIzquierdo.Controls.Add(this.txtNumPieza);
+            this.panelIzquierdo.Controls.Add(this.panelImagenDinete);
+            this.panelIzquierdo.Controls.Add(this.label23);
+            this.panelIzquierdo.Controls.Add(this.label22);
+            this.panelIzquierdo.Controls.Add(this.label21);
+            this.panelIzquierdo.Controls.Add(this.label20);
+            this.panelIzquierdo.Controls.Add(this.label19);
+            this.panelIzquierdo.Controls.Add(this.label18);
+            this.panelIzquierdo.Controls.Add(this.label17);
+            this.panelIzquierdo.Controls.Add(this.label16);
+            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(0);
+            this.panelIzquierdo.Name = "panelIzquierdo";
+            this.panelIzquierdo.Size = new System.Drawing.Size(450, 3000);
+            this.panelIzquierdo.TabIndex = 0;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(81, 1492);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(206, 1492);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(152, 1454);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // dtpFechaPadecimiento
+            // 
+            this.dtpFechaPadecimiento.Location = new System.Drawing.Point(81, 1339);
+            this.dtpFechaPadecimiento.Name = "dtpFechaPadecimiento";
+            this.dtpFechaPadecimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaPadecimiento.TabIndex = 8;
+            // 
+            // dtpFechaRegistro
+            // 
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(81, 1250);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaRegistro.TabIndex = 8;
+            // 
+            // btnAgregarTratamiento
+            // 
+            this.btnAgregarTratamiento.Location = new System.Drawing.Point(123, 1158);
+            this.btnAgregarTratamiento.Name = "btnAgregarTratamiento";
+            this.btnAgregarTratamiento.Size = new System.Drawing.Size(141, 23);
+            this.btnAgregarTratamiento.TabIndex = 7;
+            this.btnAgregarTratamiento.Text = "+ Añadir Otro Tratamiento";
+            this.btnAgregarTratamiento.UseVisualStyleBackColor = true;
+            this.btnAgregarTratamiento.Click += new System.EventHandler(this.btnAgregarTratamiento_Click);
+            // 
+            // flpTratamientos
+            // 
+            this.flpTratamientos.AutoSize = true;
+            this.flpTratamientos.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpTratamientos.Location = new System.Drawing.Point(98, 1028);
+            this.flpTratamientos.Name = "flpTratamientos";
+            this.flpTratamientos.Size = new System.Drawing.Size(200, 100);
+            this.flpTratamientos.TabIndex = 6;
+            this.flpTratamientos.WrapContents = false;
+            // 
+            // cmbTratamiento
+            // 
+            this.cmbTratamiento.FormattingEnabled = true;
+            this.cmbTratamiento.Location = new System.Drawing.Point(69, 987);
+            this.cmbTratamiento.Name = "cmbTratamiento";
+            this.cmbTratamiento.Size = new System.Drawing.Size(265, 21);
+            this.cmbTratamiento.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.Location = new System.Drawing.Point(52, 791);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(282, 138);
+            this.textBox1.TabIndex = 4;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.checkBox4.ForeColor = System.Drawing.Color.White;
+            this.checkBox4.Location = new System.Drawing.Point(67, 707);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(110, 32);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "Extraído";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.checkBox3.ForeColor = System.Drawing.Color.White;
+            this.checkBox3.Location = new System.Drawing.Point(67, 680);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(138, 32);
+            this.checkBox3.TabIndex = 3;
+            this.checkBox3.Text = "Restaurado";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.checkBox2.ForeColor = System.Drawing.Color.White;
+            this.checkBox2.Location = new System.Drawing.Point(69, 652);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(103, 32);
+            this.checkBox2.TabIndex = 3;
+            this.checkBox2.Text = "Tratado";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(69, 623);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(77, 32);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "Sano";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Location = new System.Drawing.Point(173, 553);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo.TabIndex = 2;
+            // 
+            // txtNumPieza
+            // 
+            this.txtNumPieza.Location = new System.Drawing.Point(173, 475);
+            this.txtNumPieza.Name = "txtNumPieza";
+            this.txtNumPieza.Size = new System.Drawing.Size(100, 20);
+            this.txtNumPieza.TabIndex = 2;
+            // 
+            // panelImagenDinete
+            // 
+            this.panelImagenDinete.BackColor = System.Drawing.Color.White;
+            this.panelImagenDinete.Controls.Add(this.tableLayoutPanel2);
+            this.panelImagenDinete.Location = new System.Drawing.Point(12, 89);
+            this.panelImagenDinete.Name = "panelImagenDinete";
+            this.panelImagenDinete.Size = new System.Drawing.Size(424, 306);
+            this.panelImagenDinete.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.lblIndicaciones, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.86555F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.13445F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(424, 306);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // lblIndicaciones
+            // 
+            this.lblIndicaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblIndicaciones.AutoSize = true;
+            this.lblIndicaciones.Location = new System.Drawing.Point(102, 14);
+            this.lblIndicaciones.Name = "lblIndicaciones";
+            this.lblIndicaciones.Size = new System.Drawing.Size(220, 13);
+            this.lblIndicaciones.TabIndex = 0;
+            this.lblIndicaciones.Text = "Arrastra un icono para idicar un padecimiento";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.panelDienteVertical, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 42);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 264F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(424, 264);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // panelDienteVertical
+            // 
+            this.panelDienteVertical.AllowDrop = true;
+            this.panelDienteVertical.Controls.Add(this.picDienteVertical);
+            this.panelDienteVertical.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDienteVertical.Location = new System.Drawing.Point(3, 3);
+            this.panelDienteVertical.Name = "panelDienteVertical";
+            this.panelDienteVertical.Size = new System.Drawing.Size(206, 258);
+            this.panelDienteVertical.TabIndex = 2;
+            this.panelDienteVertical.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelDienteVertical_DragDrop);
+            this.panelDienteVertical.DragEnter += new System.Windows.Forms.DragEventHandler(this.panelDienteVertical_DragEnter);
+            // 
+            // picDienteVertical
+            // 
+            this.picDienteVertical.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picDienteVertical.Image = ((System.Drawing.Image)(resources.GetObject("picDienteVertical.Image")));
+            this.picDienteVertical.Location = new System.Drawing.Point(0, 0);
+            this.picDienteVertical.Name = "picDienteVertical";
+            this.picDienteVertical.Size = new System.Drawing.Size(206, 258);
+            this.picDienteVertical.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDienteVertical.TabIndex = 0;
+            this.picDienteVertical.TabStop = false;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.panelDienteSuperior, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(212, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 264);
+            this.tableLayoutPanel4.TabIndex = 3;
+            // 
+            // panelDienteSuperior
+            // 
+            this.panelDienteSuperior.AllowDrop = true;
+            this.panelDienteSuperior.Controls.Add(this.picDienteSuperior);
+            this.panelDienteSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDienteSuperior.Location = new System.Drawing.Point(3, 3);
+            this.panelDienteSuperior.Name = "panelDienteSuperior";
+            this.panelDienteSuperior.Size = new System.Drawing.Size(206, 152);
+            this.panelDienteSuperior.TabIndex = 0;
+            this.panelDienteSuperior.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelDienteSuperior_DragDrop);
+            this.panelDienteSuperior.DragEnter += new System.Windows.Forms.DragEventHandler(this.panelDienteSuperior_DragEnter);
+            // 
+            // picDienteSuperior
+            // 
+            this.picDienteSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picDienteSuperior.Image = global::Dental_H.Properties.Resources.vista_superior;
+            this.picDienteSuperior.Location = new System.Drawing.Point(0, 0);
+            this.picDienteSuperior.Margin = new System.Windows.Forms.Padding(0);
+            this.picDienteSuperior.Name = "picDienteSuperior";
+            this.picDienteSuperior.Size = new System.Drawing.Size(206, 152);
+            this.picDienteSuperior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDienteSuperior.TabIndex = 0;
+            this.picDienteSuperior.TabStop = false;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.AllowDrop = true;
+            this.tableLayoutPanel5.ColumnCount = 4;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.Controls.Add(this.picFractura, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.picDesgaste, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.picSensibilidad, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.picPlaca, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.picSarro, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.picInfeccion, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.picInflamacion, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.picCaries, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 161);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(206, 100);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // picFractura
+            // 
+            this.picFractura.BackColor = System.Drawing.Color.Transparent;
+            this.picFractura.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picFractura.Image = global::Dental_H.Properties.Resources.circulo_amarillo;
+            this.picFractura.Location = new System.Drawing.Point(56, 5);
+            this.picFractura.Margin = new System.Windows.Forms.Padding(5);
+            this.picFractura.Name = "picFractura";
+            this.picFractura.Size = new System.Drawing.Size(41, 40);
+            this.picFractura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picFractura.TabIndex = 0;
+            this.picFractura.TabStop = false;
+            this.picFractura.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picFractura_MouseDown);
+            // 
+            // picDesgaste
+            // 
+            this.picDesgaste.BackColor = System.Drawing.Color.Transparent;
+            this.picDesgaste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picDesgaste.Image = global::Dental_H.Properties.Resources.circulo_verde;
+            this.picDesgaste.Location = new System.Drawing.Point(107, 5);
+            this.picDesgaste.Margin = new System.Windows.Forms.Padding(5);
+            this.picDesgaste.Name = "picDesgaste";
+            this.picDesgaste.Size = new System.Drawing.Size(41, 40);
+            this.picDesgaste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDesgaste.TabIndex = 0;
+            this.picDesgaste.TabStop = false;
+            this.picDesgaste.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picDesgaste_MouseDown);
+            // 
+            // picSensibilidad
+            // 
+            this.picSensibilidad.BackColor = System.Drawing.Color.Transparent;
+            this.picSensibilidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picSensibilidad.Image = global::Dental_H.Properties.Resources.circulo_azulcielo;
+            this.picSensibilidad.Location = new System.Drawing.Point(158, 5);
+            this.picSensibilidad.Margin = new System.Windows.Forms.Padding(5);
+            this.picSensibilidad.Name = "picSensibilidad";
+            this.picSensibilidad.Size = new System.Drawing.Size(43, 40);
+            this.picSensibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSensibilidad.TabIndex = 0;
+            this.picSensibilidad.TabStop = false;
+            this.picSensibilidad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picSensibilidad_MouseDown);
+            // 
+            // picPlaca
+            // 
+            this.picPlaca.BackColor = System.Drawing.Color.Transparent;
+            this.picPlaca.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picPlaca.Image = global::Dental_H.Properties.Resources.circulo_azul;
+            this.picPlaca.Location = new System.Drawing.Point(5, 55);
+            this.picPlaca.Margin = new System.Windows.Forms.Padding(5);
+            this.picPlaca.Name = "picPlaca";
+            this.picPlaca.Size = new System.Drawing.Size(41, 40);
+            this.picPlaca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPlaca.TabIndex = 0;
+            this.picPlaca.TabStop = false;
+            this.picPlaca.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picPlaca_MouseDown);
+            // 
+            // picSarro
+            // 
+            this.picSarro.BackColor = System.Drawing.Color.Transparent;
+            this.picSarro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picSarro.Image = global::Dental_H.Properties.Resources.circulo_gris;
+            this.picSarro.Location = new System.Drawing.Point(56, 55);
+            this.picSarro.Margin = new System.Windows.Forms.Padding(5);
+            this.picSarro.Name = "picSarro";
+            this.picSarro.Size = new System.Drawing.Size(41, 40);
+            this.picSarro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSarro.TabIndex = 0;
+            this.picSarro.TabStop = false;
+            this.picSarro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picSarro_MouseDown);
+            // 
+            // picInfeccion
+            // 
+            this.picInfeccion.BackColor = System.Drawing.Color.Transparent;
+            this.picInfeccion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picInfeccion.Image = global::Dental_H.Properties.Resources.circulo_morado;
+            this.picInfeccion.Location = new System.Drawing.Point(107, 55);
+            this.picInfeccion.Margin = new System.Windows.Forms.Padding(5);
+            this.picInfeccion.Name = "picInfeccion";
+            this.picInfeccion.Size = new System.Drawing.Size(41, 40);
+            this.picInfeccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picInfeccion.TabIndex = 0;
+            this.picInfeccion.TabStop = false;
+            this.picInfeccion.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picInfeccion_MouseDown);
+            // 
+            // picInflamacion
+            // 
+            this.picInflamacion.BackColor = System.Drawing.Color.Transparent;
+            this.picInflamacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picInflamacion.Image = global::Dental_H.Properties.Resources.circulo_rosa;
+            this.picInflamacion.Location = new System.Drawing.Point(158, 55);
+            this.picInflamacion.Margin = new System.Windows.Forms.Padding(5);
+            this.picInflamacion.Name = "picInflamacion";
+            this.picInflamacion.Size = new System.Drawing.Size(43, 40);
+            this.picInflamacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picInflamacion.TabIndex = 0;
+            this.picInflamacion.TabStop = false;
+            this.picInflamacion.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picInflamacion_MouseDown);
+            // 
+            // picCaries
+            // 
+            this.picCaries.BackColor = System.Drawing.Color.Transparent;
+            this.picCaries.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picCaries.Image = global::Dental_H.Properties.Resources.circulo_rojo;
+            this.picCaries.Location = new System.Drawing.Point(5, 5);
+            this.picCaries.Margin = new System.Windows.Forms.Padding(5);
+            this.picCaries.Name = "picCaries";
+            this.picCaries.Size = new System.Drawing.Size(41, 40);
+            this.picCaries.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCaries.TabIndex = 1;
+            this.picCaries.TabStop = false;
+            this.picCaries.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picCaries_MouseDown);
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(43, 1285);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(313, 37);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Fecha de padecimiento";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(45, 1198);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(238, 37);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Fecha de registro";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(45, 932);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(300, 37);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Tratamiento a realizar";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(45, 751);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(171, 37);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Diagnostico";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(43, 583);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(103, 37);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Estado";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(45, 510);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(75, 37);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Tipo";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(62, 435);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(236, 37);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Número de pieza";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(92, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(285, 37);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Diente Seleccionado ";
+            // 
+            // panelDerecho
+            // 
+            this.panelDerecho.Controls.Add(this.tableLayoutPanel6);
+            this.panelDerecho.Controls.Add(this.panel2);
+            this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDerecho.Location = new System.Drawing.Point(450, 0);
+            this.panelDerecho.Margin = new System.Windows.Forms.Padding(0);
+            this.panelDerecho.Name = "panelDerecho";
+            this.panelDerecho.Size = new System.Drawing.Size(1350, 3000);
+            this.panelDerecho.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnTemporales);
+            this.panel2.Controls.Add(this.btnPermanentes);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1350, 44);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnTemporales
+            // 
+            this.btnTemporales.Location = new System.Drawing.Point(118, 12);
+            this.btnTemporales.Name = "btnTemporales";
+            this.btnTemporales.Size = new System.Drawing.Size(75, 23);
+            this.btnTemporales.TabIndex = 1;
+            this.btnTemporales.Text = "Temporales";
+            this.btnTemporales.UseVisualStyleBackColor = true;
+            // 
+            // btnPermanentes
+            // 
+            this.btnPermanentes.Location = new System.Drawing.Point(17, 12);
+            this.btnPermanentes.Name = "btnPermanentes";
+            this.btnPermanentes.Size = new System.Drawing.Size(75, 23);
+            this.btnPermanentes.TabIndex = 0;
+            this.btnPermanentes.Text = "Permanentes ";
+            this.btnPermanentes.UseVisualStyleBackColor = true;
             // 
             // panelDatosPersonales
             // 
@@ -623,473 +1279,6 @@
             this.picAvatarPaciente.TabIndex = 0;
             this.picAvatarPaciente.TabStop = false;
             // 
-            // paneltrabajo12
-            // 
-            this.paneltrabajo12.Controls.Add(this.tableLayoutPanel1);
-            this.paneltrabajo12.Location = new System.Drawing.Point(0, 0);
-            this.paneltrabajo12.Name = "paneltrabajo12";
-            this.paneltrabajo12.Size = new System.Drawing.Size(1800, 3000);
-            this.paneltrabajo12.TabIndex = 0;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Controls.Add(this.panelIzquierdo, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panelDerecho, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 771F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1800, 3000);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // panelDerecho
-            // 
-            this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDerecho.Location = new System.Drawing.Point(450, 0);
-            this.panelDerecho.Margin = new System.Windows.Forms.Padding(0);
-            this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(1350, 3000);
-            this.panelDerecho.TabIndex = 1;
-            // 
-            // panelIzquierdo
-            // 
-            this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(142)))), ((int)(((byte)(218)))));
-            this.panelIzquierdo.Controls.Add(this.cmbTratamiento);
-            this.panelIzquierdo.Controls.Add(this.textBox1);
-            this.panelIzquierdo.Controls.Add(this.checkBox4);
-            this.panelIzquierdo.Controls.Add(this.checkBox3);
-            this.panelIzquierdo.Controls.Add(this.checkBox2);
-            this.panelIzquierdo.Controls.Add(this.checkBox1);
-            this.panelIzquierdo.Controls.Add(this.txtTipo);
-            this.panelIzquierdo.Controls.Add(this.txtNumPieza);
-            this.panelIzquierdo.Controls.Add(this.panelImagenDinete);
-            this.panelIzquierdo.Controls.Add(this.label21);
-            this.panelIzquierdo.Controls.Add(this.label20);
-            this.panelIzquierdo.Controls.Add(this.label19);
-            this.panelIzquierdo.Controls.Add(this.label18);
-            this.panelIzquierdo.Controls.Add(this.label17);
-            this.panelIzquierdo.Controls.Add(this.label16);
-            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(0);
-            this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(450, 3000);
-            this.panelIzquierdo.TabIndex = 0;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(92, 24);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(285, 37);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Diente Seleccionado ";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(62, 435);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(236, 37);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Número de pieza";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(45, 510);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(75, 37);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Tipo";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(43, 583);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(103, 37);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Estado";
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(45, 751);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(171, 37);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Diagnostico";
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(45, 932);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(300, 37);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Tratamiento a realizar";
-            // 
-            // panelImagenDinete
-            // 
-            this.panelImagenDinete.BackColor = System.Drawing.Color.White;
-            this.panelImagenDinete.Controls.Add(this.tableLayoutPanel2);
-            this.panelImagenDinete.Location = new System.Drawing.Point(12, 89);
-            this.panelImagenDinete.Name = "panelImagenDinete";
-            this.panelImagenDinete.Size = new System.Drawing.Size(424, 306);
-            this.panelImagenDinete.TabIndex = 1;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.lblIndicaciones, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.86555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.13445F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(424, 306);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.panelDienteVertical, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 42);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 264F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(424, 264);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.panelDienteSuperior, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(212, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 264);
-            this.tableLayoutPanel4.TabIndex = 3;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.AllowDrop = true;
-            this.tableLayoutPanel5.ColumnCount = 4;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.Controls.Add(this.picFractura, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.picDesgaste, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.picSensibilidad, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.picPlaca, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.picSarro, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.picInfeccion, 2, 1);
-            this.tableLayoutPanel5.Controls.Add(this.picInflamacion, 3, 1);
-            this.tableLayoutPanel5.Controls.Add(this.picCaries, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 161);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(206, 100);
-            this.tableLayoutPanel5.TabIndex = 1;
-            // 
-            // picCaries
-            // 
-            this.picCaries.BackColor = System.Drawing.Color.Transparent;
-            this.picCaries.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picCaries.Image = global::Dental_H.Properties.Resources.circulo_rojo;
-            this.picCaries.Location = new System.Drawing.Point(5, 5);
-            this.picCaries.Margin = new System.Windows.Forms.Padding(5);
-            this.picCaries.Name = "picCaries";
-            this.picCaries.Size = new System.Drawing.Size(41, 40);
-            this.picCaries.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCaries.TabIndex = 1;
-            this.picCaries.TabStop = false;
-            this.picCaries.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picCaries_MouseDown);
-            // 
-            // picInflamacion
-            // 
-            this.picInflamacion.BackColor = System.Drawing.Color.Transparent;
-            this.picInflamacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picInflamacion.Image = global::Dental_H.Properties.Resources.circulo_rosa;
-            this.picInflamacion.Location = new System.Drawing.Point(158, 55);
-            this.picInflamacion.Margin = new System.Windows.Forms.Padding(5);
-            this.picInflamacion.Name = "picInflamacion";
-            this.picInflamacion.Size = new System.Drawing.Size(43, 40);
-            this.picInflamacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picInflamacion.TabIndex = 0;
-            this.picInflamacion.TabStop = false;
-            // 
-            // picInfeccion
-            // 
-            this.picInfeccion.BackColor = System.Drawing.Color.Transparent;
-            this.picInfeccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picInfeccion.Image = global::Dental_H.Properties.Resources.circulo_morado;
-            this.picInfeccion.Location = new System.Drawing.Point(107, 55);
-            this.picInfeccion.Margin = new System.Windows.Forms.Padding(5);
-            this.picInfeccion.Name = "picInfeccion";
-            this.picInfeccion.Size = new System.Drawing.Size(41, 40);
-            this.picInfeccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picInfeccion.TabIndex = 0;
-            this.picInfeccion.TabStop = false;
-            // 
-            // picSarro
-            // 
-            this.picSarro.BackColor = System.Drawing.Color.Transparent;
-            this.picSarro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picSarro.Image = global::Dental_H.Properties.Resources.circulo_gris;
-            this.picSarro.Location = new System.Drawing.Point(56, 55);
-            this.picSarro.Margin = new System.Windows.Forms.Padding(5);
-            this.picSarro.Name = "picSarro";
-            this.picSarro.Size = new System.Drawing.Size(41, 40);
-            this.picSarro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSarro.TabIndex = 0;
-            this.picSarro.TabStop = false;
-            // 
-            // picPlaca
-            // 
-            this.picPlaca.BackColor = System.Drawing.Color.Transparent;
-            this.picPlaca.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picPlaca.Image = global::Dental_H.Properties.Resources.circulo_azul;
-            this.picPlaca.Location = new System.Drawing.Point(5, 55);
-            this.picPlaca.Margin = new System.Windows.Forms.Padding(5);
-            this.picPlaca.Name = "picPlaca";
-            this.picPlaca.Size = new System.Drawing.Size(41, 40);
-            this.picPlaca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPlaca.TabIndex = 0;
-            this.picPlaca.TabStop = false;
-            // 
-            // picSensibilidad
-            // 
-            this.picSensibilidad.BackColor = System.Drawing.Color.Transparent;
-            this.picSensibilidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picSensibilidad.Image = global::Dental_H.Properties.Resources.circulo_azulcielo;
-            this.picSensibilidad.Location = new System.Drawing.Point(158, 5);
-            this.picSensibilidad.Margin = new System.Windows.Forms.Padding(5);
-            this.picSensibilidad.Name = "picSensibilidad";
-            this.picSensibilidad.Size = new System.Drawing.Size(43, 40);
-            this.picSensibilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSensibilidad.TabIndex = 0;
-            this.picSensibilidad.TabStop = false;
-            // 
-            // picDesgaste
-            // 
-            this.picDesgaste.BackColor = System.Drawing.Color.Transparent;
-            this.picDesgaste.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picDesgaste.Image = global::Dental_H.Properties.Resources.circulo_verde;
-            this.picDesgaste.Location = new System.Drawing.Point(107, 5);
-            this.picDesgaste.Margin = new System.Windows.Forms.Padding(5);
-            this.picDesgaste.Name = "picDesgaste";
-            this.picDesgaste.Size = new System.Drawing.Size(41, 40);
-            this.picDesgaste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDesgaste.TabIndex = 0;
-            this.picDesgaste.TabStop = false;
-            // 
-            // picFractura
-            // 
-            this.picFractura.BackColor = System.Drawing.Color.Transparent;
-            this.picFractura.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picFractura.Image = global::Dental_H.Properties.Resources.circulo_amarillo;
-            this.picFractura.Location = new System.Drawing.Point(56, 5);
-            this.picFractura.Margin = new System.Windows.Forms.Padding(5);
-            this.picFractura.Name = "picFractura";
-            this.picFractura.Size = new System.Drawing.Size(41, 40);
-            this.picFractura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFractura.TabIndex = 0;
-            this.picFractura.TabStop = false;
-            // 
-            // panelDienteSuperior
-            // 
-            this.panelDienteSuperior.AllowDrop = true;
-            this.panelDienteSuperior.Controls.Add(this.picDienteSuperior);
-            this.panelDienteSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDienteSuperior.Location = new System.Drawing.Point(3, 3);
-            this.panelDienteSuperior.Name = "panelDienteSuperior";
-            this.panelDienteSuperior.Size = new System.Drawing.Size(206, 152);
-            this.panelDienteSuperior.TabIndex = 0;
-            // 
-            // picDienteSuperior
-            // 
-            this.picDienteSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picDienteSuperior.Image = global::Dental_H.Properties.Resources.vista_superior;
-            this.picDienteSuperior.Location = new System.Drawing.Point(0, 0);
-            this.picDienteSuperior.Margin = new System.Windows.Forms.Padding(0);
-            this.picDienteSuperior.Name = "picDienteSuperior";
-            this.picDienteSuperior.Size = new System.Drawing.Size(206, 152);
-            this.picDienteSuperior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDienteSuperior.TabIndex = 0;
-            this.picDienteSuperior.TabStop = false;
-            // 
-            // panelDienteVertical
-            // 
-            this.panelDienteVertical.AllowDrop = true;
-            this.panelDienteVertical.Controls.Add(this.picDienteVertical);
-            this.panelDienteVertical.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDienteVertical.Location = new System.Drawing.Point(3, 3);
-            this.panelDienteVertical.Name = "panelDienteVertical";
-            this.panelDienteVertical.Size = new System.Drawing.Size(206, 258);
-            this.panelDienteVertical.TabIndex = 2;
-            // 
-            // picDienteVertical
-            // 
-            this.picDienteVertical.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picDienteVertical.Image = ((System.Drawing.Image)(resources.GetObject("picDienteVertical.Image")));
-            this.picDienteVertical.Location = new System.Drawing.Point(0, 0);
-            this.picDienteVertical.Name = "picDienteVertical";
-            this.picDienteVertical.Size = new System.Drawing.Size(206, 258);
-            this.picDienteVertical.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDienteVertical.TabIndex = 0;
-            this.picDienteVertical.TabStop = false;
-            // 
-            // lblIndicaciones
-            // 
-            this.lblIndicaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblIndicaciones.AutoSize = true;
-            this.lblIndicaciones.Location = new System.Drawing.Point(102, 14);
-            this.lblIndicaciones.Name = "lblIndicaciones";
-            this.lblIndicaciones.Size = new System.Drawing.Size(220, 13);
-            this.lblIndicaciones.TabIndex = 0;
-            this.lblIndicaciones.Text = "Arrastra un icono para idicar un padecimiento";
-            // 
-            // txtNumPieza
-            // 
-            this.txtNumPieza.Location = new System.Drawing.Point(173, 475);
-            this.txtNumPieza.Name = "txtNumPieza";
-            this.txtNumPieza.Size = new System.Drawing.Size(100, 20);
-            this.txtNumPieza.TabIndex = 2;
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(173, 553);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(100, 20);
-            this.txtTipo.TabIndex = 2;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(69, 623);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 32);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Sano";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(69, 652);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(103, 32);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "Tratado";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(67, 680);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(138, 32);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "Restaurado";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.checkBox4.ForeColor = System.Drawing.Color.White;
-            this.checkBox4.Location = new System.Drawing.Point(67, 707);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(110, 32);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Extraído";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.Location = new System.Drawing.Point(52, 791);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 138);
-            this.textBox1.TabIndex = 4;
-            // 
-            // cmbTratamiento
-            // 
-            this.cmbTratamiento.FormattingEnabled = true;
-            this.cmbTratamiento.Location = new System.Drawing.Point(69, 987);
-            this.cmbTratamiento.Name = "cmbTratamiento";
-            this.cmbTratamiento.Size = new System.Drawing.Size(265, 21);
-            this.cmbTratamiento.TabIndex = 5;
-            // 
-            // panelOdontograma
-            // 
-            this.panelOdontograma.AutoScroll = true;
-            this.panelOdontograma.BackColor = System.Drawing.Color.White;
-            this.panelOdontograma.Controls.Add(this.paneltrabajo12);
-            this.panelOdontograma.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelOdontograma.Location = new System.Drawing.Point(0, 270);
-            this.panelOdontograma.Margin = new System.Windows.Forms.Padding(0);
-            this.panelOdontograma.Name = "panelOdontograma";
-            this.panelOdontograma.Size = new System.Drawing.Size(1396, 904);
-            this.panelOdontograma.TabIndex = 1;
-            this.panelOdontograma.Visible = false;
-            // 
             // headerControl1
             // 
             this.headerControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1097,6 +1286,336 @@
             this.headerControl1.Name = "headerControl1";
             this.headerControl1.Size = new System.Drawing.Size(1396, 110);
             this.headerControl1.TabIndex = 0;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 44);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1350, 2956);
+            this.tableLayoutPanel6.TabIndex = 1;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel7.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1344, 1472);
+            this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tableLayoutPanel8);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(226, 248);
+            this.panel3.TabIndex = 0;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label24, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label25, 1, 1);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox2, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox3, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox4, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox5, 0, 4);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox6, 0, 5);
+            this.tableLayoutPanel8.Controls.Add(this.label26, 1, 2);
+            this.tableLayoutPanel8.Controls.Add(this.label27, 1, 3);
+            this.tableLayoutPanel8.Controls.Add(this.label28, 1, 4);
+            this.tableLayoutPanel8.Controls.Add(this.label29, 1, 5);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox7, 0, 6);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox8, 0, 7);
+            this.tableLayoutPanel8.Controls.Add(this.label30, 1, 6);
+            this.tableLayoutPanel8.Controls.Add(this.label31, 1, 7);
+            this.tableLayoutPanel8.Controls.Add(this.label32, 3, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label33, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label34, 2, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label35, 2, 2);
+            this.tableLayoutPanel8.Controls.Add(this.label36, 2, 3);
+            this.tableLayoutPanel8.Controls.Add(this.label37, 3, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label38, 3, 2);
+            this.tableLayoutPanel8.Controls.Add(this.label39, 3, 3);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 8;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(226, 248);
+            this.tableLayoutPanel8.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Dental_H.Properties.Resources.circulo_rojo;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(34, 9);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(36, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Caries";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Dental_H.Properties.Resources.circulo_amarillo;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 34);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(34, 40);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(51, 13);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Fracturas";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Dental_H.Properties.Resources.circulo_verde;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 65);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Dental_H.Properties.Resources.circulo_azulcielo;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 96);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Dental_H.Properties.Resources.circulo_rosa;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 127);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Dental_H.Properties.Resources.circulo_morado;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 158);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(34, 71);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(52, 13);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Desgaste";
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(34, 102);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(63, 13);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Sensibilidad";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(34, 133);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(61, 13);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "Inflamación";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(34, 164);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(51, 13);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "Infección";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Dental_H.Properties.Resources.circulo_azul;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 189);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Dental_H.Properties.Resources.circulo_gris;
+            this.pictureBox8.Location = new System.Drawing.Point(3, 220);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(34, 195);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(34, 13);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Placa";
+            // 
+            // label31
+            // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(34, 226);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(32, 13);
+            this.label31.TabIndex = 1;
+            this.label31.Text = "Sarro";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(128, 9);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(32, 13);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "Sano";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label33.ForeColor = System.Drawing.Color.Lime;
+            this.label33.Location = new System.Drawing.Point(103, 2);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(19, 26);
+            this.label33.TabIndex = 1;
+            this.label33.Text = "/";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label34.ForeColor = System.Drawing.Color.Gold;
+            this.label34.Location = new System.Drawing.Point(103, 33);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(19, 26);
+            this.label34.TabIndex = 1;
+            this.label34.Text = "/";
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label35.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label35.Location = new System.Drawing.Point(103, 64);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(19, 26);
+            this.label35.TabIndex = 1;
+            this.label35.Text = "/";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label36.Location = new System.Drawing.Point(103, 95);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(19, 26);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "/";
+            // 
+            // label37
+            // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(128, 40);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(50, 13);
+            this.label37.TabIndex = 1;
+            this.label37.Text = "Tratando";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(128, 71);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(62, 13);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "Restaurado";
+            // 
+            // label39
+            // 
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(128, 102);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(45, 13);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "Extraido";
             // 
             // PacienteDetalleForm
             // 
@@ -1107,14 +1626,7 @@
             this.Text = "PacienteDetalleForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
-            this.panelDatosPersonales.ResumeLayout(false);
-            this.panelDatosPersonales.PerformLayout();
-            this.pnlInfoBasica.ResumeLayout(false);
-            this.pnlInfoBasica.PerformLayout();
-            this.pnlTabs.ResumeLayout(false);
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatarPaciente)).EndInit();
+            this.panelOdontograma.ResumeLayout(false);
             this.paneltrabajo12.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelIzquierdo.ResumeLayout(false);
@@ -1123,21 +1635,43 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picCaries)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInflamacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfeccion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSarro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlaca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSensibilidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDesgaste)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFractura)).EndInit();
-            this.panelDienteSuperior.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picDienteSuperior)).EndInit();
             this.panelDienteVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDienteVertical)).EndInit();
-            this.panelOdontograma.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panelDienteSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picDienteSuperior)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picFractura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDesgaste)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSensibilidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlaca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSarro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInfeccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInflamacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCaries)).EndInit();
+            this.panelDerecho.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panelDatosPersonales.ResumeLayout(false);
+            this.panelDatosPersonales.PerformLayout();
+            this.pnlInfoBasica.ResumeLayout(false);
+            this.pnlInfoBasica.PerformLayout();
+            this.pnlTabs.ResumeLayout(false);
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatarPaciente)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1230,5 +1764,45 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panelDerecho;
+        private System.Windows.Forms.FlowLayoutPanel flpTratamientos;
+        private System.Windows.Forms.Button btnAgregarTratamiento;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DateTimePicker dtpFechaPadecimiento;
+        private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnTemporales;
+        private System.Windows.Forms.Button btnPermanentes;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
     }
 }

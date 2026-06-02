@@ -373,5 +373,38 @@ namespace Dental_H.View
 
             return marca;
         }
+
+        private void btnAgregarTratamiento_Click(object sender, EventArgs e)
+        {
+            Panel fila = new Panel();
+            fila.Width = 320;
+            fila.Height = 35;
+
+            ComboBox cmb = new ComboBox();
+            cmb.Width = 250;
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            // Copiar tratamientos del combo principal
+            foreach (var item in cmbTratamiento.Items)
+            {
+                cmb.Items.Add(item);
+            }
+
+            Button btnEliminar = new Button();
+            btnEliminar.Text = "X";
+            btnEliminar.Width = 40;
+            btnEliminar.Left = 260;
+
+            btnEliminar.Click += (s, ev) =>
+            {
+                flpTratamientos.Controls.Remove(fila);
+                fila.Dispose();
+            };
+
+            fila.Controls.Add(cmb);
+            fila.Controls.Add(btnEliminar);
+
+            flpTratamientos.Controls.Add(fila);
+        }
     }
 }
