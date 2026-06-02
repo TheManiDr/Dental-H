@@ -78,7 +78,6 @@
             this.btnExpediente = new System.Windows.Forms.Button();
             this.btnDatosPersonales = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.back2 = new System.Windows.Forms.Button();
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblNombrePaciente = new System.Windows.Forms.Label();
@@ -140,7 +139,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1904, 1181);
+            this.panel1.Size = new System.Drawing.Size(1904, 1041);
             this.panel1.TabIndex = 0;
             // 
             // panelOdontograma
@@ -152,7 +151,7 @@
             this.panelOdontograma.Location = new System.Drawing.Point(0, 270);
             this.panelOdontograma.Margin = new System.Windows.Forms.Padding(0);
             this.panelOdontograma.Name = "panelOdontograma";
-            this.panelOdontograma.Size = new System.Drawing.Size(1904, 911);
+            this.panelOdontograma.Size = new System.Drawing.Size(1904, 771);
             this.panelOdontograma.TabIndex = 1;
             this.panelOdontograma.Visible = false;
             // 
@@ -168,8 +167,8 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 911F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1904, 911);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 771F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1904, 771);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panelIzquierdo
@@ -181,7 +180,7 @@
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(476, 911);
+            this.panelIzquierdo.Size = new System.Drawing.Size(476, 771);
             this.panelIzquierdo.TabIndex = 0;
             // 
             // label16
@@ -190,7 +189,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(92, 31);
+            this.label16.Location = new System.Drawing.Point(92, -39);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(285, 37);
             this.label16.TabIndex = 0;
@@ -202,7 +201,7 @@
             this.panelDerecho.Location = new System.Drawing.Point(476, 0);
             this.panelDerecho.Margin = new System.Windows.Forms.Padding(0);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(1428, 911);
+            this.panelDerecho.Size = new System.Drawing.Size(1428, 771);
             this.panelDerecho.TabIndex = 1;
             // 
             // panelDatosPersonales
@@ -236,7 +235,7 @@
             this.panelDatosPersonales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDatosPersonales.Location = new System.Drawing.Point(0, 270);
             this.panelDatosPersonales.Name = "panelDatosPersonales";
-            this.panelDatosPersonales.Size = new System.Drawing.Size(1904, 911);
+            this.panelDatosPersonales.Size = new System.Drawing.Size(1904, 771);
             this.panelDatosPersonales.TabIndex = 8;
             // 
             // label15
@@ -619,7 +618,6 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(156)))), ((int)(((byte)(232)))));
-            this.pnlHeader.Controls.Add(this.back2);
             this.pnlHeader.Controls.Add(this.lblEdad);
             this.pnlHeader.Controls.Add(this.lblPaciente);
             this.pnlHeader.Controls.Add(this.lblNombrePaciente);
@@ -629,16 +627,6 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1904, 120);
             this.pnlHeader.TabIndex = 6;
-            // 
-            // back2
-            // 
-            this.back2.Location = new System.Drawing.Point(1348, 35);
-            this.back2.Margin = new System.Windows.Forms.Padding(2);
-            this.back2.Name = "back2";
-            this.back2.Size = new System.Drawing.Size(71, 41);
-            this.back2.TabIndex = 3;
-            this.back2.Text = "<";
-            this.back2.UseVisualStyleBackColor = true;
             // 
             // lblEdad
             // 
@@ -948,10 +936,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1181);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.panel1);
             this.Name = "PacienteDetalleForm";
             this.Text = "PacienteDetalleForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panelOdontograma.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1033,7 +1022,6 @@
         private System.Windows.Forms.Button btnExpediente;
         private System.Windows.Forms.Button btnDatosPersonales;
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Button back2;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblPaciente;
         private System.Windows.Forms.Label lblNombrePaciente;

@@ -72,6 +72,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "PacienteListaForm";
             this.Text = "Pacientes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PacienteListaForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
