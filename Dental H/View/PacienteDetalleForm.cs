@@ -22,6 +22,7 @@ namespace Dental_H.View
 
         // 1. VARIABLE GLOBAL PARA RECORDAR LA VENTANA ANTERIOR
         private Form _ventanaAnterior;
+        private Button btnGuardarCambios;
 
         // 2. CONSTRUCTOR MODIFICADO (Ahora recibe el ID del paciente Y la ventana de origen)
         public PacienteDetalleForm(int idPaciente, Form anterior)
@@ -120,8 +121,63 @@ namespace Dental_H.View
             layout.Controls.Add(cardMedica, 1, 0);
             layout.Controls.Add(cardContacto, 2, 0);
 
+            btnGuardarCambios = new Button();
+            btnGuardarCambios.Text = "Guardar cambios";
+            btnGuardarCambios.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnGuardarCambios.Location = new Point(pnlHeader.Width - 220, 52);
+            btnGuardarCambios.Size = new Size(180, 36);
+            btnGuardarCambios.BackColor = Color.FromArgb(46, 125, 84);
+            btnGuardarCambios.ForeColor = Color.White;
+            btnGuardarCambios.FlatStyle = FlatStyle.Flat;
+            btnGuardarCambios.FlatAppearance.BorderSize = 0;
+            btnGuardarCambios.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            btnGuardarCambios.Click += BtnGuardarCambios_Click;
+            pnlHeader.Controls.Add(btnGuardarCambios);
+            btnGuardarCambios.BringToFront();
+
             panelDatosPersonales.Controls.Clear();
             panelDatosPersonales.Controls.Add(layout);
+        }
+
+        private void BtnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtApellidoPaterno.Text))
+            {
+                MessageBox.Show("Nombre y apellido paterno son obligatorios.", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Paciente paciente = new Paciente();
+            paciente.IdPersona = idPaciente;
+            paciente.Nombre = txtNombre.Text.Trim();
+            paciente.ApellidoPaterno = txtApellidoPaterno.Text.Trim();
+            paciente.ApellidoMaterno = txtApellidoMaterno.Text.Trim();
+            paciente.FechaNacimiento = dtpFechaNacimiento.Value;
+            paciente.Genero = cmbGenero.Text;
+            paciente.TipoSangre = cmbTipoSangre.Text;
+            paciente.Alergias = txtAlergias.Text.Trim();
+            paciente.Calle = txtCalle.Text.Trim();
+            paciente.Ciudad = txtCiudad.Text.Trim();
+            paciente.Estado = txtEstado.Text.Trim();
+            paciente.CodigoPostal = txtCodigoPostal.Text.Trim();
+            paciente.Telefono = txtTelefono.Text.Trim();
+            paciente.Correo = txtCorreo.Text.Trim();
+            paciente.ContactoEmergencia = txtContactoEmergencia.Text.Trim();
+            paciente.NumeroEmergencia = txtNumeroEmergencia.Text.Trim();
+
+            PacienteController controller = new PacienteController();
+
+            if (controller.ActualizarPaciente(paciente))
+            {
+                lblNombrePaciente.Text = paciente.Nombre + " " + paciente.ApellidoPaterno + " " + paciente.ApellidoMaterno;
+                lblEdad.Text = CalcularEdad(paciente.FechaNacimiento) + " años";
+                MessageBox.Show("Cambios guardados correctamente.", "Paciente actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudieron guardar los cambios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void EstilizarTab(Button boton, int x, int y, int width)
@@ -264,6 +320,9 @@ namespace Dental_H.View
 
             txtTelefono.Text =
                 paciente.Telefono;
+
+            txtCorreo.Text =
+                paciente.Correo;
 
             if (paciente.Genero == "Masculino")
             {

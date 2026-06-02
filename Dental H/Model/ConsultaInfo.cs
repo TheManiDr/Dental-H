@@ -15,5 +15,7 @@ namespace Dental_H.Model
         public string Odontologo { get; set; }
 
         public string Descripcion { get; set; }
+
+        public int DuracionMinutos { get; set; }
     }
 }

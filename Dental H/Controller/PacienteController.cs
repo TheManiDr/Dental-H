@@ -60,6 +60,13 @@ namespace Dental_H.Controller
                     return false;
                 }
 
+                pacienteDAO.RegistrarDatosComplementarios(
+                    idPersona,
+                    paciente,
+                    conexion,
+                    transaccion
+                );
+
                 transaccion.Commit();
 
                 return true;
@@ -82,6 +89,11 @@ namespace Dental_H.Controller
         public Paciente ObtenerPacientePorId(int idPaciente)
         {
             return pacienteDAO.ObtenerPacientePorId(idPaciente);
+        }
+
+        public bool ActualizarPaciente(Paciente paciente)
+        {
+            return pacienteDAO.ActualizarPaciente(paciente);
         }
     }
 }

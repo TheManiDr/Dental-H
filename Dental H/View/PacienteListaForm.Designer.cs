@@ -50,10 +50,10 @@
             // 
             this.flpPacientes.AutoScroll = true;
             this.flpPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpPacientes.Location = new System.Drawing.Point(0, 270);
+            this.flpPacientes.Location = new System.Drawing.Point(0, 315);
             this.flpPacientes.Name = "flpPacientes";
             this.flpPacientes.Padding = new System.Windows.Forms.Padding(25);
-            this.flpPacientes.Size = new System.Drawing.Size(1904, 771);
+            this.flpPacientes.Size = new System.Drawing.Size(1904, 726);
             this.flpPacientes.TabIndex = 2;
             // 
             // pnlAltaPaciente
@@ -61,7 +61,7 @@
             this.pnlAltaPaciente.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAltaPaciente.Location = new System.Drawing.Point(0, 110);
             this.pnlAltaPaciente.Name = "pnlAltaPaciente";
-            this.pnlAltaPaciente.Size = new System.Drawing.Size(1904, 160);
+            this.pnlAltaPaciente.Size = new System.Drawing.Size(1904, 205);
             this.pnlAltaPaciente.TabIndex = 3;
             // 
             // headerControl1
