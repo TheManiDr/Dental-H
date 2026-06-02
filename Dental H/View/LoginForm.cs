@@ -74,5 +74,10 @@ namespace Dental_H
         {
 
         }
+
+        private void cerrarLogin_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -37,6 +37,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cerrarLogin = new System.Windows.Forms.Button();
             this.panelLogin.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -139,12 +140,25 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
+            // cerrarLogin
+            // 
+            this.cerrarLogin.BackColor = System.Drawing.Color.Navy;
+            this.cerrarLogin.ForeColor = System.Drawing.Color.Black;
+            this.cerrarLogin.Location = new System.Drawing.Point(0, 0);
+            this.cerrarLogin.Name = "cerrarLogin";
+            this.cerrarLogin.Size = new System.Drawing.Size(75, 23);
+            this.cerrarLogin.TabIndex = 6;
+            this.cerrarLogin.Text = "X";
+            this.cerrarLogin.UseVisualStyleBackColor = false;
+            this.cerrarLogin.Click += new System.EventHandler(this.cerrarLogin_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(1066, 718);
+            this.Controls.Add(this.cerrarLogin);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelLogin);
@@ -174,6 +188,7 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button cerrarLogin;
     }
 }
 
