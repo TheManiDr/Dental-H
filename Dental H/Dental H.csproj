@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\ConsultaListaForm.cs" />
     <Compile Include="Components\PacienteCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,6 +108,13 @@
     <Compile Include="Components\HeaderControl.Designer.cs">
       <DependentUpon>HeaderControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\PersonalListaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\PersonalListaForm.Designer.cs">
+      <DependentUpon>PersonalListaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TratamientoListaForm.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\PacienteController.cs" />
     <Compile Include="DAO\PacienteDAO.cs" />
@@ -185,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\PacienteCard.resx">
       <DependentUpon>PacienteCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PersonalListaForm.resx">
+      <DependentUpon>PersonalListaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

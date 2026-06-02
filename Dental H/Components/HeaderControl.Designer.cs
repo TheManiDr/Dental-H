@@ -46,10 +46,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblBienvenida = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.lblBienvenida = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlTop.SuspendLayout();
@@ -150,6 +150,7 @@
             this.btnTaratamientos.TabIndex = 3;
             this.btnTaratamientos.Text = "Taratamientos";
             this.btnTaratamientos.UseVisualStyleBackColor = false;
+            this.btnTaratamientos.Click += new System.EventHandler(this.btnTaratamientos_Click);
             // 
             // btnConsultas
             // 
@@ -164,6 +165,7 @@
             this.btnConsultas.TabIndex = 3;
             this.btnConsultas.Text = "Consultas";
             this.btnConsultas.UseVisualStyleBackColor = false;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // btnPersonal
             // 
@@ -178,6 +180,7 @@
             this.btnPersonal.TabIndex = 2;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.UseVisualStyleBackColor = false;
+            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
             // 
             // btnPacientes
             // 
@@ -244,7 +247,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(554, 20);
             this.txtBuscar.TabIndex = 2;
-            this.txtBuscar.Text = "Buscar paciente...";
+            this.txtBuscar.Text = " ";
             // 
             // panel2
             // 
@@ -281,6 +284,32 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(134, 54);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 18);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Nombre Usuario";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBienvenida
+            // 
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblBienvenida.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblBienvenida.ForeColor = System.Drawing.Color.White;
+            this.lblBienvenida.Location = new System.Drawing.Point(3, 0);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(128, 17);
+            this.lblBienvenida.TabIndex = 7;
+            this.lblBienvenida.Text = "Bienvenido Admin";
+            this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pbUsuario
             // 
             this.pbUsuario.Dock = System.Windows.Forms.DockStyle.Left;
@@ -301,32 +330,6 @@
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
-            // 
-            // lblBienvenida
-            // 
-            this.lblBienvenida.AutoSize = true;
-            this.lblBienvenida.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblBienvenida.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblBienvenida.ForeColor = System.Drawing.Color.White;
-            this.lblBienvenida.Location = new System.Drawing.Point(3, 0);
-            this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(128, 17);
-            this.lblBienvenida.TabIndex = 7;
-            this.lblBienvenida.Text = "Bienvenido Admin";
-            this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 18);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Nombre Usuario";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HeaderControl
             // 

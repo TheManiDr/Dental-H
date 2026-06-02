@@ -143,7 +143,7 @@
             // cerrarLogin
             // 
             this.cerrarLogin.BackColor = System.Drawing.Color.Navy;
-            this.cerrarLogin.ForeColor = System.Drawing.Color.Black;
+            this.cerrarLogin.ForeColor = System.Drawing.Color.Transparent;
             this.cerrarLogin.Location = new System.Drawing.Point(0, 0);
             this.cerrarLogin.Name = "cerrarLogin";
             this.cerrarLogin.Size = new System.Drawing.Size(75, 23);
