@@ -45,8 +45,7 @@ namespace Dental_H
             {
                 Sesion.UsuarioActual = usuarioEncontrado;
                 DashboardForm dashboard = new DashboardForm();
-                dashboard.Show();
-                this.Hide();
+                AppNavigator.AbrirDesdeLogin(this, dashboard);
 
             }
             else

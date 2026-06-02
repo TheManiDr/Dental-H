@@ -130,47 +130,27 @@ namespace Dental_H.View
 
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            PacienteListaForm pacientelista = new PacienteListaForm();
-            pacientelista.Show();
-            this.Hide();
+            AppNavigator.IrA(this, new PacienteListaForm());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-            Personal formPersonal = new Personal();
-
-            formPersonal.Show();
-
-            this.Hide();
+            AppNavigator.IrA(this, new Personal());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-            Consultas formConsultas = new Consultas();
-
-            formConsultas.Show();
-
-            this.Hide();
+            AppNavigator.IrA(this, new Consultas());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Tratamientos formTratamientos = new Tratamientos();
-
-            formTratamientos.Show();
-
-            this.Hide();
+            AppNavigator.IrA(this, new Tratamientos());
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Citashoy formCitasHoy = new Citashoy();
-
-            formCitasHoy.Show();
-
-            this.Hide();
+            AppNavigator.IrA(this, new Citashoy());
         }
 
         private void button1_Click(object sender, EventArgs e)

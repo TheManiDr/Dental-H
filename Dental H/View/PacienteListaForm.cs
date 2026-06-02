@@ -59,8 +59,7 @@ namespace Dental_H.View
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
         {
             PacienteForm pacientefrom = new PacienteForm(this);
-            pacientefrom.Show();
-            this.Hide();
+            AppNavigator.AbrirSecundaria(this, pacientefrom);
         }
 
         private int CalcularEdad(DateTime fechaNacimiento)

@@ -25,47 +25,27 @@ namespace Dental_H.Components
 
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            Form actual = this.FindForm();
-            PacienteListaForm frm = new PacienteListaForm();
-            frm.Show(); // Muestra la nueva ventana primero
-
-            if (actual != null) actual.Close(); // Cierra definitivamente la actual
+            AppNavigator.IrA(this.FindForm(), new PacienteListaForm());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Form actual = this.FindForm();
-            DashboardForm frm = new DashboardForm();
-            frm.Show();
-
-            if (actual != null) actual.Close();
+            AppNavigator.IrA(this.FindForm(), new DashboardForm());
         }
 
         private void btnPersonal_Click(object sender, EventArgs e)
         {
-            Form actual = this.FindForm();
-            PersonalListaForm frm = new PersonalListaForm();
-            frm.Show();
-
-            if (actual != null) actual.Close();
+            AppNavigator.IrA(this.FindForm(), new Personal());
         }
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-            Form actual = this.FindForm();
-            ConsultaListaForm frm = new ConsultaListaForm();
-            frm.Show();
-
-            if (actual != null) actual.Close();
+            AppNavigator.IrA(this.FindForm(), new Consultas());
         }
 
         private void btnTaratamientos_Click(object sender, EventArgs e)
         {
-            Form actual = this.FindForm();
-            TratamientoListaForm frm = new TratamientoListaForm();
-            frm.Show();
-
-            if (actual != null) actual.Close();
+            AppNavigator.IrA(this.FindForm(), new Tratamientos());
         }
     }
 }

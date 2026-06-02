@@ -1,4 +1,5 @@
-﻿using Dental_H.Model;
+using Dental_H.Model;
+using Dental_H.Util;
 using Dental_H.View;
 using System;
 using System.Collections.Generic;
@@ -46,18 +47,9 @@ namespace Dental_H.Components
 
         private void btnVerPerfil_Click(object sender, EventArgs e)
         {
-            // 1. Recuperamos el formulario PacienteListaForm desde la propiedad Tag de la tarjeta
             Form listaPadre = this.Tag as Form;
-
-            // 2. Pasamos el ID del paciente Y el formulario de la lista para que funcione el botón de regreso
             PacienteDetalleForm detalle = new PacienteDetalleForm(IdPaciente, listaPadre);
-            detalle.Show();
-
-            // 3. Ocultamos la lista de pacientes (si es que se encontró la referencia en el Tag)
-            if (listaPadre != null)
-            {
-                listaPadre.Hide();
-            }
+            AppNavigator.AbrirSecundaria(listaPadre, detalle);
         }
     }
 }

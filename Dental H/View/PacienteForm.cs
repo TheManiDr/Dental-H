@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dental_H.Controller;
 using Dental_H.Model;
+using Dental_H.Util;
 
 namespace Dental_H.View
 {
@@ -94,17 +95,7 @@ namespace Dental_H.View
         {
             if (this._ventanaAnterior != null)
             {
-                // Si la ventana que nos abrió es la lista de pacientes, la convertimos explícitamente
-                if (this._ventanaAnterior is PacienteListaForm listaPacientes)
-                {
-                    listaPacientes.Show(); // Muestra la lista de pacientes original
-                }
-                else
-                {
-                    this._ventanaAnterior.Show(); // Respaldo genérico por si se abre desde otra ventana
-                }
-
-                this.Close(); // Cierra este formulario de registro
+                AppNavigator.Regresar(this, this._ventanaAnterior);
             }
         }
 

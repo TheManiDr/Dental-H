@@ -124,6 +124,7 @@
     <Compile Include="Model\Paciente.cs" />
     <Compile Include="Model\Persona.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Util\AppNavigator.cs" />
     <Compile Include="Util\Conexion.cs" />
     <Compile Include="Util\Sesion.cs" />
     <Compile Include="View\AgendarCita.cs">
