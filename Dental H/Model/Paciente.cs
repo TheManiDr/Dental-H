@@ -26,6 +26,8 @@ namespace Dental_H.Model
 
         public string Telefono { get; set; }
 
+        public string Correo { get; set; }
+
         public Paciente()
         {
 
