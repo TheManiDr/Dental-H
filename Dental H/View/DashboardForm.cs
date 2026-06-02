@@ -61,10 +61,10 @@ namespace Dental_H.View
             this.dgvCalendario.Columns.Add("colHora", "Horario");
             this.dgvCalendario.Columns.Add("colLunes", "Lunes");
             this.dgvCalendario.Columns.Add("colMartes", "Martes");
-            this.dgvCalendario.Columns.Add("colMiercoles", "Miércoles");
+            this.dgvCalendario.Columns.Add("colMiercoles", "Miercoles");
             this.dgvCalendario.Columns.Add("colJueves", "Jueves");
             this.dgvCalendario.Columns.Add("colViernes", "Viernes");
-            this.dgvCalendario.Columns.Add("colSabado", "Sábado");
+            this.dgvCalendario.Columns.Add("colSabado", "Sabado");
 
             // Estilos estéticos del encabezado principal azul
             this.dgvCalendario.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
@@ -109,20 +109,106 @@ namespace Dental_H.View
             this.dgvCalendario.DefaultCellStyle.SelectionForeColor = Color.Black;
             this.dgvCalendario.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(248, 250, 252);
 
-            // Inyección de citas muestra en la cuadrícula para validar el renderizado visual
-            InsertarCitaMuestra(1, 2, "C. Pérez - 9 AM");       // Lunes 9:00 AM
-            InsertarCitaMuestra(2, 4, "J. Gómez - 11 AM");      // Martes 11:00 AM
-            InsertarCitaMuestra(3, 6, "C. Pérez - 9 AM");       // Miércoles 1:00 PM
-            InsertarCitaMuestra(5, 2, "L. Gómez - 10 AM");      // Viernes 9:00 AM
+            CargarCitasSemanales();
         }
 
-        private void InsertarCitaMuestra(int columnaDia, int filaHora, string informacionPaciente)
+        private void CargarCitasSemanales()
+        {
+            DateTime hoy = DateTime.Today;
+            int diasDesdeLunes = ((int)hoy.DayOfWeek + 6) % 7;
+            DateTime lunes = hoy.AddDays(-diasDesdeLunes);
+            DateTime sabado = lunes.AddDays(5);
+
+            CitaMedicaController controller = new CitaMedicaController();
+            List<ConsultaInfo> citas = controller.ObtenerCitasPorRango(lunes, sabado);
+
+            foreach (ConsultaInfo cita in citas)
+            {
+                DateTime fechaHoraCita = cita.Fecha.Date.Add(cita.Hora);
+                if (fechaHoraCita < DateTime.Now)
+                {
+                    continue;
+                }
+
+                int columnaDia = ObtenerColumnaDia(cita.Fecha);
+                int filaHora = ObtenerFilaHora(cita.Hora);
+
+                if (columnaDia < 1 || filaHora < 0)
+                {
+                    continue;
+                }
+
+                string nombreCorto = ObtenerNombreCorto(cita.Paciente);
+                string texto = nombreCorto + Environment.NewLine + cita.Descripcion + Environment.NewLine + DateTime.Today.Add(cita.Hora).ToString("hh:mm tt");
+                InsertarCitaEnCalendario(columnaDia, filaHora, texto);
+            }
+        }
+
+        private int ObtenerColumnaDia(DateTime fecha)
+        {
+            switch (fecha.DayOfWeek)
+            {
+                case DayOfWeek.Monday:
+                    return 1;
+                case DayOfWeek.Tuesday:
+                    return 2;
+                case DayOfWeek.Wednesday:
+                    return 3;
+                case DayOfWeek.Thursday:
+                    return 4;
+                case DayOfWeek.Friday:
+                    return 5;
+                case DayOfWeek.Saturday:
+                    return 6;
+                default:
+                    return -1;
+            }
+        }
+
+        private int ObtenerFilaHora(TimeSpan hora)
+        {
+            int horaEntera = hora.Hours;
+
+            if (horaEntera < 7 || horaEntera > 15)
+            {
+                return -1;
+            }
+
+            return horaEntera - 7;
+        }
+
+        private string ObtenerNombreCorto(string nombreCompleto)
+        {
+            if (string.IsNullOrWhiteSpace(nombreCompleto))
+            {
+                return "Paciente";
+            }
+
+            string[] partes = nombreCompleto.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            if (partes.Length >= 2)
+            {
+                return partes[0] + " " + partes[1];
+            }
+
+            return nombreCompleto;
+        }
+
+        private void InsertarCitaEnCalendario(int columnaDia, int filaHora, string informacionPaciente)
         {
             if (this.dgvCalendario != null && filaHora < this.dgvCalendario.Rows.Count && columnaDia < this.dgvCalendario.Columns.Count)
             {
                 var celda = this.dgvCalendario.Rows[filaHora].Cells[columnaDia];
-                celda.Value = informacionPaciente;
-                celda.Style.BackColor = Color.FromArgb(174, 214, 241); // Azul clínico pastel
+
+                if (!string.IsNullOrWhiteSpace(celda.Value?.ToString()))
+                {
+                    celda.Value += Environment.NewLine + informacionPaciente;
+                }
+                else
+                {
+                    celda.Value = informacionPaciente;
+                }
+
+                celda.Style.BackColor = Color.FromArgb(174, 214, 241);
                 celda.Style.ForeColor = Color.FromArgb(21, 67, 96);
                 celda.Style.Font = new Font("Segoe UI", 9.5f, FontStyle.Bold);
                 celda.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;

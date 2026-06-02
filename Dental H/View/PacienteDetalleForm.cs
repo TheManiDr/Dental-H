@@ -30,7 +30,185 @@ namespace Dental_H.View
             this.idPaciente = idPaciente;
             this._ventanaAnterior = anterior; // Guardamos la lista de pacientes en memoria
 
+            ConfigurarEstiloDetalle();
             CargarPaciente();
+        }
+
+        private void ConfigurarEstiloDetalle()
+        {
+            Text = "Detalle del paciente";
+            WindowState = FormWindowState.Maximized;
+            BackColor = Color.FromArgb(245, 247, 250);
+
+            panel1.BackColor = Color.FromArgb(245, 247, 250);
+
+            pnlHeader.Height = 138;
+            pnlHeader.BackColor = Color.FromArgb(86, 141, 214);
+            pnlHeader.Padding = new Padding(28, 18, 28, 18);
+
+            picAvatarPaciente.Location = new Point(28, 24);
+            picAvatarPaciente.Size = new Size(92, 92);
+            picAvatarPaciente.SizeMode = PictureBoxSizeMode.Zoom;
+
+            lblPaciente.Location = new Point(142, 35);
+            lblPaciente.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            lblPaciente.ForeColor = Color.White;
+
+            lblNombrePaciente.Location = new Point(142, 58);
+            lblNombrePaciente.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+            lblNombrePaciente.ForeColor = Color.White;
+            lblNombrePaciente.AutoSize = true;
+
+            lblEdad.Location = new Point(142, 90);
+            lblEdad.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblEdad.ForeColor = Color.White;
+
+            pnlTabs.Height = 48;
+            pnlTabs.BackColor = Color.FromArgb(221, 235, 250);
+            EstilizarTab(btnDatosPersonales, 28, 10, 130);
+            EstilizarTab(btnExpediente, 168, 10, 140);
+            EstilizarTab(btnPlanesTratamientos, 318, 10, 165);
+            EstilizarTab(btnRadiografia, 493, 10, 120);
+
+            panelDatosPersonales.BackColor = Color.FromArgb(245, 247, 250);
+            panelDatosPersonales.Padding = new Padding(26);
+            panelDatosPersonales.AutoScroll = true;
+
+            TableLayoutPanel layout = new TableLayoutPanel();
+            layout.Dock = DockStyle.Fill;
+            layout.ColumnCount = 3;
+            layout.RowCount = 1;
+            layout.BackColor = Color.FromArgb(245, 247, 250);
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33f));
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33f));
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.34f));
+
+            Panel cardBasica = CrearCardDetalle("Informacion basica");
+            Panel cardMedica = CrearCardDetalle("Informacion medica y direccion");
+            Panel cardContacto = CrearCardDetalle("Contacto y emergencia");
+
+            TableLayoutPanel tablaBasica = CrearTablaCampos();
+            TableLayoutPanel tablaMedica = CrearTablaCampos();
+            TableLayoutPanel tablaContacto = CrearTablaCampos();
+
+            cardBasica.Controls.Add(tablaBasica);
+            cardMedica.Controls.Add(tablaMedica);
+            cardContacto.Controls.Add(tablaContacto);
+
+            AgregarCampo(tablaBasica, lblNombre, txtNombre);
+            AgregarCampo(tablaBasica, lblApellidoPaterno, txtApellidoPaterno);
+            AgregarCampo(tablaBasica, lblApellidoMaterno, txtApellidoMaterno);
+            AgregarCampo(tablaBasica, lblFechaNacimiento, dtpFechaNacimiento);
+            AgregarCampo(tablaBasica, lblGenero, cmbGenero);
+
+            AgregarCampo(tablaMedica, label3, cmbTipoSangre);
+            AgregarCampo(tablaMedica, label4, txtAlergias);
+            AgregarSeparador(tablaMedica, "Direccion");
+            label9.Text = "Codigo postal";
+            AgregarCampo(tablaMedica, label6, txtCalle);
+            AgregarCampo(tablaMedica, label5, txtCiudad);
+            AgregarCampo(tablaMedica, label8, txtEstado);
+            AgregarCampo(tablaMedica, label9, txtCodigoPostal);
+
+            AgregarCampo(tablaContacto, label11, txtTelefono);
+            AgregarCampo(tablaContacto, label10, txtCorreo);
+            AgregarSeparador(tablaContacto, "Contacto de emergencia");
+            AgregarCampo(tablaContacto, label15, txtContactoEmergencia);
+            AgregarCampo(tablaContacto, label13, txtNumeroEmergencia);
+
+            layout.Controls.Add(cardBasica, 0, 0);
+            layout.Controls.Add(cardMedica, 1, 0);
+            layout.Controls.Add(cardContacto, 2, 0);
+
+            panelDatosPersonales.Controls.Clear();
+            panelDatosPersonales.Controls.Add(layout);
+        }
+
+        private void EstilizarTab(Button boton, int x, int y, int width)
+        {
+            boton.Location = new Point(x, y);
+            boton.Size = new Size(width, 30);
+            boton.FlatStyle = FlatStyle.Flat;
+            boton.FlatAppearance.BorderSize = 0;
+            boton.BackColor = Color.Transparent;
+            boton.ForeColor = Color.FromArgb(28, 65, 111);
+            boton.Font = new Font("Segoe UI", 9.5f, FontStyle.Bold);
+        }
+
+        private Panel CrearCardDetalle(string titulo)
+        {
+            Panel card = new Panel();
+            card.Dock = DockStyle.Fill;
+            card.BackColor = Color.White;
+            card.BorderStyle = BorderStyle.FixedSingle;
+            card.Margin = new Padding(10);
+            card.Padding = new Padding(24, 72, 24, 24);
+
+            Label labelTitulo = new Label();
+            labelTitulo.Text = titulo;
+            labelTitulo.Location = new Point(24, 18);
+            labelTitulo.Size = new Size(360, 40);
+            labelTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelTitulo.Font = new Font("Segoe UI", 15, FontStyle.Bold);
+            labelTitulo.ForeColor = Color.FromArgb(28, 65, 111);
+            labelTitulo.TextAlign = ContentAlignment.MiddleLeft;
+
+            card.Controls.Add(labelTitulo);
+
+            return card;
+        }
+
+        private TableLayoutPanel CrearTablaCampos()
+        {
+            TableLayoutPanel tabla = new TableLayoutPanel();
+            tabla.Dock = DockStyle.Fill;
+            tabla.ColumnCount = 1;
+            tabla.RowCount = 1;
+            tabla.AutoScroll = true;
+            tabla.BackColor = Color.White;
+            tabla.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            return tabla;
+        }
+
+        private void AgregarCampo(TableLayoutPanel tabla, Label label, Control control)
+        {
+            label.AutoSize = false;
+            label.Dock = DockStyle.Fill;
+            label.Height = 22;
+            label.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            label.ForeColor = Color.FromArgb(51, 65, 85);
+            label.TextAlign = ContentAlignment.BottomLeft;
+            label.Margin = new Padding(0, 8, 0, 2);
+
+            control.Dock = DockStyle.Fill;
+            control.Height = 34;
+            control.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            control.Margin = new Padding(0, 0, 0, 8);
+            control.BackColor = Color.FromArgb(248, 250, 252);
+
+            tabla.RowStyles.Add(new RowStyle(SizeType.Absolute, 30));
+            tabla.Controls.Add(label, 0, tabla.RowCount - 1);
+            tabla.RowCount++;
+
+            tabla.RowStyles.Add(new RowStyle(SizeType.Absolute, 42));
+            tabla.Controls.Add(control, 0, tabla.RowCount - 1);
+            tabla.RowCount++;
+        }
+
+        private void AgregarSeparador(TableLayoutPanel tabla, string texto)
+        {
+            Label separador = new Label();
+            separador.Text = texto;
+            separador.Dock = DockStyle.Fill;
+            separador.Height = 42;
+            separador.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+            separador.ForeColor = Color.FromArgb(28, 65, 111);
+            separador.TextAlign = ContentAlignment.BottomLeft;
+            separador.Margin = new Padding(0, 18, 0, 4);
+
+            tabla.RowStyles.Add(new RowStyle(SizeType.Absolute, 54));
+            tabla.Controls.Add(separador, 0, tabla.RowCount - 1);
+            tabla.RowCount++;
         }
 
         private void CargarPaciente()

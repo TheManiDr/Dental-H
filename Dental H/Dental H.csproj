@@ -129,6 +129,7 @@
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="Enums\Rol.cs" />
     <Compile Include="Model\ComboItem.cs" />
+    <Compile Include="Model\ConsultaInfo.cs" />
     <Compile Include="Model\Paciente.cs" />
     <Compile Include="Model\Persona.cs" />
     <Compile Include="Model\PersonalInfo.cs" />

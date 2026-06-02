@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using Dental_H.Controller;
+using Dental_H.Model;
 
 namespace Dental_H.View
 {
@@ -11,11 +14,13 @@ namespace Dental_H.View
         // Controles dinámicos principales
         private Panel panelSuperior;
         private DateTimePicker dtpFechaControl;
+        private CitaMedicaController citaMedicaController;
 
         // VARIABLE DE COMPATIBILIDAD: Satisface al diseñador y elimina los errores CS0103 de raíz
 
         public Citashoy()
         {
+            citaMedicaController = new CitaMedicaController();
             InitializeComponent();
         }
 
@@ -124,6 +129,8 @@ namespace Dental_H.View
             btnCancelar.FillWeight = 50;
             dgvHorario2.Columns.Add(btnCancelar);
 
+            dgvHorario2.CellContentClick -= dgvHorario2_CellContentClick_1;
+            dgvHorario2.CellContentClick -= DgvHorario2_CellContentClick;
             dgvHorario2.CellContentClick += DgvHorario2_CellContentClick;
         }
 
@@ -142,19 +149,42 @@ namespace Dental_H.View
 
             int horaInicio = 7;
             int horaFin = 15;
+            List<ConsultaInfo> citasDelDia = citaMedicaController.ObtenerCitasPorFecha(fecha);
+            SortedSet<TimeSpan> horarios = new SortedSet<TimeSpan>();
 
             for (int h = horaInicio; h <= horaFin; h++)
             {
-                string stringHora = $"{h:D2}:00";
-                Cita infoCita = ObtenerCitaDeBaseDeDatos(fecha, stringHora);
+                horarios.Add(new TimeSpan(h, 0, 0));
+            }
 
-                if (infoCita != null)
+            foreach (ConsultaInfo cita in citasDelDia)
+            {
+                horarios.Add(new TimeSpan(cita.Hora.Hours, cita.Hora.Minutes, 0));
+            }
+
+            foreach (TimeSpan horario in horarios)
+            {
+                string stringHora = DateTime.Today.Add(horario).ToString("HH:mm");
+                List<ConsultaInfo> citasEnHorario = citasDelDia
+                    .Where(c => c.Hora.Hours == horario.Hours && c.Hora.Minutes == horario.Minutes)
+                    .ToList();
+
+                if (citasEnHorario.Count > 0)
                 {
-                    dgvHorario2.Rows.Add(stringHora, infoCita.Paciente, infoCita.Estado);
+                    foreach (ConsultaInfo cita in citasEnHorario)
+                    {
+                        int rowIndex = dgvHorario2.Rows.Add(
+                            stringHora,
+                            cita.Paciente + " (" + cita.Descripcion + ")",
+                            "Pendiente"
+                        );
+                        dgvHorario2.Rows[rowIndex].Tag = cita;
+                    }
                 }
                 else
                 {
-                    dgvHorario2.Rows.Add(stringHora, "--- Disponible ---", "");
+                    int rowIndex = dgvHorario2.Rows.Add(stringHora, "--- Disponible ---", "");
+                    dgvHorario2.Rows[rowIndex].Tag = null;
                 }
             }
 
@@ -189,8 +219,9 @@ namespace Dental_H.View
             string columnaSeleccionada = dgvHorario2.Columns[e.ColumnIndex].Name;
             string hora = dgvHorario2.Rows[e.RowIndex].Cells["Hora"].Value.ToString();
             string paciente = dgvHorario2.Rows[e.RowIndex].Cells["Paciente"].Value.ToString();
+            ConsultaInfo cita = dgvHorario2.Rows[e.RowIndex].Tag as ConsultaInfo;
 
-            if (paciente == "--- Disponible ---") return;
+            if (paciente == "--- Disponible ---" || cita == null) return;
 
             switch (columnaSeleccionada)
             {
@@ -201,7 +232,7 @@ namespace Dental_H.View
                     ReagendarCita(hora, paciente);
                     break;
                 case "BtnCancelar":
-                    CancelarCita(hora, paciente);
+                    CancelarCita(cita);
                     break;
             }
         }
@@ -223,37 +254,24 @@ namespace Dental_H.View
             MessageBox.Show($"Abriendo ventana para reagendar la cita de las {hora}...", "Reagendar Cita", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void CancelarCita(string hora, string paciente)
+        private void CancelarCita(ConsultaInfo cita)
         {
-            DialogResult result = MessageBox.Show($"¿Está seguro de CANCELAR la cita de las {hora} de {paciente}?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            string hora = DateTime.Today.Add(cita.Hora).ToString("HH:mm");
+            DialogResult result = MessageBox.Show($"¿Está seguro de CANCELAR la cita de las {hora} de {cita.Paciente}?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                MessageBox.Show("La cita ha sido cancelada.", "Cancelación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarAgendaDelDia(dtpFechaControl.Value);
+                bool cancelada = citaMedicaController.CancelarCita(cita.IdCita);
+
+                if (cancelada)
+                {
+                    MessageBox.Show("La cita ha sido cancelada.", "Cancelación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarAgendaDelDia(dtpFechaControl.Value);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo cancelar la cita en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-        }
-
-        #endregion
-
-        #region Base de Datos Local de Prueba
-
-        private class Cita
-        {
-            public string Paciente { get; set; }
-            public string Estado { get; set; }
-        }
-
-        private Cita ObtenerCitaDeBaseDeDatos(DateTime fecha, string hora)
-        {
-            if (fecha.Date == DateTime.Today.Date && hora == "09:00")
-            {
-                return new Cita { Paciente = "Carlos Gómez (Limpieza)", Estado = "Pendiente" };
-            }
-            if (fecha.Date == DateTime.Today.Date && hora == "11:00")
-            {
-                return new Cita { Paciente = "Ana Martínez (Ortodoncia)", Estado = "Pendiente" };
-            }
-            return null;
         }
 
         #endregion

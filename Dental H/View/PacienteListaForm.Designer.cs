@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.flpPacientes = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlAltaPaciente = new System.Windows.Forms.Panel();
             this.headerControl1 = new Dental_H.Components.HeaderControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -37,6 +38,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.flpPacientes);
+            this.panel1.Controls.Add(this.pnlAltaPaciente);
             this.panel1.Controls.Add(this.headerControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -48,11 +50,19 @@
             // 
             this.flpPacientes.AutoScroll = true;
             this.flpPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpPacientes.Location = new System.Drawing.Point(0, 110);
+            this.flpPacientes.Location = new System.Drawing.Point(0, 270);
             this.flpPacientes.Name = "flpPacientes";
             this.flpPacientes.Padding = new System.Windows.Forms.Padding(25);
-            this.flpPacientes.Size = new System.Drawing.Size(1904, 931);
+            this.flpPacientes.Size = new System.Drawing.Size(1904, 771);
             this.flpPacientes.TabIndex = 2;
+            // 
+            // pnlAltaPaciente
+            // 
+            this.pnlAltaPaciente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAltaPaciente.Location = new System.Drawing.Point(0, 110);
+            this.pnlAltaPaciente.Name = "pnlAltaPaciente";
+            this.pnlAltaPaciente.Size = new System.Drawing.Size(1904, 160);
+            this.pnlAltaPaciente.TabIndex = 3;
             // 
             // headerControl1
             // 
@@ -83,6 +93,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flpPacientes;
+        private System.Windows.Forms.Panel pnlAltaPaciente;
         private Components.HeaderControl headerControl1;
     }
 }

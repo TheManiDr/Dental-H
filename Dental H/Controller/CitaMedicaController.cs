@@ -38,5 +38,25 @@ namespace Dental_H.Controller
         {
             return citaMedicaDAO.RegistrarCita(fecha, hora, motivo, idPaciente, idPersonal);
         }
+
+        public List<ConsultaInfo> ObtenerConsultas()
+        {
+            return citaMedicaDAO.ObtenerConsultas();
+        }
+
+        public List<ConsultaInfo> ObtenerCitasPorFecha(DateTime fecha)
+        {
+            return citaMedicaDAO.ObtenerCitasPorFecha(fecha);
+        }
+
+        public bool CancelarCita(int idCita)
+        {
+            return citaMedicaDAO.CancelarCita(idCita);
+        }
+
+        public List<ConsultaInfo> ObtenerCitasPorRango(DateTime fechaInicio, DateTime fechaFin)
+        {
+            return citaMedicaDAO.ObtenerCitasPorRango(fechaInicio, fechaFin);
+        }
     }
 }
