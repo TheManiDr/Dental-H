@@ -89,8 +89,7 @@ namespace Dental_H.View
 
             if (paciente.Genero == "Masculino")
             {
-                picAvatarPaciente.Image =
-                    Properties.Resources.avatar_hombre;
+                picAvatarPaciente.Image = Properties.Resources.avatar_hombre;
             }
             else
             {
@@ -374,7 +373,5 @@ namespace Dental_H.View
 
             return marca;
         }
-
-
     }
 }
