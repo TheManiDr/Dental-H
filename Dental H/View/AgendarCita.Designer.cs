@@ -49,6 +49,7 @@
             this.Name = "AgendarCita";
             this.Text = "AgendarCita";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.AgendarCita_Load);
             this.ResumeLayout(false);
 
         }
