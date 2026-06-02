@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dental_H.Components;
+using System.Drawing.Drawing2D;
 
 namespace Dental_H.View
 {
@@ -178,6 +179,13 @@ namespace Dental_H.View
             icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
         }
 
+        private void picCaries_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox icono = (PictureBox)sender;
+
+            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+        }
+
         private void panelDienteVertical_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.StringFormat))
@@ -188,30 +196,49 @@ namespace Dental_H.View
 
         private void panelDienteVertical_DragDrop(object sender, DragEventArgs e)
         {
-            string padecimiento = e.Data.GetData(DataFormats.StringFormat).ToString();
+            string padecimiento =
+        e.Data.GetData(DataFormats.StringFormat).ToString();
 
-            Panel panelDiente =
-                (Panel)sender;
+            Panel panelDiente = (Panel)sender;
 
-            PictureBox marca =
-                new PictureBox();
+            Color color = Color.Red;
 
-            marca.Size = new Size(25, 25);
-
-            marca.SizeMode =
-                PictureBoxSizeMode.StretchImage;
-
-            PictureBox iconoOriginal =
-                Controls.Find(
-                    padecimiento,
-                    true)
-                    .FirstOrDefault() as PictureBox;
-
-            if (iconoOriginal != null)
+            switch (padecimiento)
             {
-                marca.Image =
-                    iconoOriginal.Image;
+                case "picCaries":
+                    color = Color.Red;
+                    break;
+
+                case "picFractura":
+                    color = Color.Orange;
+                    break;
+
+                case "picDesgaste":
+                    color = Color.GreenYellow;
+                    break;
+
+                case "picSensibilidad":
+                    color = Color.LightCyan;
+                    break;
+
+                case "picPlaca":
+                    color = Color.Blue;
+                    break;
+
+                case "picSarro":
+                    color = Color.Gray;
+                    break;
+
+                case "picInfeccion":
+                    color = Color.BlueViolet;
+                    break;
+
+                case "picInflamacion":
+                    color = Color.Magenta;
+                    break;
             }
+
+            Panel marca = CrearMarca(color);
 
             Point p =
                 panelDiente.PointToClient(
@@ -221,13 +248,6 @@ namespace Dental_H.View
                 new Point(
                     p.X - marca.Width / 2,
                     p.Y - marca.Height / 2);
-
-            marca.Cursor = Cursors.Hand;
-
-            marca.MouseDown += Marca_MouseDown;
-            marca.MouseMove += Marca_MouseMove;
-            marca.MouseUp += Marca_MouseUp;
-            marca.MouseClick += Marca_MouseClick;
 
             panelDiente.Controls.Add(marca);
 
@@ -236,30 +256,49 @@ namespace Dental_H.View
 
         private void panelDienteSuperior_DragDrop(object sender, DragEventArgs e)
         {
-            string padecimiento = e.Data.GetData(DataFormats.StringFormat).ToString();
+            string padecimiento =
+        e.Data.GetData(DataFormats.StringFormat).ToString();
 
-            Panel panelDiente =
-                (Panel)sender;
+            Panel panelDiente = (Panel)sender;
 
-            PictureBox marca =
-                new PictureBox();
+            Color color = Color.Red;
 
-            marca.Size = new Size(25, 25);
-
-            marca.SizeMode =
-                PictureBoxSizeMode.StretchImage;
-
-            PictureBox iconoOriginal =
-                Controls.Find(
-                    padecimiento,
-                    true)
-                    .FirstOrDefault() as PictureBox;
-
-            if (iconoOriginal != null)
+            switch (padecimiento)
             {
-                marca.Image =
-                    iconoOriginal.Image;
+                case "picCaries":
+                    color = Color.Red;
+                    break;
+
+                case "picFractura":
+                    color = Color.Orange;
+                    break;
+
+                case "picDesgaste":
+                    color = Color.GreenYellow;
+                    break;
+
+                case "picSensibilidad":
+                    color = Color.LightCyan;
+                    break;
+
+                case "picPlaca":
+                    color = Color.Blue;
+                    break;
+
+                case "picSarro":
+                    color = Color.Gray;
+                    break;
+
+                case "picInfeccion":
+                    color = Color.BlueViolet;
+                    break;
+
+                case "picInflamacion":
+                    color = Color.Magenta;
+                    break;
             }
+
+            Panel marca = CrearMarca(color);
 
             Point p =
                 panelDiente.PointToClient(
@@ -269,13 +308,6 @@ namespace Dental_H.View
                 new Point(
                     p.X - marca.Width / 2,
                     p.Y - marca.Height / 2);
-
-            marca.Cursor = Cursors.Hand;
-
-            marca.MouseDown += Marca_MouseDown;
-            marca.MouseMove += Marca_MouseMove;
-            marca.MouseUp += Marca_MouseUp;
-            marca.MouseClick += Marca_MouseClick;
 
             panelDiente.Controls.Add(marca);
 
@@ -301,8 +333,7 @@ namespace Dental_H.View
             if (!arrastrando)
                 return;
 
-            PictureBox marca =
-                (PictureBox)sender;
+            Panel marca = (Panel)sender;
 
             marca.Left += e.X - puntoInicial.X;
             marca.Top += e.Y - puntoInicial.Y;
@@ -315,23 +346,35 @@ namespace Dental_H.View
         {
             if (e.Button == MouseButtons.Right)
             {
-                PictureBox marca = (PictureBox)sender;
-
-                marca.BackColor = Color.Transparent;
+                Panel marca = (Panel)sender;
 
                 marca.Parent.Controls.Remove(marca);
 
                 marca.Dispose();
             }
         }
-
-        private void picCaries_MouseDown(object sender, MouseEventArgs e)
+        private Panel CrearMarca(Color color)
         {
-            PictureBox icono = (PictureBox)sender;
+            Panel marca = new Panel();
 
+            marca.Size = new Size(25, 25);
+            marca.BackColor = color;
 
+            GraphicsPath gp = new GraphicsPath();
+            gp.AddEllipse(0, 0, 25, 25);
 
-            icono.DoDragDrop(icono.Name, DragDropEffects.Copy);
+            marca.Region = new Region(gp);
+
+            marca.Cursor = Cursors.Hand;
+
+            marca.MouseDown += Marca_MouseDown;
+            marca.MouseMove += Marca_MouseMove;
+            marca.MouseUp += Marca_MouseUp;
+            marca.MouseClick += Marca_MouseClick;
+
+            return marca;
         }
+
+
     }
 }
