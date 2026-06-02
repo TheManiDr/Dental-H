@@ -69,5 +69,10 @@ namespace Dental_H
         {
 
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
